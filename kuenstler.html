@@ -236,6 +236,16 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
   .section{padding:70px 0}
   .hero-h1{font-size:36px}
 }
+
+.has-dropdown{position:relative}
+.dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
+.dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
+.has-dropdown:hover .dropdown{display:block}
+.dropdown li{list-style:none}
+.dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#CCCCDD;transition:all .2s;white-space:nowrap;text-decoration:none}
+.dropdown a i{font-size:16px;color:#0099FF}
+.dropdown a:hover{background:rgba(0,56,255,.12);color:#fff}
+
 </style>
 </head>
 <body>
@@ -253,10 +263,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
         <li><a href="index.html#portfolio">Portfolio</a></li>
         <li><a href="ueber-mich.html">Über mich</a></li>
         <li><a href="index.html#blog">Blog</a></li>
-        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
       <div class="nav-right">
-        <a href="index.html#kontakt" class="btn btn-p">Erstgespräch buchen</a>
+        <a href="kontakt.html" class="btn btn-p">Erstgespräch buchen</a>
         <button class="burger" id="burger" aria-label="Menü">
           <span></span><span></span><span></span>
         </button>
@@ -271,8 +281,8 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
   <a href="index.html#portfolio" onclick="cM()">Portfolio</a>
   <a href="ueber-mich.html" onclick="cM()">Über mich</a>
   <a href="index.html#blog" onclick="cM()">Blog</a>
-  <a href="index.html#kontakt" onclick="cM()">Kontakt</a>
-  <a href="index.html#kontakt" class="btn btn-p" onclick="cM()">Erstgespräch buchen</a>
+  <a href="kontakt.html" onclick="cM()">Kontakt</a>
+  <a href="kontakt.html" class="btn btn-p" onclick="cM()">Erstgespräch buchen</a>
 </div>
 
 <!-- BREADCRUMB -->
@@ -313,7 +323,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
     </p>
 
     <div class="hero-ctas">
-      <a href="index.html#kontakt" class="btn btn-p btn-lg pulse">
+      <a href="kontakt.html" class="btn btn-p btn-lg pulse">
         <i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen
       </a>
       <a href="#leistungen" class="btn btn-o btn-lg">Was ich anbiete</a>
@@ -461,7 +471,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
           <li><i class="ti ti-check"></i> Monatlicher Report</li>
           <li><i class="ti ti-check"></i> Persönliche Betreuung</li>
         </ul>
-        <a href="index.html#kontakt" class="btn btn-o pkg-cta">Anfragen</a>
+        <a href="kontakt.html" class="btn btn-o pkg-cta">Anfragen</a>
       </div>
 
       <!-- Professional (Featured) -->
@@ -477,7 +487,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
           <li><i class="ti ti-check"></i> Detaillierte Monatsreports</li>
           <li><i class="ti ti-check"></i> Persönlicher Ansprechpartner</li>
         </ul>
-        <a href="index.html#kontakt" class="btn btn-p pkg-cta">Anfragen</a>
+        <a href="kontakt.html" class="btn btn-p pkg-cta">Anfragen</a>
       </div>
 
       <!-- Premium -->
@@ -492,7 +502,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
           <li><i class="ti ti-check"></i> Netzwerk-Vermittlung</li>
           <li><i class="ti ti-check"></i> Tägliche Betreuung</li>
         </ul>
-        <a href="index.html#kontakt" class="btn btn-o pkg-cta">Anfragen</a>
+        <a href="kontakt.html" class="btn btn-o pkg-cta">Anfragen</a>
       </div>
     </div>
   </div>
@@ -594,7 +604,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
     <div class="cta-end-inner reveal">
       <h2>Bereit durchzustarten?</h2>
       <p>Buche jetzt dein kostenloses Erstgespräch — unverbindlich, persönlich, ohne Risiko.</p>
-      <a href="index.html#kontakt" class="btn btn-w btn-lg">
+      <a href="kontakt.html" class="btn btn-w btn-lg">
         <i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen
       </a>
       <div class="cta-extras">
@@ -608,47 +618,54 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:60px 0 0}
 
 <!-- FOOTER -->
 <footer>
-  <div class="container">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <h3>
-          <div class="logo-mark" style="width:36px;height:36px;font-size:13px;border-radius:6px">LMS</div>
-          Leon Media Solution
-        </h3>
-        <p>Messbare Marketinglösungen für Künstler, Musiker, Veranstalter & Firmen.</p>
-        <div class="socials" style="margin-top:20px">
-          <a href="#" class="soc" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
-          <a href="#" class="soc" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
-          <a href="#" class="soc" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
-          <a href="#" class="soc" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
-          <a href="#" class="soc" aria-label="TikTok"><i class="ti ti-brand-tiktok"></i></a>
+  <div class="container" style="max-width:1200px">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(0,56,255,.18)">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <div style="width:36px;height:36px;background:#0038FF;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:6px;box-shadow:0 0 12px rgba(0,56,255,.35);font-family:'Space Grotesk',sans-serif">LMS</div>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#fff">Leon Media Solution</span>
+        </div>
+        <p style="font-size:14px;color:#CCCCDD;line-height:1.7;max-width:260px;margin-bottom:20px">Messbare Marketinglösungen für Künstler, Musiker, Veranstalter &amp; Firmen.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="TikTok"><i class="ti ti-brand-tiktok"></i></a>
         </div>
       </div>
-      <div class="foot-nav">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Startseite</a></li>
-          <li><a href="index.html#leistungen">Leistungen</a></li>
-          <li><a href="kuenstler.html" class="active">Für Künstler</a></li>
-          <li><a href="ueber-mich.html">Über mich</a></li>
-          <li><a href="index.html#kontakt">Kontakt</a></li>
+      <div>
+        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Leistungen</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li><a href="kuenstler.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Künstler & Musiker</a></li>
+          <li><a href="veranstalter.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Veranstalter</a></li>
+          <li><a href="firmen.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Firmen</a></li>
+          <li><a href="index.html#portfolio" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Portfolio</a></li>
         </ul>
       </div>
-      <div class="foot-contact">
-        <h4>Kontakt</h4>
-        <p><i class="ti ti-mail"></i> vmissun@web.de</p>
-        <p><i class="ti ti-phone"></i> 01716852540</p>
-        <p><i class="ti ti-world"></i> leonmediasolution.de</p>
-        <a href="index.html#kontakt" class="btn btn-p" style="margin-top:20px;font-size:13px;padding:10px 20px">
-          <i class="ti ti-calendar"></i> Termin buchen
-        </a>
+      <div>
+        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Unternehmen</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li><a href="ueber-mich.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Über mich</a></li>
+          <li><a href="index.html#blog" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Blog</a></li>
+          <li><a href="kontakt.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Kontakt</a></li>
+          <li><a href="impressum.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Impressum</a></li>
+          <li><a href="datenschutz.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Kontakt</h4>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="mailto:vmissun@web.de" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">vmissun@web.de</a></p>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="tel:01716852540" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">01716852540</a></p>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:20px;display:flex;align-items:center;gap:8px"><i class="ti ti-world" style="font-size:16px;color:#0099FF;flex-shrink:0"></i> leonmediasolution.de</p>
+        <a href="kontakt.html" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(0,56,255,.3);text-decoration:none" onmouseover="this.style.background='#0099FF'" onmouseout="this.style.background='#0038FF'"><i class="ti ti-calendar"></i> Termin buchen</a>
       </div>
     </div>
-    <div class="foot-bottom">
+    <div style="padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#CCCCDD;flex-wrap:wrap;gap:12px">
       <span>© 2025 Leon Media Solution · Inh. Volker Missun</span>
-      <div class="foot-legal">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+      <div style="display:flex;gap:20px">
+        <a href="impressum.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Impressum</a>
+        <a href="datenschutz.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Datenschutz</a>
       </div>
     </div>
   </div>
