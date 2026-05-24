@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Leon Media Solution — Messbare Marketinglösungen für Künstler, Musiker, Veranstalter & Firmen. Social Media, YouTube, Podcast, Ads und mehr. Volker Missun.">
+<meta name="keywords" content="Social Media Manager, Marketing Künstler, Social Media Musiker, Veranstalter Marketing, Leon Media Solution, Volker Missun">
+<title>Leon Media Solution | Messbare Marketinglösungen</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Tabler Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<style>
+/* ===== CSS VARIABLEN ===== */
+:root {
+  --bg-primary: #050510;
+  --bg-card: #111133;
+  --bg-card-hover: #161650;
+  --blue: #0038FF;
+  --blue-light: #0099FF;
+  --blue-glow: rgba(0, 56, 255, 0.35);
+  --blue-glow-soft: rgba(0, 56, 255, 0.15);
+  --white: #FFFFFF;
+  --subtext: #CCCCDD;
+  --border: rgba(0, 56, 255, 0.2);
+  --border-hover: rgba(0, 56, 255, 0.7);
+  --font-head: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --nav-h: 72px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --section-pad: 100px 0;
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ===== UTILITY ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding: var(--section-pad); }
+.section-label {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.section-sub {
+  font-size: 17px;
+  color: var(--subtext);
+  max-width: 600px;
+  line-height: 1.7;
+}
+.text-center { text-align: center; }
+.text-center .section-sub { margin: 0 auto; }
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .25s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 0 0 20px var(--blue-glow);
+}
+.btn-primary:hover {
+  background: var(--blue-light);
+  box-shadow: 0 0 35px rgba(0,153,255,0.5);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.4);
+}
+.btn-outline:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-2px);
+}
+.btn-large {
+  font-size: 17px;
+  padding: 18px 40px;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  z-index: 1000;
+  transition: background .3s ease, backdrop-filter .3s ease, border-bottom .3s ease;
+}
+nav.scrolled {
+  background: rgba(5, 5, 16, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-h);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-head);
+}
+.nav-logo-mark {
+  width: 42px;
+  height: 42px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 15px var(--blue-glow);
+  position: relative;
+  overflow: hidden;
+}
+.nav-logo-mark::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+@keyframes shimmer { to { left: 100%; } }
+.nav-logo-name {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--white);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--subtext);
+  transition: color .2s;
+  font-family: var(--font-head);
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta { display: flex; align-items: center; gap: 16px; }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  transition: all .3s;
+  border-radius: 2px;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: rgba(5,5,16,0.97);
+  backdrop-filter: blur(20px);
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+  z-index: 999;
+  flex-direction: column;
+  gap: 16px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--subtext);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color .2s;
+}
+.mobile-menu a:hover { color: var(--white); }
+.mobile-menu .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+/* ===== HERO ===== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--nav-h);
+}
+
+/* Animated geometric background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  border: 1px solid rgba(0,56,255,0.12);
+  transform: rotate(15deg);
+  animation: rotate-slow 40s linear infinite;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 500px; height: 500px;
+  border: 1px solid rgba(0,56,255,0.08);
+  transform: rotate(-10deg);
+  animation: rotate-slow 55s linear infinite reverse;
+}
+@keyframes rotate-slow { to { transform: rotate(375deg); } }
+
+.geo-line {
+  position: absolute;
+  border: 1px solid rgba(0,56,255,0.07);
+  animation: rotate-slow linear infinite;
+}
+.geo-line:nth-child(1) { width: 300px; height: 300px; top: 20%; right: 10%; animation-duration: 30s; }
+.geo-line:nth-child(2) { width: 200px; height: 200px; top: 60%; right: 25%; animation-duration: 20s; animation-direction: reverse; }
+.geo-line:nth-child(3) { width: 150px; height: 150px; top: 30%; left: 5%; animation-duration: 45s; }
+
+/* Blue glow orb */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.glow-orb-1 {
+  width: 500px; height: 500px;
+  background: rgba(0,56,255,0.12);
+  top: -100px; right: -100px;
+  animation: pulse-orb 6s ease-in-out infinite;
+}
+.glow-orb-2 {
+  width: 300px; height: 300px;
+  background: rgba(0,153,255,0.08);
+  bottom: 0; left: 10%;
+  animation: pulse-orb 8s ease-in-out infinite reverse;
+}
+@keyframes pulse-orb {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.7; }
+}
+
+/* Particle dots */
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 50%;
+  opacity: 0;
+  animation: float-particle linear infinite;
+}
+@keyframes float-particle {
+  0% { opacity: 0; transform: translateY(0); }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(-120px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  padding: 80px 24px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-overline {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.hero-overline::before, .hero-overline::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--blue-light);
+  opacity: 0.5;
+}
+.hero-headline {
+  font-family: var(--font-head);
+  font-size: clamp(42px, 7vw, 82px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  margin-bottom: 28px;
+  color: var(--white);
+}
+.hero-headline .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: word-reveal .6s ease forwards;
+}
+@keyframes word-reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-headline .word.blue { color: var(--blue); }
+.hero-sub {
+  font-size: clamp(16px, 2.2vw, 19px);
+  color: var(--subtext);
+  max-width: 620px;
+  margin: 0 auto 44px;
+  line-height: 1.7;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.btn-primary.pulse {
+  animation: btn-pulse 2.5s ease-in-out infinite;
+}
+@keyframes btn-pulse {
+  0%, 100% { box-shadow: 0 0 20px var(--blue-glow); }
+  50% { box-shadow: 0 0 40px rgba(0,56,255,0.55), 0 0 60px rgba(0,56,255,0.2); }
+}
+.hero-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--subtext);
+  font-family: var(--font-head);
+}
+.hero-trust span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-trust i { color: var(--blue-light); font-size: 15px; }
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--subtext);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-family: var(--font-head);
+  z-index: 1;
+}
+.scroll-dot {
+  width: 20px;
+  height: 30px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+.scroll-dot::after {
+  content: '';
+  width: 3px;
+  height: 6px;
+  background: var(--blue-light);
+  border-radius: 2px;
+  animation: scroll-bounce 1.8s ease-in-out infinite;
+}
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.3; }
+}
+
+/* ===== ZIELGRUPPEN ===== */
+#zielgruppen {
+  background: var(--bg-card);
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.zg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.zg-card {
+  background: rgba(5,5,16,0.6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.zg-card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 0 30px var(--blue-glow-soft), inset 0 0 30px rgba(0,56,255,0.04);
+  transform: translateY(-4px);
+}
+.zg-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--blue-glow-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: var(--blue-light);
+  transition: all .3s;
+}
+.zg-card:hover .zg-icon {
+  background: rgba(0,56,255,0.2);
+  border-color: var(--blue);
+  color: var(--white);
+}
+.zg-card h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.zg-card p {
+  font-size: 14px;
+  color: var(--subtext);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.zg-link {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--blue-light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap .2s, color .2s;
+}
+.zg-card:hover .zg-link { gap: 10px; color: var(--white); }
+
+/* ===== KENNZAHLEN ===== */
+#kennzahlen {
+  padding: 80px 0;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+#kennzahlen::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(0,56,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.kz-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.kz-item {
+  padding: 48px 24px;
+  text-align: center;
+  background: rgba(17,17,51,0.3);
+  border-right: 1px solid var(--border);
+  transition: background .3s;
+}
+.kz-item:last-child { border-right: none; }
+.kz-item:hover { background: rgba(0,56,255,0.05); }
+.kz-number {
+  font-family: var(--font-head);
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -.03em;
+}
+.kz-label {
+  font-size: 13px;
+  color: var(--subtext);
+  font-family: var(--font-head);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+/* ===== LEISTUNGEN ===== */
+#leistungen {
+  padding: 100px 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+}
+.ls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+.ls-card {
+  background: rgba(5,5,16,0.7);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.ls-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+.ls-card:hover::before { transform: scaleX(1); }
+.ls-card:hover {
+  border-color: rgba(0,56,255,0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.ls-icon {
+  font-size: 32px;
+  color: var(--blue-light);
+  margin-bottom: 16px;
+  transition: color .3s;
+}
+.ls-card:hover .ls-icon { color: var(--white); }
+.ls-card h3 {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.ls-card p {
+  font-size: 14px;
+  color: var(--subtext);
+  line-height: 1.6;
+}
+
+/* ===== WHY ===== */
+#warum {
+  padding: 100px 0;
+  background: var(--bg-primary);
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+.why-item {
+  text-align: center;
+}
+.why-icon-wrap {
+  width: 72px;
+  height: 72px;
+  background: var(--blue-glow-soft);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 30px;
+  color: var(--blue-light);
+  transition: all .3s;
+}
+.why-item:hover .why-icon-wrap {
+  background: rgba(0,56,255,0.2);
+  border-color: var(--blue);
+  box-shadow: 0 0 20px var(--blue-glow);
+  transform: scale(1.05);
+}
+.why-item h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.why-item p {
+  font-size: 14px;
+  color: var(--subtext);
+  line-height: 1.7;
+}
+.why-divider {
+  color: var(--blue);
+  font-size: 13px;
+  font-family: var(--font-head);
+  letter-spacing: .05em;
+}
+
+/* ===== TESTIMONIAL ===== */
+#testimonial {
+  padding: 80px 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.testi-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 0 24px;
+}
+.testi-line {
+  width: 3px;
+  min-height: 120px;
+  background: linear-gradient(to bottom, var(--blue), var(--blue-light));
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.testi-content {}
+.testi-quote {
+  font-family: var(--font-head);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 28px;
+  color: var(--white);
+}
+.testi-quote::before { content: '\201E'; color: var(--blue); font-size: 1.5em; line-height: 0; vertical-align: -.2em; margin-right: 4px; }
+.testi-quote::after { content: '\201C'; color: var(--blue); font-size: 1.5em; line-height: 0; vertical-align: -.2em; margin-left: 4px; }
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.testi-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blue-glow-soft);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--blue-light);
+  flex-shrink: 0;
+}
+.testi-name {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.testi-role {
+  font-size: 13px;
+  color: var(--subtext);
+}
+
+/* ===== CTA SECTION ===== */
+#cta-section {
+  padding: 100px 0;
+  background: var(--blue);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+#cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.2), transparent);
+}
+#cta-section::after {
+  content: '';
+  position: absolute;
+  top: -150px; right: -150px;
+  width: 500px; height: 500px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transform: rotate(20deg);
+  animation: rotate-slow 35s linear infinite;
+}
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+.cta-content h2 {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+.cta-content p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-white {
+  background: var(--white);
+  color: var(--blue);
+  font-weight: 700;
+}
+.btn-white:hover {
+  background: rgba(255,255,255,0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  padding: 60px 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.footer-brand h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-brand p {
+  font-size: 14px;
+  color: var(--subtext);
+  line-height: 1.7;
+  max-width: 280px;
+}
+.footer-nav h4, .footer-contact h4 {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 16px;
+}
+.footer-nav ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-nav a {
+  font-size: 14px;
+  color: var(--subtext);
+  transition: color .2s;
+}
+.footer-nav a:hover { color: var(--white); }
+.footer-contact p {
+  font-size: 14px;
+  color: var(--subtext);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-contact i { color: var(--blue-light); font-size: 16px; flex-shrink: 0; }
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.social-link {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--subtext);
+  transition: all .25s;
+}
+.social-link:hover {
+  border-color: var(--blue);
+  color: var(--white);
+  background: rgba(0,56,255,0.15);
+  transform: translateY(-2px);
+}
+.footer-bottom {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--subtext);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom a { color: var(--subtext); transition: color .2s; }
+.footer-bottom a:hover { color: var(--white); }
+.footer-legal { display: flex; gap: 20px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  :root { --section-pad: 70px 0; }
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .zg-grid { grid-template-columns: 1fr; }
+  .kz-grid { grid-template-columns: repeat(2, 1fr); }
+  .kz-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .kz-item:nth-child(2n) { border-bottom: 1px solid var(--border); }
+  .kz-item:last-child, .kz-item:nth-last-child(2) { border-bottom: none; }
+  .ls-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 32px; }
+  .testi-wrap { flex-direction: column; gap: 24px; }
+  .testi-line { width: 100%; min-height: 3px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .hero-ctas { flex-direction: column; align-items: center; }
+}
+@media (max-width: 480px) {
+  .kz-grid { grid-template-columns: 1fr; }
+  .kz-number { font-size: 48px; }
+  .section-title { font-size: 28px; }
+  .hero-headline { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-mark">LMS</div>
+        <span class="nav-logo-name">Leon Media Solution</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#ueber-mich">Über mich</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+
+      <!-- CTA + Hamburger -->
+      <div class="nav-cta">
+        <a href="#kontakt" class="btn btn-primary">Erstgespräch buchen</a>
+        <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+  <a href="#ueber-mich" onclick="closeMobile()">Über mich</a>
+  <a href="#blog" onclick="closeMobile()">Blog</a>
+  <a href="#kontakt" onclick="closeMobile()">Kontakt</a>
+  <a href="#kontakt" class="btn btn-primary" onclick="closeMobile()">Erstgespräch buchen</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="geo-line"></div>
+    <div class="geo-line"></div>
+    <div class="geo-line"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-overline">Social Media · Marketing · Strategie</div>
+
+    <h1 class="hero-headline" id="hero-headline">
+      <!-- Words injected by JS -->
+    </h1>
+
+    <p class="hero-sub">
+      Ich helfe Künstlern, Musikern, Veranstaltern & Firmen dabei, professionell sichtbar zu werden — mit Social Media, das wirklich Ergebnisse bringt.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#kontakt" class="btn btn-primary btn-large pulse">🎤 Jetzt sichtbar werden</a>
+      <a href="#portfolio" class="btn btn-outline btn-large">Portfolio ansehen</a>
+    </div>
+
+    <div class="hero-trust">
+      <span><i class="ti ti-check"></i> Kein Risiko</span>
+      <span><i class="ti ti-check"></i> Persönliche Betreuung</span>
+      <span><i class="ti ti-check"></i> Messbare Ergebnisse</span>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<!-- ===== ZIELGRUPPEN ===== -->
+<section id="zielgruppen">
+  <div class="container">
+    <div class="text-center reveal">
+      <p class="section-label">Für wen ich arbeite</p>
+      <h2 class="section-title">Drei Welten.<br>Eine Lösung.</h2>
+    </div>
+    <div class="zg-grid">
+      <div class="zg-card reveal reveal-delay-1">
+        <div class="zg-icon"><i class="ti ti-music"></i></div>
+        <h3>Künstler & Musiker</h3>
+        <p>Mehr Auftritte, mehr Fans, mehr Streams — mit Strategie die zur deiner Musik passt und dich sichtbar macht.</p>
+        <span class="zg-link">Mehr erfahren <i class="ti ti-arrow-right"></i></span>
+      </div>
+      <div class="zg-card reveal reveal-delay-2">
+        <div class="zg-icon"><i class="ti ti-confetti"></i></div>
+        <h3>Veranstalter & Events</h3>
+        <p>Ausverkaufte Veranstaltungen durch gezielte Kampagnen, die dein Publikum da erreichen, wo es ist.</p>
+        <span class="zg-link">Mehr erfahren <i class="ti ti-arrow-right"></i></span>
+      </div>
+      <div class="zg-card reveal reveal-delay-3">
+        <div class="zg-icon"><i class="ti ti-building"></i></div>
+        <h3>Firmen & Unternehmen</h3>
+        <p>Professionelle Sichtbarkeit, neue Kunden und eine starke Online-Präsenz — messbar und zuverlässig.</p>
+        <span class="zg-link">Mehr erfahren <i class="ti ti-arrow-right"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KENNZAHLEN ===== -->
+<section id="kennzahlen">
+  <div class="container">
+    <div class="kz-grid">
+      <div class="kz-item reveal">
+        <div class="kz-number" data-target="50" data-suffix="+">0</div>
+        <div class="kz-label">Betreute Kunden</div>
+      </div>
+      <div class="kz-item reveal reveal-delay-1">
+        <div class="kz-number" data-target="280" data-suffix="%">0</div>
+        <div class="kz-label">Ø Reichweiten-Steigerung</div>
+      </div>
+      <div class="kz-item reveal reveal-delay-2">
+        <div class="kz-number" data-target="5" data-suffix="">0</div>
+        <div class="kz-label">Jahre Erfahrung</div>
+      </div>
+      <div class="kz-item reveal reveal-delay-3">
+        <div class="kz-number" data-target="3" data-suffix="">0</div>
+        <div class="kz-label">Branchen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEISTUNGEN ===== -->
+<section id="leistungen" class="section">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom: 0;">
+      <p class="section-label">Meine Leistungen</p>
+      <h2 class="section-title">Was ich für dich tue</h2>
+      <p class="section-sub">Von Social Media bis YouTube, von Podcast bis Paid Ads — alles aus einer Hand, alles messbar.</p>
+    </div>
+    <div class="ls-grid">
+      <div class="ls-card reveal reveal-delay-1">
+        <div class="ls-icon"><i class="ti ti-brand-instagram"></i></div>
+        <h3>Social Media Management</h3>
+        <p>Strategie, Content-Erstellung und Community-Pflege auf Instagram, Facebook, TikTok und LinkedIn.</p>
+      </div>
+      <div class="ls-card reveal reveal-delay-2">
+        <div class="ls-icon"><i class="ti ti-brand-youtube"></i></div>
+        <h3>YouTube-Kanal-Aufbau</h3>
+        <p>Von null auf Reichweite: Konzept, SEO-Optimierung, Thumbnails und nachhaltige Wachstumsstrategie.</p>
+      </div>
+      <div class="ls-card reveal reveal-delay-3">
+        <div class="ls-icon"><i class="ti ti-microphone"></i></div>
+        <h3>Podcast-Produktion</h3>
+        <p>Konzept, technische Umsetzung und Distribution — deine Stimme auf allen Plattformen.</p>
+      </div>
+      <div class="ls-card reveal reveal-delay-1">
+        <div class="ls-icon"><i class="ti ti-ad"></i></div>
+        <h3>Paid Ads (Meta & Google)</h3>
+        <p>Gezielte Werbung die wirklich konvertiert — mehr Auftritte, mehr Tickets, mehr Umsatz.</p>
+      </div>
+      <div class="ls-card reveal reveal-delay-2">
+        <div class="ls-icon"><i class="ti ti-pencil"></i></div>
+        <h3>Blog & Content Marketing</h3>
+        <p>SEO-optimierte Inhalte die Vertrauen aufbauen und organisch neue Kunden bringen.</p>
+      </div>
+      <div class="ls-card reveal reveal-delay-3">
+        <div class="ls-icon"><i class="ti ti-layout"></i></div>
+        <h3>Webseiten (Squarespace)</h3>
+        <p>Professionelle, conversion-optimierte Websites die Besucher zu Kunden machen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WARUM ===== -->
+<section id="warum" class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <p class="section-label">Warum Leon Media Solution</p>
+      <h2 class="section-title">Kein Blabla.<br>Nur Ergebnisse.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal reveal-delay-1">
+        <div class="why-icon-wrap"><i class="ti ti-chart-line"></i></div>
+        <h3>Messbare Ergebnisse</h3>
+        <p>Kein Marketing-Blabla — nur Strategien die messbar funktionieren. Monatliche Reports, klare KPIs.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <div class="why-icon-wrap"><i class="ti ti-packages"></i></div>
+        <h3>Komplettanbieter</h3>
+        <p>Von Social Media bis YouTube bis Podcast bis Ads — alles aus einer Hand, perfekt aufeinander abgestimmt.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-3">
+        <div class="why-icon-wrap"><i class="ti ti-user-heart"></i></div>
+        <h3>Persönliche Betreuung</h3>
+        <p>Du arbeitest direkt mit mir — kein anonymes Agentur-Team, keine Übergaben, kein Informationsverlust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIAL ===== -->
+<section id="testimonial">
+  <div class="container">
+    <div class="testi-wrap reveal">
+      <div class="testi-line"></div>
+      <div class="testi-content">
+        <p class="testi-quote">
+          [PLATZHALTER: Hier kommt dein Kundenzitat. Zum Beispiel: "Seit der Zusammenarbeit mit Volker haben wir unsere Instagram-Reichweite verdreifacht und bekommen wöchentlich neue Anfragen. Endlich Social Media das wirklich was bringt."]
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">[N]</div>
+          <div>
+            <div class="testi-name">[NAME DES KUNDEN]</div>
+            <div class="testi-role">[BERUF / BRANCHE]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ABSCHLUSS ===== -->
+<section id="cta-section">
+  <div class="container">
+    <div class="cta-content reveal">
+      <h2>Bereit, sichtbar zu werden?</h2>
+      <p>Buche jetzt dein kostenloses Erstgespräch — kein Risiko, keine Verpflichtung.</p>
+      <a href="#kontakt" class="btn btn-white btn-large">Kostenloses Erstgespräch buchen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="kontakt">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h3>
+          <div class="nav-logo-mark" style="width:36px;height:36px;font-size:13px;border-radius:6px">LMS</div>
+          Leon Media Solution
+        </h3>
+        <p>Messbare Marketinglösungen für Künstler, Musiker, Veranstalter & Firmen. Mit Strategie, Storytelling und echter Erfahrung.</p>
+        <div class="social-links" style="margin-top:20px">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" class="social-link" aria-label="TikTok"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#ueber-mich">Über mich</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4>Kontakt</h4>
+        <p><i class="ti ti-mail"></i> vmissun@web.de</p>
+        <p><i class="ti ti-phone"></i> 01716852540</p>
+        <p><i class="ti ti-world"></i> leonmediasolution.de</p>
+        <!-- [PLATZHALTER: Calendly-Link einfügen sobald erstellt] -->
+        <a href="#" class="btn btn-primary" style="margin-top:20px;font-size:13px;padding:10px 20px">
+          <i class="ti ti-calendar"></i> Termin buchen
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <span>© 2025 Leon Media Solution · Inh. Volker Missun</span>
+      <div class="footer-legal">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// --- Navigation Scroll Effect ---
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// --- Hamburger Menu ---
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+function closeMobile() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
+
+// --- Hero Headline Word-by-Word Animation ---
+const words = ['Mehr', 'Reichweite.', 'Mehr', 'Fans.', 'Mehr', 'Aufmerksamkeit.'];
+const blueWords = ['Reichweite.', 'Fans.', 'Aufmerksamkeit.'];
+const headline = document.getElementById('hero-headline');
+
+words.forEach((word, i) => {
+  const span = document.createElement('span');
+  span.classList.add('word');
+  if (blueWords.includes(word)) span.classList.add('blue');
+  span.textContent = word + ' ';
+  span.style.animationDelay = (0.3 + i * 0.12) + 's';
+  headline.appendChild(span);
+});
+
+// --- Particles ---
+const particlesContainer = document.getElementById('particles');
+for (let i = 0; i < 25; i++) {
+  const p = document.createElement('div');
+  p.classList.add('particle');
+  p.style.left = Math.random() * 100 + '%';
+  p.style.top = Math.random() * 100 + '%';
+  p.style.animationDuration = (8 + Math.random() * 12) + 's';
+  p.style.animationDelay = (Math.random() * 10) + 's';
+  p.style.width = p.style.height = (1 + Math.random() * 2) + 'px';
+  particlesContainer.appendChild(p);
+}
+
+// --- Reveal on Scroll ---
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => revealObserver.observe(el));
+
+// --- CountUp Animation ---
+function countUp(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(ease * target);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+const kzObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const nums = e.target.querySelectorAll('.kz-number');
+      nums.forEach(n => countUp(n));
+      kzObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const kzSection = document.getElementById('kennzahlen');
+if (kzSection) kzObserver.observe(kzSection);
+</script>
+
+<!--
+==============================================
+TODO — Vor dem Launch ausfüllen:
+==============================================
+[ ] Logo-Bild einsetzen (nav-logo-mark und footer)
+[ ] Calendly-Link eintragen (alle "Erstgespräch buchen" Buttons)
+[ ] E-Mail aktualisieren (vmissun@web.de → neue Adresse)
+[ ] Testimonial-Zitat + Name + Beruf + Foto eintragen
+[ ] Social-Media-Links eintragen (Instagram, Facebook, YouTube, LinkedIn, TikTok)
+[ ] Impressum-Seite erstellen (impressum.html)
+[ ] Datenschutz-Seite erstellen (datenschutz.html)
+[ ] Domain leonmediasolution.de verbinden
+[ ] Google Analytics 4 einbinden (vor </head>)
+[ ] Favicon erstellen und eintragen
+[ ] Portfolio-Seite verlinken (portfolio.html)
+[ ] Über-mich-Seite verlinken (ueber-mich.html)
+[ ] Blog-Seite verlinken (blog.html)
+[ ] Leistungs-Unterseiten verlinken (zg-link Karten)
+==============================================
+-->
+</body>
+</html>

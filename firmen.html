@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Leon Media Solution — Social Media Marketing für Firmen & Unternehmen. Mehr Kunden, mehr Sichtbarkeit, messbarer ROI. Volker Missun.">
+<title>Für Firmen & Unternehmen | Leon Media Solution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+:root{--bg:#050510;--card:#111133;--blue:#0038FF;--bl:#0099FF;--glow:rgba(0,56,255,.35);--soft:rgba(0,56,255,.12);--w:#FFFFFF;--sub:#CCCCDD;--brd:rgba(0,56,255,.18);--fh:'Space Grotesk',sans-serif;--fb:'Inter',sans-serif;--nh:72px;--r:12px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--w);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:100px 0}
+.sl{font-family:var(--fh);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--bl);margin-bottom:14px}
+.st{font-family:var(--fh);font-size:clamp(30px,5vw,52px);font-weight:700;line-height:1.1;margin-bottom:18px}
+.ss{font-size:17px;color:var(--sub);line-height:1.7;max-width:600px}
+.tc{text-align:center}.tc .ss{margin:0 auto}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:15px;font-weight:500;padding:14px 28px;border-radius:6px;cursor:pointer;transition:all .25s;border:2px solid transparent;white-space:nowrap}
+.bp{background:var(--blue);color:#fff;box-shadow:0 0 22px var(--glow)}.bp:hover{background:var(--bl);box-shadow:0 0 38px rgba(0,153,255,.5);transform:translateY(-2px)}
+.bo{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}.bo:hover{border-color:#fff;background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.blg{font-size:17px;padding:18px 40px}
+.bw{background:#fff;color:var(--blue);font-weight:700}.bw:hover{background:rgba(255,255,255,.9);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;transition:background .3s,backdrop-filter .3s,border-bottom .3s}
+nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+.ni{display:flex;align-items:center;justify-content:space-between;height:var(--nh)}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--fh)}
+.lm{width:42px;height:42px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:8px;box-shadow:0 0 15px var(--glow);overflow:hidden;position:relative}
+.lm::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:sh 3s infinite}
+@keyframes sh{to{left:100%}}
+.ln{font-size:16px;font-weight:700}
+.nl{display:flex;align-items:center;gap:36px;list-style:none}
+.nl a{font-size:14px;font-weight:500;color:var(--sub);transition:color .2s;font-family:var(--fh)}
+.nl a:hover,.nl a.act{color:#fff}
+.nr{display:flex;align-items:center;gap:16px}
+.burg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.burg span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
+.burg.o span:nth-child(1){transform:translateY(7px) rotate(45deg)}.burg.o span:nth-child(2){opacity:0}.burg.o span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mm{display:none;position:fixed;top:var(--nh);left:0;right:0;background:rgba(5,5,16,.97);backdrop-filter:blur(20px);padding:24px;border-bottom:1px solid var(--brd);z-index:999;flex-direction:column;gap:16px}
+.mm.o{display:flex}.mm a{font-family:var(--fh);font-size:18px;font-weight:500;color:var(--sub);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .2s}
+.mm a:hover{color:#fff}.mm .btn{width:100%;justify-content:center;margin-top:8px}
+.bc{padding-top:calc(var(--nh) + 24px)}
+.bci{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--sub);font-family:var(--fh)}
+.bci a{color:var(--sub);transition:color .2s}.bci a:hover{color:#fff}.bci i{font-size:12px;color:rgba(255,255,255,.25)}.bci span{color:var(--bl)}
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:var(--nh)}
+.hbg{position:absolute;inset:0;z-index:0}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
+.o1{width:600px;height:600px;background:rgba(0,56,255,.1);top:-150px;right:-150px;animation:po 7s ease-in-out infinite}
+.o2{width:400px;height:400px;background:rgba(0,153,255,.07);bottom:-50px;left:-50px;animation:po 9s ease-in-out infinite reverse}
+@keyframes po{0%,100%{transform:scale(1)}50%{transform:scale(1.2);opacity:.65}}
+/* Grid pattern for corporate feel */
+.grid-pat{position:absolute;inset:0;background-image:linear-gradient(rgba(0,56,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,56,255,.04) 1px,transparent 1px);background-size:60px 60px;opacity:.6}
+.hi{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:80px 24px;text-align:center}
+.hbadge{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);border:1px solid rgba(0,153,255,.3);border-radius:20px;padding:6px 16px;margin-bottom:32px;background:rgba(0,153,255,.06)}
+.hh1{font-family:var(--fh);font-size:clamp(40px,7vw,80px);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin-bottom:28px}
+.hh1 em{font-style:normal;color:var(--blue)}
+.hsub{font-size:clamp(16px,2.2vw,19px);color:var(--sub);max-width:640px;margin:0 auto 44px;line-height:1.7}
+.hctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.pulse{animation:bpu 2.5s ease-in-out infinite}
+@keyframes bpu{0%,100%{box-shadow:0 0 22px var(--glow)}50%{box-shadow:0 0 42px rgba(0,56,255,.55),0 0 65px rgba(0,56,255,.2)}}
+.htrust{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;font-size:13px;color:var(--sub);font-family:var(--fh)}
+.htrust span{display:flex;align-items:center;gap:6px}.htrust i{color:var(--bl);font-size:15px}
+.sci{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:var(--sub);letter-spacing:.1em;text-transform:uppercase;font-family:var(--fh);z-index:1}
+.sd{width:20px;height:30px;border:1px solid rgba(255,255,255,.2);border-radius:10px;display:flex;justify-content:center;padding-top:5px}
+.sd::after{content:'';width:3px;height:6px;background:var(--bl);border-radius:2px;animation:sb 1.8s ease-in-out infinite}
+@keyframes sb{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(8px);opacity:.3}}
+#pain{padding:80px 0;background:var(--card);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd)}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.pc{background:rgba(5,5,16,.6);border:1px solid var(--brd);border-radius:var(--r);padding:32px 26px;transition:all .3s;position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(to bottom,var(--blue),var(--bl));transition:height .4s}
+.pc:hover::before{height:100%}.pc:hover{border-color:rgba(0,56,255,.4);transform:translateY(-4px)}
+.pi{font-size:28px;color:var(--bl);margin-bottom:16px;display:block}
+.pc h3{font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.3}
+.pc p{font-size:13px;color:var(--sub);line-height:1.6}
+#stats{padding:80px 0;background:var(--bg);position:relative;overflow:hidden}
+#stats::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,56,255,.06) 0%,transparent 70%);pointer-events:none}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border:1px solid var(--brd);border-radius:var(--r);overflow:hidden}
+.si{padding:48px 24px;text-align:center;background:rgba(17,17,51,.3);border-right:1px solid var(--brd);transition:background .3s}
+.si:last-child{border-right:none}.si:hover{background:rgba(0,56,255,.05)}
+.sn{font-family:var(--fh);font-size:64px;font-weight:700;color:var(--blue);line-height:1;margin-bottom:8px;letter-spacing:-.03em}
+.sl2{font-size:13px;color:var(--sub);font-family:var(--fh);letter-spacing:.05em;text-transform:uppercase}
+#leistungen{padding:100px 0;background:var(--card);border-top:1px solid var(--brd)}
+.lg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
+.lc{background:rgba(5,5,16,.7);border:1px solid var(--brd);border-radius:var(--r);padding:32px 26px;transition:all .3s;position:relative;overflow:hidden}
+.lc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--bl));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.lc:hover::after{transform:scaleX(1)}.lc:hover{border-color:rgba(0,56,255,.4);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.lic{font-size:32px;color:var(--bl);margin-bottom:16px;transition:color .3s}.lc:hover .lic{color:#fff}
+.lc h3{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:10px}
+.lc p{font-size:13px;color:var(--sub);line-height:1.6;margin-bottom:16px}
+.ltag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-family:var(--fh);color:var(--bl);border:1px solid rgba(0,153,255,.25);border-radius:4px;padding:3px 8px}
+/* ROI Section */
+#roi{padding:100px 0;background:var(--bg)}
+.roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.roi-text .sl{margin-bottom:14px}
+.roi-text .st{margin-bottom:18px}
+.roi-text .ss{margin-bottom:32px}
+.roi-list{display:flex;flex-direction:column;gap:16px}
+.roi-item{display:flex;align-items:flex-start;gap:14px}
+.roi-icon{width:44px;height:44px;background:var(--soft);border:1px solid var(--brd);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--bl);flex-shrink:0;transition:all .3s}
+.roi-item:hover .roi-icon{background:rgba(0,56,255,.2);border-color:var(--blue)}
+.roi-item h4{font-family:var(--fh);font-size:15px;font-weight:700;margin-bottom:4px}
+.roi-item p{font-size:13px;color:var(--sub);line-height:1.5}
+.roi-visual{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:32px;position:relative;overflow:hidden}
+.roi-visual::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border:1px solid var(--brd);transform:rotate(20deg);animation:rs 20s linear infinite}
+@keyframes rs{to{transform:rotate(380deg)}}
+.roi-stat{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--brd)}
+.roi-stat:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.roi-num{font-family:var(--fh);font-size:48px;font-weight:700;color:var(--blue);line-height:1;margin-bottom:4px}
+.roi-label{font-size:13px;color:var(--sub);font-family:var(--fh)}
+#pakete{padding:100px 0;background:var(--card);border-top:1px solid var(--brd)}
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.pkc{background:rgba(5,5,16,.7);border:1px solid var(--brd);border-radius:var(--r);padding:40px 32px;transition:all .3s;position:relative}
+.pkc.ft{border:2px solid var(--blue);box-shadow:0 0 40px var(--soft)}
+.pkb{display:inline-block;font-family:var(--fh);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:var(--blue);color:#fff;padding:4px 12px;border-radius:4px;margin-bottom:20px}
+.pkn{font-family:var(--fh);font-size:24px;font-weight:700;margin-bottom:8px}
+.pkp{font-family:var(--fh);font-size:15px;color:var(--bl);margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--brd)}
+.pkl{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.pkl li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--sub)}
+.pkl i{color:var(--bl);font-size:16px;flex-shrink:0;margin-top:2px}
+.pkcta{width:100%;justify-content:center}
+.pkc:hover{transform:translateY(-4px)}
+#faq{padding:100px 0;background:var(--bg)}
+.fw{max-width:760px;margin:60px auto 0}
+.fi{border:1px solid var(--brd);border-radius:var(--r);margin-bottom:12px;overflow:hidden;transition:border-color .3s}
+.fi.op{border-color:rgba(0,56,255,.45)}
+.fq{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:var(--card);cursor:pointer;border:none;color:#fff;font-family:var(--fh);font-size:16px;font-weight:500;text-align:left;transition:background .2s;gap:16px}
+.fq:hover{background:rgba(17,17,51,.8)}.fq i{font-size:20px;color:var(--bl);flex-shrink:0;transition:transform .3s}
+.fi.op .fq i{transform:rotate(45deg)}
+.fa{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.fai{padding:20px 24px;font-size:15px;color:var(--sub);line-height:1.7;border-top:1px solid var(--brd)}
+#ce{padding:100px 0;background:var(--blue);position:relative;overflow:hidden;text-align:center}
+#ce::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.2),transparent)}
+#ce::after{content:'';position:absolute;top:-150px;right:-150px;width:500px;height:500px;border:1px solid rgba(255,255,255,.1);transform:rotate(20deg);animation:rs 35s linear infinite}
+.cei{position:relative;z-index:1}.cei h2{font-family:var(--fh);font-size:clamp(28px,5vw,52px);font-weight:700;margin-bottom:16px}
+.cei p{font-size:18px;color:rgba(255,255,255,.85);margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto}
+.cex{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:28px;font-size:13px;color:rgba(255,255,255,.75);flex-wrap:wrap;font-family:var(--fh)}
+.cex span{display:flex;align-items:center;gap:6px}
+footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--brd)}
+.fb h3{font-family:var(--fh);font-size:20px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.fb p{font-size:14px;color:var(--sub);line-height:1.7;max-width:280px}
+.fn h4,.fc h4{font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);margin-bottom:16px}
+.fn ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fn a{font-size:14px;color:var(--sub);transition:color .2s}.fn a:hover,.fn a.act{color:#fff}
+.fc p{font-size:14px;color:var(--sub);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.fc i{color:var(--bl);font-size:16px;flex-shrink:0}
+.soc{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.sl3{width:38px;height:38px;border:1px solid var(--brd);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--sub);transition:all .25s}
+.sl3:hover{border-color:var(--blue);color:#fff;background:rgba(0,56,255,.15);transform:translateY(-2px)}
+.fbot{padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--sub);flex-wrap:wrap;gap:12px}
+.fbot a{color:var(--sub);transition:color .2s}.fbot a:hover{color:#fff}.fl{display:flex;gap:20px}
+@media(max-width:768px){
+  .nl,.nr .btn{display:none}.burg{display:flex}
+  .pg,.lg,.pk,.roi-grid{grid-template-columns:1fr}
+  .sg{grid-template-columns:repeat(2,1fr)}
+  .si{border-right:none;border-bottom:1px solid var(--brd)}
+  .hctas{flex-direction:column;align-items:center}
+  .fg{grid-template-columns:1fr;gap:36px}
+  .fbot{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){.section{padding:70px 0}.hh1{font-size:36px}.sn{font-size:48px}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="container"><div class="ni"><a href="index.html" class="logo"><div class="lm">LMS</div><span class="ln">Leon Media Solution</span></a><ul class="nl"><li><a href="index.html#leistungen">Leistungen</a></li><li><a href="index.html#portfolio">Portfolio</a></li><li><a href="ueber-mich.html">Über mich</a></li><li><a href="index.html#blog">Blog</a></li><li><a href="index.html#kontakt">Kontakt</a></li></ul><div class="nr"><a href="index.html#kontakt" class="btn bp">Erstgespräch buchen</a><button class="burg" id="burg"><span></span><span></span><span></span></button></div></div></div></nav>
+<div class="mm" id="mm"><a href="index.html#leistungen" onclick="cM()">Leistungen</a><a href="index.html#portfolio" onclick="cM()">Portfolio</a><a href="ueber-mich.html" onclick="cM()">Über mich</a><a href="index.html#blog" onclick="cM()">Blog</a><a href="index.html#kontakt" onclick="cM()">Kontakt</a><a href="index.html#kontakt" class="btn bp" onclick="cM()">Erstgespräch buchen</a></div>
+<div class="bc"><div class="container"><div class="bci"><a href="index.html">Startseite</a><i class="ti ti-chevron-right"></i><a href="#">Leistungen</a><i class="ti ti-chevron-right"></i><span>Firmen & Unternehmen</span></div></div></div>
+<section id="hero">
+  <div class="hbg"><div class="orb o1"></div><div class="orb o2"></div><div class="grid-pat"></div></div>
+  <div class="hi">
+    <div class="hbadge"><i class="ti ti-building"></i> Für Firmen & Unternehmen</div>
+    <h1 class="hh1">Social Media der<br>wirklich <em>Kunden bringt.</em></h1>
+    <p class="hsub">Kein Posting in die Leere — sondern eine Strategie die deine Zielgruppe erreicht, Vertrauen aufbaut und messbar mehr Anfragen generiert.</p>
+    <div class="hctas">
+      <a href="index.html#kontakt" class="btn bp blg pulse"><i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen</a>
+      <a href="#leistungen" class="btn bo blg">Meine Leistungen</a>
+    </div>
+    <div class="htrust"><span><i class="ti ti-check"></i> Messbarer ROI</span><span><i class="ti ti-check"></i> Professionelle Umsetzung</span><span><i class="ti ti-check"></i> Persönliche Betreuung</span></div>
+  </div>
+  <div class="sci"><div class="sd"></div></div>
+</section>
+<section id="pain">
+  <div class="container">
+    <div class="tc reveal"><p class="sl">Das Problem</p><h2 class="st">Kommt dir das bekannt vor?</h2><p class="ss">Viele Firmen sind auf Social Media aktiv — aber ohne Strategie verpufft das Budget.</p></div>
+    <div class="pg">
+      <div class="pc reveal d1"><i class="ti ti-chart-arrows-vertical pi"></i><h3>Wir posten regelmäßig — aber es kommen keine neuen Kunden.</h3><p>Sichtbarkeit ohne Strategie ist verschwendetes Budget. Was fehlt: die richtige Botschaft zur richtigen Zeit an die richtige Zielgruppe.</p></div>
+      <div class="pc reveal d2"><i class="ti ti-clock pi"></i><h3>Für Social Media fehlt intern die Zeit und das Know-how.</h3><p>Dein Team hat andere Prioritäten. Professionelles Social Media Management auslagern spart Zeit und bringt bessere Ergebnisse.</p></div>
+      <div class="pc reveal d3"><i class="ti ti-chart-pie pi"></i><h3>Wir wissen nicht ob unser Marketing wirklich funktioniert.</h3><p>Ohne klare KPIs und Reports ist Marketing ein Blindflug. Du verdienst Transparenz und messbare Ergebnisse.</p></div>
+    </div>
+  </div>
+</section>
+<section id="stats"><div class="container"><div class="sg"><div class="si reveal"><div class="sn" data-target="50" data-suffix="+">0</div><div class="sl2">Betreute Kunden</div></div><div class="si reveal d1"><div class="sn" data-target="280" data-suffix="%">0</div><div class="sl2">Ø Reichweiten-Plus</div></div><div class="si reveal d2"><div class="sn" data-target="5" data-suffix="">0</div><div class="sl2">Jahre Erfahrung</div></div><div class="si reveal d3"><div class="sn" data-target="3" data-suffix="">0</div><div class="sl2">Branchen</div></div></div></div></section>
+<section id="leistungen">
+  <div class="container">
+    <div class="reveal"><p class="sl">Meine Leistungen</p><h2 class="st">Was ich für dein Unternehmen tue</h2><p class="ss">Vom ersten Post bis zur kompletten digitalen Präsenz — alles aus einer Hand.</p></div>
+    <div class="lg">
+      <div class="lc reveal d1"><div class="lic"><i class="ti ti-brand-instagram"></i></div><h3>Social Media Management</h3><p>Strategie, Content-Erstellung und Community-Pflege auf Instagram, Facebook, LinkedIn und TikTok — professionell und konsistent.</p><span class="ltag"><i class="ti ti-clock" style="font-size:12px"></i> Monatlich</span></div>
+      <div class="lc reveal d2"><div class="lic"><i class="ti ti-ad"></i></div><h3>Paid Ads (Meta & Google)</h3><p>Gezielte Werbeanzeigen die deine Wunschkunden erreichen — mit klarem Budget, klaren Zielen, klaren Ergebnissen.</p><span class="ltag"><i class="ti ti-clock" style="font-size:12px"></i> Monatlich</span></div>
+      <div class="lc reveal d3"><div class="lic"><i class="ti ti-pencil"></i></div><h3>Blog & Content Marketing</h3><p>SEO-optimierte Inhalte die Vertrauen aufbauen, Expertise zeigen und organisch neue Kunden bringen.</p><span class="ltag"><i class="ti ti-clock" style="font-size:12px"></i> Monatlich</span></div>
+      <div class="lc reveal d1"><div class="lic"><i class="ti ti-brand-youtube"></i></div><h3>YouTube-Kanal für Firmen</h3><p>Produkt-Videos, Unternehmensvorstellungen, How-To-Inhalte — YouTube als Vertrauens- und Reichweitenmotor.</p><span class="ltag"><i class="ti ti-sparkles" style="font-size:12px"></i> Auf Anfrage</span></div>
+      <div class="lc reveal d2"><div class="lic"><i class="ti ti-microphone"></i></div><h3>Firmen-Podcast</h3><p>Positioniere dein Unternehmen als Branchenexperte — mit einem Podcast der Vertrauen schafft und Reichweite aufbaut.</p><span class="ltag"><i class="ti ti-sparkles" style="font-size:12px"></i> Auf Anfrage</span></div>
+      <div class="lc reveal d3"><div class="lic"><i class="ti ti-layout"></i></div><h3>Webseite (Squarespace)</h3><p>Professionelle, schnelle und conversion-optimierte Website die Besucher zu Kunden macht — mit eigenem CMS.</p><span class="ltag"><i class="ti ti-sparkles" style="font-size:12px"></i> Einmalig</span></div>
+    </div>
+  </div>
+</section>
+<section id="roi" class="section">
+  <div class="container">
+    <div class="roi-grid">
+      <div class="roi-text reveal">
+        <p class="sl">Warum Leon Media Solution</p>
+        <h2 class="st">Marketing das sich rechnet</h2>
+        <p class="ss">Kein Blindflug, kein Bauchgefühl — sondern Strategie die messbar funktioniert.</p>
+        <div class="roi-list" style="margin-top:32px">
+          <div class="roi-item"><div class="roi-icon"><i class="ti ti-chart-line"></i></div><div><h4>Messbare Ergebnisse</h4><p>Monatliche Reports mit klaren KPIs — Reichweite, Leads, Conversions. Du siehst was dein Budget bringt.</p></div></div>
+          <div class="roi-item"><div class="roi-icon"><i class="ti ti-target"></i></div><div><h4>Zielgruppengenau</h4><p>Kein Streuverlust — wir erreichen genau die Menschen die als Kunden in Frage kommen.</p></div></div>
+          <div class="roi-item"><div class="roi-icon"><i class="ti ti-user-heart"></i></div><div><h4>Persönlicher Ansprechpartner</h4><p>Du arbeitest direkt mit Volker — kein anonymes Team, keine Übergaben, keine Missverständnisse.</p></div></div>
+        </div>
+      </div>
+      <div class="roi-visual reveal d2">
+        <div class="roi-stat"><div class="roi-num" data-target="280" data-suffix="%">0%</div><div class="roi-label">Durchschnittliche Reichweiten-Steigerung</div></div>
+        <div class="roi-stat"><div class="roi-num" data-target="50" data-suffix="+">0+</div><div class="roi-label">Betreute Kunden aus verschiedenen Branchen</div></div>
+        <div class="roi-stat"><div class="roi-num" data-target="5" data-suffix="">0</div><div class="roi-label">Jahre Erfahrung im digitalen Marketing</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="pakete">
+  <div class="container">
+    <div class="tc reveal"><p class="sl">Meine Angebote</p><h2 class="st">Das passende Paket für dein Unternehmen</h2><p class="ss">Flexibel, skalierbar und auf deine Branche zugeschnitten.</p></div>
+    <div class="pk">
+      <div class="pkc reveal d1"><div class="pkn">Business-Starter</div><div class="pkp">Einstieg ins professionelle Marketing · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> 1–2 Social Media Kanäle</li><li><i class="ti ti-check"></i> Monatlicher Content-Plan</li><li><i class="ti ti-check"></i> Community Management</li><li><i class="ti ti-check"></i> Monatlicher Report</li><li><i class="ti ti-check"></i> Persönliche Betreuung</li></ul><a href="index.html#kontakt" class="btn bo pkcta">Anfragen</a></div>
+      <div class="pkc ft reveal d2"><div class="pkb">Empfohlen</div><div class="pkn">Business-Pro</div><div class="pkp">Multi-Channel mit Ads · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> Alle relevanten Kanäle</li><li><i class="ti ti-check"></i> Content-Produktion inklusive</li><li><i class="ti ti-check"></i> Meta + Google Ads</li><li><i class="ti ti-check"></i> Blog & SEO-Content</li><li><i class="ti ti-check"></i> Wöchentliche Updates</li><li><i class="ti ti-check"></i> Detaillierte KPI-Reports</li></ul><a href="index.html#kontakt" class="btn bp pkcta">Anfragen</a></div>
+      <div class="pkc reveal d3"><div class="pkn">Business-Premium</div><div class="pkp">Volldigitale Präsenz · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> Alle Leistungen inklusive</li><li><i class="ti ti-check"></i> Social + YouTube + Podcast</li><li><i class="ti ti-check"></i> Webseite inklusive</li><li><i class="ti ti-check"></i> Ads + Blog + PR</li><li><i class="ti ti-check"></i> Monatliche Strategie-Calls</li><li><i class="ti ti-check"></i> Tägliche Betreuung</li></ul><a href="index.html#kontakt" class="btn bo pkcta">Anfragen</a></div>
+    </div>
+  </div>
+</section>
+<section id="faq" class="section">
+  <div class="container">
+    <div class="tc reveal"><p class="sl">Häufige Fragen</p><h2 class="st">Deine Fragen — meine Antworten</h2></div>
+    <div class="fw">
+      <div class="fi reveal d1"><button class="fq" onclick="tog(this)">Arbeitet ihr auch mit kleinen Unternehmen?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Ja — die Unternehmensgröße spielt keine Rolle. Ob Einzelunternehmer, KMU oder mittelständisches Unternehmen: Ich passe die Strategie an dein Budget und deine Ziele an. Es gibt kein Mindestumsatz.</div></div></div>
+      <div class="fi reveal d2"><button class="fq" onclick="tog(this)">Wie lange dauert es bis ich Ergebnisse sehe?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Erste messbare Ergebnisse — mehr Reichweite, mehr Profilbesuche, erste Anfragen — sind oft nach 4–8 Wochen sichtbar. Paid Ads liefern schneller Ergebnisse als organisches Marketing. Ein realistischer Zeithorizont für nachhaltiges Wachstum sind 3–6 Monate.</div></div></div>
+      <div class="fi reveal d3"><button class="fq" onclick="tog(this)">Welche Branchen betreust du?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Ich bin branchenoffen — von Handwerk über Gastronomie bis hin zu Dienstleistungen und E-Commerce. Im Erstgespräch analysieren wir gemeinsam, welche Kanäle und Strategien für deine spezifische Branche am besten funktionieren.</div></div></div>
+      <div class="fi reveal d4"><button class="fq" onclick="tog(this)">Wie hoch sollte das Ads-Budget sein?<i class="ti ti-plus"></i></button><div class="fai" style="display:none"></div><div class="fa"><div class="fai">Das hängt von deinen Zielen und der Wettbewerbssituation ab. Ich arbeite mit jedem Budget — und helfe dir, es optimal einzusetzen. Wir besprechen das gemeinsam im Erstgespräch ohne Verpflichtung.</div></div></div>
+      <div class="fi reveal d5"><button class="fq" onclick="tog(this)">Bekomme ich regelmäßige Reports?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Ja — monatliche Reports sind Standard. Darin siehst du alle wichtigen KPIs: Reichweite, Engagement, Klicks, Leads und Conversions. Auf Wunsch auch wöchentliche Updates. Volle Transparenz ist für mich selbstverständlich.</div></div></div>
+    </div>
+  </div>
+</section>
+<section id="ce"><div class="container"><div class="cei reveal"><h2>Mehr Kunden durch Social Media?</h2><p>Buche dein kostenloses Erstgespräch — unverbindlich, persönlich, ohne Risiko.</p><a href="index.html#kontakt" class="btn bw blg"><i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen</a><div class="cex"><span><i class="ti ti-check"></i> Kein Risiko</span><span><i class="ti ti-check"></i> Antwort in 24h</span><span><i class="ti ti-check"></i> Für alle Branchen</span></div></div></div></section>
+<footer><div class="container"><div class="fg"><div class="fb"><h3><div class="lm" style="width:36px;height:36px;font-size:13px;border-radius:6px">LMS</div>Leon Media Solution</h3><p>Messbare Marketinglösungen für Künstler, Musiker, Veranstalter & Firmen.</p><div class="soc" style="margin-top:20px"><a href="#" class="sl3"><i class="ti ti-brand-instagram"></i></a><a href="#" class="sl3"><i class="ti ti-brand-facebook"></i></a><a href="#" class="sl3"><i class="ti ti-brand-youtube"></i></a><a href="#" class="sl3"><i class="ti ti-brand-linkedin"></i></a><a href="#" class="sl3"><i class="ti ti-brand-tiktok"></i></a></div></div><div class="fn"><h4>Navigation</h4><ul><li><a href="index.html">Startseite</a></li><li><a href="kuenstler.html">Für Künstler</a></li><li><a href="veranstalter.html">Für Veranstalter</a></li><li><a href="firmen.html" class="act">Für Firmen</a></li><li><a href="index.html#kontakt">Kontakt</a></li></ul></div><div class="fc"><h4>Kontakt</h4><p><i class="ti ti-mail"></i> vmissun@web.de</p><p><i class="ti ti-phone"></i> 01716852540</p><p><i class="ti ti-world"></i> leonmediasolution.de</p><a href="index.html#kontakt" class="btn bp" style="margin-top:20px;font-size:13px;padding:10px 20px"><i class="ti ti-calendar"></i> Termin buchen</a></div></div><div class="fbot"><span>© 2025 Leon Media Solution · Inh. Volker Missun</span><div class="fl"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></div></div></footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>20));
+const b=document.getElementById('burg'),m=document.getElementById('mm');
+b.addEventListener('click',()=>{b.classList.toggle('o');m.classList.toggle('o')});
+function cM(){b.classList.remove('o');m.classList.remove('o')}
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function tog(btn){const it=btn.closest('.fi'),an=it.querySelector('.fa'),op=it.classList.contains('op');document.querySelectorAll('.fi.op').forEach(i=>{i.classList.remove('op');i.querySelector('.fa').style.maxHeight='0'});if(!op){it.classList.add('op');an.style.maxHeight=an.scrollHeight+'px'}}
+function cu(el){const t=parseInt(el.dataset.target),s=el.dataset.suffix||'',d=1800,st=performance.now();function u(n){const p=Math.min((n-st)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(e*t)+s;if(p<1)requestAnimationFrame(u)}requestAnimationFrame(u)}
+const ko=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.querySelectorAll('[data-target]').forEach(n=>cu(n));ko.unobserve(x.target)}})},{threshold:.3});
+[document.getElementById('stats'),document.getElementById('roi')].forEach(s=>{if(s)ko.observe(s)});
+</script>
+</body>
+</html>
