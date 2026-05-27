@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Leon Media Solution Blog — Tipps & Wissen zu Social Media, YouTube, Podcast, Marketing für Künstler, Musiker, Veranstalter und Firmen. Von Volker Missun.">
+<title>Blog | Leon Media Solution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+/* ===== VARIABLEN ===== */
+:root{
+  --bg:#050510;--card:#111133;--blue:#0038FF;--bl:#0099FF;
+  --glow:rgba(0,56,255,.35);--soft:rgba(0,56,255,.12);
+  --w:#FFFFFF;--sub:#CCCCDD;--brd:rgba(0,56,255,.18);
+  --fh:'Space Grotesk',sans-serif;--fb:'Inter',sans-serif;
+  --nh:72px;--r:12px
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--w);line-height:1.7;font-size:17px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;transition:background .3s,backdrop-filter .3s,border-bottom .3s}
+nav.sc{background:rgba(5,5,16,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+.ni{display:flex;align-items:center;justify-content:space-between;height:var(--nh)}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--fh)}
+.lm{width:42px;height:42px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:8px;box-shadow:0 0 15px var(--glow);overflow:hidden;position:relative;flex-shrink:0}
+.lm::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:sh 3s infinite}
+@keyframes sh{to{left:100%}}
+.ln{font-size:16px;font-weight:700;color:var(--w)}
+.nl{display:flex;align-items:center;gap:36px;list-style:none}
+.nl a{font-size:14px;font-weight:500;color:var(--sub);transition:color .2s;font-family:var(--fh)}
+.nl a:hover,.nl a.act{color:var(--w)}
+.has-dropdown{position:relative}
+.dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid var(--brd);border-radius:var(--r);padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
+.has-dropdown:hover .dropdown{display:block}
+.dropdown li{list-style:none}
+.dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:var(--sub);transition:all .2s}
+.dropdown a i{font-size:16px;color:var(--bl)}
+.dropdown a:hover{background:rgba(0,56,255,.12);color:var(--w)}
+.nr{display:flex;align-items:center;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:15px;font-weight:500;padding:14px 28px;border-radius:6px;cursor:pointer;transition:all .25s;border:2px solid transparent;white-space:nowrap;text-decoration:none}
+.bp{background:var(--blue);color:#fff;box-shadow:0 0 22px var(--glow)}
+.bp:hover{background:var(--bl);box-shadow:0 0 38px rgba(0,153,255,.5);transform:translateY(-2px)}
+.bo{background:transparent;color:var(--w);border-color:rgba(255,255,255,.35)}
+.bo:hover{border-color:var(--w);background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.burg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.burg span{display:block;width:24px;height:2px;background:var(--w);border-radius:2px;transition:all .3s}
+.burg.o span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burg.o span:nth-child(2){opacity:0}
+.burg.o span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mm{display:none;position:fixed;top:var(--nh);left:0;right:0;background:rgba(5,5,16,.97);backdrop-filter:blur(20px);padding:24px;border-bottom:1px solid var(--brd);z-index:999;flex-direction:column;gap:16px}
+.mm.o{display:flex}
+.mm a{font-family:var(--fh);font-size:18px;font-weight:500;color:var(--sub);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .2s}
+.mm a:hover{color:var(--w)}
+.mm .btn{width:100%;justify-content:center;margin-top:8px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* ===== HERO ===== */
+#hero{padding:calc(var(--nh) + 80px) 0 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--brd)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+.o1{width:600px;height:600px;background:rgba(0,56,255,.09);top:-200px;right:-100px;animation:po 8s ease-in-out infinite}
+.o2{width:350px;height:350px;background:rgba(0,153,255,.06);bottom:-50px;left:-50px;animation:po 10s ease-in-out infinite reverse}
+@keyframes po{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-text .sl{font-family:var(--fh);font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--bl);margin-bottom:16px}
+.hero-text h1{font-family:var(--fh);font-size:clamp(36px,5vw,58px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+.hero-text h1 span{color:var(--blue)}
+.hero-text p{font-size:18px;color:var(--sub);line-height:1.7;margin-bottom:32px}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.hs-item{text-align:center}
+.hs-num{font-family:var(--fh);font-size:32px;font-weight:700;color:var(--blue);line-height:1}
+.hs-label{font-size:13px;color:var(--sub);margin-top:4px}
+/* Featured article card in hero */
+.hero-featured{background:var(--card);border:1px solid var(--brd);border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer}
+.hero-featured:hover{border-color:rgba(0,56,255,.45);box-shadow:0 20px 60px rgba(0,0,0,.4);transform:translateY(-4px)}
+.hf-img{height:220px;background:linear-gradient(135deg,#0d1a5e,#050510);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hf-img::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,56,255,.2),transparent)}
+.hf-img i{font-size:56px;color:rgba(0,56,255,.3)}
+.hf-cat{position:absolute;top:14px;left:14px;background:var(--blue);color:#fff;font-family:var(--fh);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px}
+.hf-body{padding:24px}
+.hf-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--sub);margin-bottom:12px;font-family:var(--fh)}
+.hf-meta i{font-size:14px;color:var(--bl)}
+.hf-title{font-family:var(--fh);font-size:20px;font-weight:700;margin-bottom:10px;line-height:1.3}
+.hf-excerpt{font-size:14px;color:var(--sub);line-height:1.6;margin-bottom:16px}
+.hf-link{font-family:var(--fh);font-size:13px;font-weight:500;color:var(--bl);display:flex;align-items:center;gap:6px;transition:gap .2s}
+.hero-featured:hover .hf-link{gap:10px;color:var(--w)}
+
+/* ===== SUCHE & FILTER ===== */
+#filter-bar{padding:40px 0;background:var(--card);border-bottom:1px solid var(--brd);position:sticky;top:var(--nh);z-index:100}
+.filter-inner{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+/* Suchfeld */
+.search-wrap{position:relative;flex:1;min-width:240px;max-width:360px}
+.search-wrap i{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--sub);pointer-events:none}
+#search-input{width:100%;background:rgba(5,5,16,.8);border:1px solid var(--brd);border-radius:8px;padding:11px 14px 11px 42px;font-size:14px;color:var(--w);font-family:var(--fb);outline:none;transition:border-color .2s,box-shadow .2s}
+#search-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,56,255,.1)}
+#search-input::placeholder{color:rgba(204,204,221,.4)}
+/* Kategorie-Buttons */
+.cats{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.cat-btn{font-family:var(--fh);font-size:13px;font-weight:500;padding:8px 16px;border-radius:20px;border:1px solid var(--brd);color:var(--sub);background:transparent;cursor:pointer;transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.cat-btn i{font-size:14px}
+.cat-btn:hover{border-color:rgba(0,56,255,.4);color:var(--w);background:rgba(0,56,255,.08)}
+.cat-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 0 15px var(--glow)}
+/* Ergebnis-Zähler */
+#result-count{font-size:13px;color:var(--sub);font-family:var(--fh);margin-left:auto;white-space:nowrap}
+
+/* ===== BLOG GRID ===== */
+#blog-section{padding:80px 0 100px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+/* Artikel-Karte */
+.article-card{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);overflow:hidden;transition:all .3s;display:flex;flex-direction:column;cursor:pointer}
+.article-card:hover{border-color:rgba(0,56,255,.45);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.ac-img{height:180px;background:linear-gradient(135deg,#0d1a5e,#070718);position:relative;overflow:hidden;flex-shrink:0}
+.ac-img::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,56,255,.15),transparent)}
+.ac-img-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:42px;color:rgba(0,56,255,.25)}
+.ac-img-gradient{position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to top,var(--card),transparent)}
+/* Kategorie-Badge auf Bild */
+.ac-cat{position:absolute;top:12px;left:12px;font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;color:#fff}
+.cat-sm{background:#0038FF}.cat-yt{background:#cc0000}.cat-pod{background:#6a0dad}
+.cat-art{background:#1a6e1a}.cat-ev{background:#aa5500}.cat-tip{background:#005577}
+/* Karten-Inhalt */
+.ac-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.ac-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--sub);margin-bottom:10px;font-family:var(--fh)}
+.ac-meta i{font-size:13px;color:var(--bl)}
+.ac-title{font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.3;color:var(--w);transition:color .2s}
+.article-card:hover .ac-title{color:var(--bl)}
+.ac-excerpt{font-size:14px;color:var(--sub);line-height:1.6;margin-bottom:16px;flex:1}
+.ac-footer{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid rgba(255,255,255,.06)}
+.ac-read{font-family:var(--fh);font-size:12px;font-weight:500;color:var(--bl);display:flex;align-items:center;gap:5px;transition:gap .2s,color .2s}
+.article-card:hover .ac-read{gap:8px;color:var(--w)}
+.ac-tag{font-size:11px;color:var(--sub);background:rgba(255,255,255,.05);padding:3px 8px;border-radius:4px;font-family:var(--fh)}
+
+/* Keine Ergebnisse */
+#no-results{display:none;grid-column:1/-1;text-align:center;padding:80px 24px}
+#no-results i{font-size:48px;color:rgba(0,56,255,.3);margin-bottom:16px;display:block}
+#no-results h3{font-family:var(--fh);font-size:22px;font-weight:700;margin-bottom:8px}
+#no-results p{font-size:16px;color:var(--sub)}
+
+/* Newsletter-Banner */
+#newsletter{padding:80px 0;background:linear-gradient(135deg,rgba(0,56,255,.12),rgba(0,0,0,0) 60%),var(--card);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd)}
+.nl-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.nl-text .sl{font-family:var(--fh);font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--bl);margin-bottom:14px}
+.nl-text h2{font-family:var(--fh);font-size:clamp(28px,4vw,40px);font-weight:700;margin-bottom:14px}
+.nl-text p{font-size:17px;color:var(--sub);line-height:1.7}
+.nl-form{display:flex;flex-direction:column;gap:12px}
+.nl-input{background:rgba(5,5,16,.8);border:1px solid var(--brd);border-radius:8px;padding:14px 18px;font-size:15px;color:var(--w);font-family:var(--fb);outline:none;transition:border-color .2s,box-shadow .2s}
+.nl-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,56,255,.1)}
+.nl-input::placeholder{color:rgba(204,204,221,.4)}
+.nl-btn{background:var(--blue);color:#fff;padding:14px 28px;border-radius:6px;font-family:var(--fh);font-size:15px;font-weight:500;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .25s;box-shadow:0 0 20px var(--glow)}
+.nl-btn:hover{background:var(--bl);box-shadow:0 0 35px rgba(0,153,255,.4);transform:translateY(-2px)}
+.nl-note{font-size:12px;color:rgba(204,204,221,.5);display:flex;align-items:center;gap:6px}
+.nl-note i{font-size:13px;color:var(--bl)}
+
+/* CTA */
+#cta-end{padding:100px 0;background:var(--blue);text-align:center;position:relative;overflow:hidden}
+#cta-end::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.2),transparent)}
+#cta-end::after{content:'';position:absolute;top:-150px;right:-150px;width:500px;height:500px;border:1px solid rgba(255,255,255,.1);transform:rotate(20deg);animation:rs 35s linear infinite}
+@keyframes rs{to{transform:rotate(380deg)}}
+.cta-inner{position:relative;z-index:1}
+.cta-inner h2{font-family:var(--fh);font-size:clamp(28px,5vw,52px);font-weight:700;margin-bottom:16px}
+.cta-inner p{font-size:18px;color:rgba(255,255,255,.85);margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto}
+.bw{background:#fff;color:var(--blue);font-weight:700}
+.bw:hover{background:rgba(255,255,255,.9);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid var(--brd)}
+.fb h3{font-family:var(--fh);font-size:20px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.fb p{font-size:14px;color:var(--sub);line-height:1.7;max-width:260px;margin-bottom:20px}
+.fn h4,.fc h4{font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);margin-bottom:16px}
+.fn ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fn a{font-size:14px;color:var(--sub);transition:color .2s}.fn a:hover,.fn a.act{color:var(--w)}
+.fc p{font-size:14px;color:var(--sub);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.fc i{color:var(--bl);font-size:16px;flex-shrink:0}
+.soc{display:flex;gap:10px;flex-wrap:wrap}
+.sl3{width:38px;height:38px;border:1px solid var(--brd);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--sub);transition:all .25s}
+.sl3:hover{border-color:var(--blue);color:var(--w);background:rgba(0,56,255,.15);transform:translateY(-2px)}
+.fbot{padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--sub);flex-wrap:wrap;gap:12px}
+.fbot a{color:var(--sub);transition:color .2s}.fbot a:hover{color:var(--w)}
+.fl{display:flex;gap:20px}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nl,.nr .btn{display:none}.burg{display:flex}
+  .hero-inner,.nl-inner{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
+  .filter-inner{flex-direction:column;align-items:flex-start}
+  .search-wrap{max-width:100%;width:100%}
+  #result-count{margin-left:0}
+  .fg{grid-template-columns:1fr;gap:32px}
+  .fbot{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){
+  .blog-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="ni">
+      <a href="index.html" class="logo">
+        <img src="Logo_Design.png" alt="Leon Media Solution" style="height:42px;width:auto;object-fit:contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="lm" style="display:none">LMS</div>
+        <span class="ln">Leon Media Solution</span>
+      </a>
+      <ul class="nl">
+        <li class="has-dropdown">
+          <a href="#" onclick="return false">Leistungen <i class="ti ti-chevron-down" style="font-size:12px;vertical-align:middle"></i></a>
+          <ul class="dropdown">
+            <li><a href="kuenstler.html"><i class="ti ti-music"></i> Für Künstler & Musiker</a></li>
+            <li><a href="veranstalter.html"><i class="ti ti-confetti"></i> Für Veranstalter</a></li>
+            <li><a href="firmen.html"><i class="ti ti-building"></i> Für Firmen</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="blog.html" class="act">Blog</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <div class="nr">
+        <a href="kontakt.html" class="btn bp">Erstgespräch buchen</a>
+        <button class="burg" id="burg"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <a href="kuenstler.html" onclick="cM()"><i class="ti ti-music" style="margin-right:8px;color:var(--bl)"></i>Für Künstler & Musiker</a>
+  <a href="veranstalter.html" onclick="cM()"><i class="ti ti-confetti" style="margin-right:8px;color:var(--bl)"></i>Für Veranstalter</a>
+  <a href="firmen.html" onclick="cM()"><i class="ti ti-building" style="margin-right:8px;color:var(--bl)"></i>Für Firmen</a>
+  <a href="index.html#portfolio" onclick="cM()">Portfolio</a>
+  <a href="ueber-mich.html" onclick="cM()">Über mich</a>
+  <a href="blog.html" onclick="cM()">Blog</a>
+  <a href="kontakt.html" onclick="cM()">Kontakt</a>
+  <a href="kontakt.html" class="btn bp" onclick="cM()">Erstgespräch buchen</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"><div class="orb o1"></div><div class="orb o2"></div></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text reveal">
+        <p class="sl">Wissen & Inspiration</p>
+        <h1>Der Blog für<br><span>mehr Sichtbarkeit.</span></h1>
+        <p>Praxistipps, Strategien und Insider-Wissen zu Social Media, YouTube, Podcast und Online-Marketing — speziell für Künstler, Musiker, Veranstalter und Firmen.</p>
+        <div class="hero-stats">
+          <div class="hs-item">
+            <div class="hs-num">5</div>
+            <div class="hs-label">Kategorien</div>
+          </div>
+          <div class="hs-item">
+            <div class="hs-num">100%</div>
+            <div class="hs-label">Kostenlos</div>
+          </div>
+          <div class="hs-item">
+            <div class="hs-num">∞</div>
+            <div class="hs-label">Tipps</div>
+          </div>
+        </div>
+      </div>
+      <!-- Featured Article -->
+      <div class="hero-featured reveal d2" onclick="window.location='#'">
+        <div class="hf-img">
+          <i class="ti ti-brand-instagram"></i>
+          <div class="hf-cat">Featured</div>
+        </div>
+        <div class="hf-body">
+          <div class="hf-meta">
+            <span><i class="ti ti-calendar"></i> 27. Mai 2025</span>
+            <span><i class="ti ti-clock"></i> 5 Min. Lesezeit</span>
+          </div>
+          <div class="hf-title">Instagram 2025: Diese 5 Strategien bringen dir wirklich mehr Fans</div>
+          <div class="hf-excerpt">Likes allein reichen nicht mehr. Lerne welche Inhalte der Algorithmus 2025 wirklich bevorzugt — und wie du als Künstler davon profitierst.</div>
+          <span class="hf-link">Artikel lesen <i class="ti ti-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER & SUCHE -->
+<div id="filter-bar">
+  <div class="container">
+    <div class="filter-inner">
+      <!-- Suche -->
+      <div class="search-wrap">
+        <i class="ti ti-search"></i>
+        <input type="text" id="search-input" placeholder="Artikel suchen..." oninput="filterArticles()">
+      </div>
+      <!-- Kategorien -->
+      <div class="cats">
+        <button class="cat-btn active" data-cat="all" onclick="setCategory(this,'all')">
+          <i class="ti ti-layout-grid"></i> Alle
+        </button>
+        <button class="cat-btn" data-cat="social" onclick="setCategory(this,'social')">
+          <i class="ti ti-brand-instagram"></i> Social Media
+        </button>
+        <button class="cat-btn" data-cat="youtube" onclick="setCategory(this,'youtube')">
+          <i class="ti ti-brand-youtube"></i> YouTube
+        </button>
+        <button class="cat-btn" data-cat="podcast" onclick="setCategory(this,'podcast')">
+          <i class="ti ti-microphone"></i> Podcast
+        </button>
+        <button class="cat-btn" data-cat="kuenstler" onclick="setCategory(this,'kuenstler')">
+          <i class="ti ti-music"></i> Tipps für Künstler
+        </button>
+        <button class="cat-btn" data-cat="events" onclick="setCategory(this,'events')">
+          <i class="ti ti-confetti"></i> Events
+        </button>
+      </div>
+      <span id="result-count">12 Artikel</span>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG GRID -->
+<section id="blog-section">
+  <div class="container">
+    <div class="blog-grid" id="blog-grid">
+
+      <!-- ARTIKEL 1 -->
+      <article class="article-card reveal" data-cat="social" data-title="instagram algorithmus 2025 mehr reichweite künstler" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-brand-instagram"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-sm">Social Media</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 27. Mai 2025</span>
+            <span><i class="ti ti-clock"></i> 5 Min.</span>
+          </div>
+          <h2 class="ac-title">Instagram-Algorithmus 2025: So bekommst du mehr Reichweite</h2>
+          <p class="ac-excerpt">Der Algorithmus hat sich geändert. Wer diese 3 Faktoren kennt, wird vom System bevorzugt — und zwar kostenlos.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">Reichweite</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 2 -->
+      <article class="article-card reveal d1" data-cat="kuenstler" data-title="musiker social media strategie fanbase aufbauen" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-music"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-art">Tipps für Künstler</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 20. Mai 2025</span>
+            <span><i class="ti ti-clock"></i> 7 Min.</span>
+          </div>
+          <h2 class="ac-title">Als Newcomer zur Fanbase: Dein 90-Tage-Plan für Musiker</h2>
+          <p class="ac-excerpt">Von null auf sichtbar — so baust du in 3 Monaten eine echte Community auf, die deine Musik wirklich liebt.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">Newcomer</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 3 -->
+      <article class="article-card reveal d2" data-cat="youtube" data-title="youtube kanal aufbauen künstler musiker views" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-brand-youtube"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-yt">YouTube</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 14. Mai 2025</span>
+            <span><i class="ti ti-clock"></i> 8 Min.</span>
+          </div>
+          <h2 class="ac-title">YouTube-Kanal für Musiker: Die 7 Fehler die alle machen</h2>
+          <p class="ac-excerpt">Falsche Thumbnails, keine SEO, kein Upload-Rhythmus — diese Fehler kosten dich täglich Views und Abonnenten.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">YouTube SEO</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 4 -->
+      <article class="article-card reveal" data-cat="events" data-title="event marketing tickets verkaufen ads veranstalter" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-confetti"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-ev">Events</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 8. Mai 2025</span>
+            <span><i class="ti ti-clock"></i> 6 Min.</span>
+          </div>
+          <h2 class="ac-title">Event ausverkauft in 3 Wochen: Die Ads-Strategie für Veranstalter</h2>
+          <p class="ac-excerpt">Mit dem richtigen Meta-Ads-Setup erreichst du genau die Menschen die dein Event lieben werden — bevor du auch nur einen Flyer druckst.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">Paid Ads</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 5 -->
+      <article class="article-card reveal d1" data-cat="podcast" data-title="podcast starten musiker künstler reichweite aufbauen" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-microphone"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-pod">Podcast</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 1. Mai 2025</span>
+            <span><i class="ti ti-clock"></i> 6 Min.</span>
+          </div>
+          <h2 class="ac-title">Warum jeder Künstler 2025 einen Podcast braucht</h2>
+          <p class="ac-excerpt">Audio ist das intimste Medium. Fans die deinen Podcast hören, kaufen Tickets, kaufen Merch — und bleiben dir treu.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">Podcast</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 6 -->
+      <article class="article-card reveal d2" data-cat="social" data-title="tiktok strategie reichweite viral gehen tipps" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-brand-tiktok"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-sm">Social Media</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 24. Apr. 2025</span>
+            <span><i class="ti ti-clock"></i> 4 Min.</span>
+          </div>
+          <h2 class="ac-title">TikTok für Künstler: Viral gehen ohne zu tanzen</h2>
+          <p class="ac-excerpt">Du musst keine Trends nachmachen. Diese 4 Content-Formate funktionieren für Musiker auf TikTok — authentisch und ohne Cringe.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">TikTok</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 7 -->
+      <article class="article-card reveal" data-cat="kuenstler" data-title="pressefotos künstler professionell tipps" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-camera"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-art">Tipps für Künstler</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 17. Apr. 2025</span>
+            <span><i class="ti ti-clock"></i> 5 Min.</span>
+          </div>
+          <h2 class="ac-title">Pressefotos die wirklich Türen öffnen: Was Veranstalter sehen wollen</h2>
+          <p class="ac-excerpt">Dein Pressefoto ist deine Visitenkarte bei Veranstaltern. Diese 6 Kriterien entscheiden ob du gebucht wirst oder nicht.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">Branding</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 8 -->
+      <article class="article-card reveal d1" data-cat="youtube" data-title="youtube seo thumbnail titel optimieren" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-photo"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-yt">YouTube</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 10. Apr. 2025</span>
+            <span><i class="ti ti-clock"></i> 7 Min.</span>
+          </div>
+          <h2 class="ac-title">Thumbnails die geklickt werden: Die Psychologie dahinter</h2>
+          <p class="ac-excerpt">Ein gutes Thumbnail verdoppelt deine Klickrate. Lerne die 3 Elemente die jedes erfolgreiche Thumbnail hat — mit konkreten Beispielen.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">YouTube SEO</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 9 -->
+      <article class="article-card reveal d2" data-cat="events" data-title="social media strategie events veranstaltungen reichweite" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-calendar-event"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-ev">Events</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 3. Apr. 2025</span>
+            <span><i class="ti ti-clock"></i> 5 Min.</span>
+          </div>
+          <h2 class="ac-title">8 Wochen vor dem Event: Dein Social-Media-Countdown-Plan</h2>
+          <p class="ac-excerpt">Wann postest du was, wie baust du Spannung auf und wann schaltest du Ads? Dieser Kalender nimmt dir die Arbeit ab.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">Strategie</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 10 -->
+      <article class="article-card reveal" data-cat="social" data-title="linkedin firmen unternehmen marketing b2b sichtbarkeit" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-brand-linkedin"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-sm">Social Media</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 27. März 2025</span>
+            <span><i class="ti ti-clock"></i> 6 Min.</span>
+          </div>
+          <h2 class="ac-title">LinkedIn für Firmen: Wie du B2B-Kunden organisch gewinnst</h2>
+          <p class="ac-excerpt">LinkedIn ist 2025 das stärkste organische B2B-Netzwerk. Diese Strategie bringt dir Anfragen ohne Werbebudget.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">B2B</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 11 -->
+      <article class="article-card reveal d1" data-cat="podcast" data-title="podcast equipment ausrüstung günstig starten" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-headphones"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-pod">Podcast</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 20. März 2025</span>
+            <span><i class="ti ti-clock"></i> 5 Min.</span>
+          </div>
+          <h2 class="ac-title">Podcast starten für unter 150€: Das brauchst du wirklich</h2>
+          <p class="ac-excerpt">Kein teures Studio nötig. Mit diesem Setup klingst du vom ersten Tag an professionell — und kannst sofort loslegen.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">Equipment</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTIKEL 12 -->
+      <article class="article-card reveal d2" data-cat="kuenstler" data-title="musikproduzent finden label kontakt tipps newcomer" onclick="window.location='#'">
+        <div class="ac-img">
+          <div class="ac-img-icon"><i class="ti ti-vinyl"></i></div>
+          <div class="ac-img-gradient"></div>
+          <span class="ac-cat cat-art">Tipps für Künstler</span>
+        </div>
+        <div class="ac-body">
+          <div class="ac-meta">
+            <span><i class="ti ti-calendar"></i> 13. März 2025</span>
+            <span><i class="ti ti-clock"></i> 8 Min.</span>
+          </div>
+          <h2 class="ac-title">Musikproduzent oder Label finden: So kommst du an die richtigen Kontakte</h2>
+          <p class="ac-excerpt">Das richtige Netzwerk öffnet Türen die du alleine nie erreichen würdest. So gehst du strategisch vor — ohne Kaltakquise.</p>
+          <div class="ac-footer">
+            <span class="ac-read">Weiterlesen <i class="ti ti-arrow-right"></i></span>
+            <span class="ac-tag">Netzwerk</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- KEINE ERGEBNISSE -->
+      <div id="no-results">
+        <i class="ti ti-search-off"></i>
+        <h3>Kein Artikel gefunden</h3>
+        <p>Versuche einen anderen Suchbegriff oder wähle eine andere Kategorie.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="container">
+    <div class="nl-inner">
+      <div class="nl-text reveal">
+        <p class="sl">Immer aktuell</p>
+        <h2>Kein Artikel mehr verpassen.</h2>
+        <p>Erhalte neue Tipps, Strategien und Insider-Wissen direkt in dein Postfach — kostenlos, kein Spam, jederzeit abmeldbar.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="nl-form">
+          <input type="text" class="nl-input" placeholder="Dein Name">
+          <input type="email" class="nl-input" placeholder="Deine E-Mail-Adresse">
+          <button class="nl-btn" onclick="alert('Newsletter-Funktion wird bald aktiviert!')">
+            <i class="ti ti-send"></i> Jetzt anmelden
+          </button>
+          <div class="nl-note">
+            <i class="ti ti-lock"></i> Kein Spam. Jederzeit abmeldbar. DSGVO-konform.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-end">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Bereit, sichtbar zu werden?</h2>
+      <p>Weniger lesen, mehr umsetzen — buch dir dein kostenloses Erstgespräch und wir entwickeln gemeinsam deine Strategie.</p>
+      <a href="kontakt.html" class="btn bw" style="font-size:17px;padding:18px 40px">
+        <i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fg">
+      <div class="fb">
+        <h3>
+          <div class="lm" style="width:36px;height:36px;font-size:13px;border-radius:6px">LMS</div>
+          Leon Media Solution
+        </h3>
+        <p>Messbare Marketinglösungen für Künstler, Musiker, Veranstalter & Firmen.</p>
+        <div class="soc">
+          <a href="#" class="sl3"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="sl3"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="sl3"><i class="ti ti-brand-youtube"></i></a>
+          <a href="#" class="sl3"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" class="sl3"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="fn">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="kuenstler.html">Für Künstler</a></li>
+          <li><a href="veranstalter.html">Für Veranstalter</a></li>
+          <li><a href="firmen.html">Für Firmen</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="fn">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="blog.html" class="act">Blog</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Kontakt</h4>
+        <p><i class="ti ti-mail"></i><a href="mailto:vmissun@web.de" style="color:var(--sub)">vmissun@web.de</a></p>
+        <p><i class="ti ti-phone"></i><a href="tel:01716852540" style="color:var(--sub)">01716852540</a></p>
+        <p style="margin-top:16px"><a href="kontakt.html" class="btn bp" style="font-size:13px;padding:10px 18px"><i class="ti ti-calendar"></i> Termin buchen</a></p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2025 Leon Media Solution · Inh. Volker Missun</span>
+      <div class="fl">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+// NAV
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>20));
+const burg=document.getElementById('burg'),mm=document.getElementById('mm');
+burg.addEventListener('click',()=>{burg.classList.toggle('o');mm.classList.toggle('o')});
+function cM(){burg.classList.remove('o');mm.classList.remove('o')}
+
+// REVEAL
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// FILTER & SUCHE
+let activeCat = 'all';
+
+function setCategory(btn, cat) {
+  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  activeCat = cat;
+  filterArticles();
+}
+
+function filterArticles() {
+  const q = document.getElementById('search-input').value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.article-card');
+  let visible = 0;
+
+  cards.forEach(card => {
+    const cat = card.dataset.cat;
+    const title = card.dataset.title || '';
+    const cardTitle = card.querySelector('.ac-title')?.textContent.toLowerCase() || '';
+    const cardExcerpt = card.querySelector('.ac-excerpt')?.textContent.toLowerCase() || '';
+
+    const catMatch = activeCat === 'all' || cat === activeCat;
+    const searchMatch = q === '' || title.includes(q) || cardTitle.includes(q) || cardExcerpt.includes(q);
+
+    if (catMatch && searchMatch) {
+      card.style.display = '';
+      visible++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  // Ergebnis-Zähler
+  const countEl = document.getElementById('result-count');
+  countEl.textContent = visible === 1 ? '1 Artikel' : `${visible} Artikel`;
+
+  // Keine Ergebnisse
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+}
+</script>
+</body>
+</html>
