@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Warum Schlager-Künstler Social Media nicht ignorieren dürfen — Von Volker Missun, Leon Media Solution. Die Bühne hat sich verlagert. Wer heute nur auf Konzerte und Radio setzt, verliert den Anschluss.">
+<meta name="author" content="Volker Missun">
+<meta property="og:title" content="Warum Schlager-Künstler Social Media nicht ignorieren dürfen">
+<meta property="og:description" content="Die Bühne hat sich verlagert. Wer heute nur auf Konzerte und Radio setzt, verliert den Anschluss – und sein Publikum.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.leonmediasolution.de/blog-post-01.html">
+<title>Warum Schlager-Künstler Social Media nicht ignorieren dürfen | Leon Media Solution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+:root{
+  --bg:#050510;--card:#111133;--blue:#0038FF;--bl:#0099FF;
+  --glow:rgba(0,56,255,.35);--soft:rgba(0,56,255,.12);
+  --w:#FFFFFF;--sub:#CCCCDD;--brd:rgba(0,56,255,.18);
+  --fh:'Space Grotesk',sans-serif;--fp:'Playfair Display',serif;--fb:'Inter',sans-serif;
+  --nh:72px;--r:12px;--max-prose:720px
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--w);line-height:1.7;font-size:17px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.prose{max-width:var(--max-prose);margin:0 auto}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;transition:background .3s,backdrop-filter .3s,border-bottom .3s}
+nav.sc{background:rgba(5,5,16,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+.ni{display:flex;align-items:center;justify-content:space-between;height:var(--nh)}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--fh)}
+.lm{width:42px;height:42px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:8px;box-shadow:0 0 15px var(--glow);flex-shrink:0}
+.ln{font-size:16px;font-weight:700;color:var(--w)}
+.nl{display:flex;align-items:center;gap:36px;list-style:none}
+.nl a{font-size:14px;font-weight:500;color:var(--sub);transition:color .2s;font-family:var(--fh)}
+.nl a:hover,.nl a.act{color:var(--w)}
+.has-dropdown{position:relative}
+.dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid var(--brd);border-radius:var(--r);padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
+.has-dropdown:hover .dropdown{display:block}
+.dropdown li{list-style:none}
+.dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:var(--sub);transition:all .2s}
+.dropdown a i{font-size:16px;color:var(--bl)}
+.dropdown a:hover{background:rgba(0,56,255,.12);color:var(--w)}
+.nr{display:flex;align-items:center;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:15px;font-weight:500;padding:14px 28px;border-radius:6px;cursor:pointer;transition:all .25s;border:2px solid transparent;white-space:nowrap}
+.bp{background:var(--blue);color:#fff;box-shadow:0 0 22px var(--glow)}
+.bp:hover{background:var(--bl);box-shadow:0 0 38px rgba(0,153,255,.5);transform:translateY(-2px)}
+.bo{background:transparent;color:var(--w);border-color:rgba(255,255,255,.35)}
+.bo:hover{border-color:var(--w);background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.bw{background:#fff;color:var(--blue);font-weight:700}
+.bw:hover{background:rgba(255,255,255,.9);transform:translateY(-2px)}
+.burg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.burg span{display:block;width:24px;height:2px;background:var(--w);border-radius:2px;transition:all .3s}
+.burg.o span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burg.o span:nth-child(2){opacity:0}
+.burg.o span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mm{display:none;position:fixed;top:var(--nh);left:0;right:0;background:rgba(5,5,16,.97);backdrop-filter:blur(20px);padding:24px;border-bottom:1px solid var(--brd);z-index:999;flex-direction:column;gap:16px}
+.mm.o{display:flex}
+.mm a{font-family:var(--fh);font-size:18px;font-weight:500;color:var(--sub);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .2s}
+.mm a:hover{color:var(--w)}
+.mm .btn{width:100%;justify-content:center;margin-top:8px}
+
+/* Breadcrumb */
+.bc{padding:calc(var(--nh) + 28px) 0 0}
+.bci{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--sub);font-family:var(--fh);flex-wrap:wrap}
+.bci a{color:var(--sub);transition:color .2s}
+.bci a:hover{color:var(--w)}
+.bci i{font-size:12px;color:rgba(255,255,255,.2)}
+.bci span{color:var(--bl)}
+
+/* ===== HERO ARTIKEL ===== */
+.article-hero{padding:48px 0 0;position:relative;overflow:hidden}
+.ah-bg{position:absolute;inset:0;z-index:0}
+.orb{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none}
+.o1{width:600px;height:600px;background:rgba(0,56,255,.07);top:-200px;right:-100px;animation:po 10s ease-in-out infinite}
+.o2{width:300px;height:300px;background:rgba(0,153,255,.05);bottom:0;left:-50px;animation:po 12s ease-in-out infinite reverse}
+@keyframes po{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.ah-inner{position:relative;z-index:1;max-width:var(--max-prose);margin:0 auto;padding:0 24px}
+
+/* Kategorie-Badge */
+.ah-cat{display:inline-flex;align-items:center;gap:6px;font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:var(--blue);color:#fff;padding:5px 12px;border-radius:4px;margin-bottom:24px}
+
+/* Artikel-Headline */
+.ah-title{font-family:var(--fp);font-size:clamp(28px,5vw,48px);font-weight:700;line-height:1.15;margin-bottom:20px;color:var(--w);letter-spacing:-.01em}
+
+/* Untertitel */
+.ah-sub{font-size:clamp(17px,2.5vw,21px);color:var(--sub);line-height:1.6;margin-bottom:32px;font-style:italic;border-left:3px solid var(--blue);padding-left:20px}
+
+/* Autor-Zeile */
+.ah-meta{display:flex;align-items:center;gap:16px;padding:20px 0;border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);margin-bottom:0;flex-wrap:wrap}
+.ah-avatar{width:48px;height:48px;border-radius:50%;background:var(--soft);border:2px solid var(--brd);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:16px;color:var(--bl);flex-shrink:0;overflow:hidden}
+.ah-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.ah-author-info{}
+.ah-author-name{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--w);margin-bottom:2px}
+.ah-author-role{font-size:13px;color:var(--sub)}
+.ah-meta-right{margin-left:auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.ah-meta-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--sub);font-family:var(--fh)}
+.ah-meta-item i{font-size:15px;color:var(--bl)}
+.ah-meta-item strong{color:var(--w)}
+
+/* Artikel-Bild */
+.article-cover{width:100%;max-width:var(--max-prose);margin:0 auto;aspect-ratio:16/9;background:linear-gradient(135deg,#0d1a5e 0%,#050510 60%,#0a1535 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid var(--brd)}
+.article-cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,rgba(0,56,255,.2),transparent 60%)}
+.article-cover-icon{font-size:80px;color:rgba(0,56,255,.2);position:relative;z-index:1}
+.article-cover-label{position:absolute;bottom:20px;left:20px;right:20px;font-family:var(--fh);font-size:13px;color:rgba(255,255,255,.5);z-index:1}
+.cover-wrap{padding:40px 24px;max-width:var(--max-prose);margin:0 auto}
+
+/* ===== ARTIKEL-INHALT ===== */
+.article-content{padding:0 24px 80px;max-width:var(--max-prose);margin:0 auto}
+
+/* Typografie */
+.article-content h2{font-family:var(--fp);font-size:clamp(22px,3.5vw,32px);font-weight:700;margin:48px 0 18px;color:var(--w);line-height:1.2;position:relative;padding-left:20px}
+.article-content h2::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:3px;background:linear-gradient(to bottom,var(--blue),var(--bl));border-radius:2px}
+.article-content h3{font-family:var(--fh);font-size:clamp(18px,2.5vw,22px);font-weight:700;margin:36px 0 14px;color:var(--w)}
+.article-content p{font-size:17px;color:rgba(204,204,221,.9);line-height:1.8;margin-bottom:22px}
+.article-content p strong{color:var(--w);font-weight:500}
+.article-content a{color:var(--bl);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.article-content a:hover{color:var(--w)}
+
+/* Highlight-Box */
+.highlight-box{background:var(--soft);border:1px solid rgba(0,56,255,.25);border-radius:var(--r);padding:24px 28px;margin:32px 0;position:relative;overflow:hidden}
+.highlight-box::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--blue),var(--bl))}
+.highlight-box p{color:var(--w);font-size:17px;margin-bottom:0;font-style:italic}
+.highlight-box .hb-icon{font-size:20px;color:var(--bl);margin-bottom:10px;display:block}
+
+/* Zitat */
+blockquote{margin:36px 0;padding:24px 32px;border-left:4px solid var(--blue);background:rgba(0,0,0,.2);border-radius:0 var(--r) var(--r) 0}
+blockquote p{font-family:var(--fp);font-size:clamp(18px,2.8vw,24px);font-style:italic;color:var(--w);margin-bottom:8px;line-height:1.5}
+blockquote cite{font-size:13px;color:var(--sub);font-family:var(--fh);font-style:normal}
+
+/* Aufzählungen */
+.article-content ul,.article-content ol{margin:20px 0 24px 0;display:flex;flex-direction:column;gap:10px;list-style:none;padding:0}
+.article-content ul li,.article-content ol li{font-size:17px;color:rgba(204,204,221,.9);line-height:1.7;display:flex;align-items:flex-start;gap:12px}
+.article-content ul li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:9px}
+.article-content ol{counter-reset:ol}
+.article-content ol li{counter-increment:ol}
+.article-content ol li::before{content:counter(ol);min-width:28px;height:28px;border-radius:50%;background:var(--soft);border:1px solid var(--brd);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:12px;font-weight:700;color:var(--bl);flex-shrink:0;margin-top:2px}
+
+/* Statistik-Karten */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0}
+.stat-card{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:24px 20px;text-align:center;transition:all .3s}
+.stat-card:hover{border-color:rgba(0,56,255,.4);transform:translateY(-3px)}
+.stat-num{font-family:var(--fh);font-size:40px;font-weight:700;color:var(--blue);line-height:1;margin-bottom:6px}
+.stat-label{font-size:13px;color:var(--sub);font-family:var(--fh);line-height:1.4}
+
+/* Plattform-Cards */
+.platform-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.platform-card{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:all .3s}
+.platform-card:hover{border-color:rgba(0,56,255,.35);transform:translateX(4px)}
+.pc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.pc-body{}
+.pc-name{font-family:var(--fh);font-size:15px;font-weight:700;margin-bottom:4px}
+.pc-desc{font-size:13px;color:var(--sub);line-height:1.5}
+
+/* Trennlinie */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--brd),transparent);margin:40px 0}
+
+/* Fazit-Box */
+.fazit-box{background:linear-gradient(135deg,rgba(0,56,255,.12),rgba(0,153,255,.06));border:1px solid rgba(0,56,255,.25);border-radius:16px;padding:32px;margin:40px 0}
+.fazit-box h3{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:16px;color:var(--bl);display:flex;align-items:center;gap:8px}
+.fazit-box ul{margin:0}
+.fazit-box ul li::before{background:var(--bl)}
+
+/* Teilen */
+.share-bar{padding:28px 0;border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);margin:40px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.share-label{font-family:var(--fh);font-size:14px;font-weight:500;color:var(--sub)}
+.share-btn{display:flex;align-items:center;gap:7px;padding:8px 16px;border-radius:6px;font-family:var(--fh);font-size:13px;font-weight:500;cursor:pointer;border:1px solid var(--brd);color:var(--sub);background:transparent;transition:all .2s}
+.share-btn:hover{border-color:var(--blue);color:var(--w);background:rgba(0,56,255,.1)}
+.share-btn i{font-size:16px}
+
+/* Autor-Bio */
+.author-bio{background:var(--card);border:1px solid var(--brd);border-radius:16px;padding:28px;margin:40px 0;display:flex;gap:24px;align-items:flex-start}
+.bio-avatar{width:72px;height:72px;border-radius:50%;background:var(--soft);border:2px solid var(--brd);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:22px;color:var(--bl);flex-shrink:0;overflow:hidden}
+.bio-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.bio-content{}
+.bio-name{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:2px}
+.bio-role{font-size:13px;color:var(--bl);font-family:var(--fh);margin-bottom:12px}
+.bio-text{font-size:15px;color:var(--sub);line-height:1.7;margin-bottom:16px}
+.bio-links{display:flex;gap:10px;flex-wrap:wrap}
+.bio-link{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--sub);border:1px solid var(--brd);padding:5px 12px;border-radius:6px;transition:all .2s;font-family:var(--fh)}
+.bio-link:hover{border-color:var(--blue);color:var(--w);background:rgba(0,56,255,.1)}
+
+/* Verwandte Artikel */
+.related{padding:60px 0;background:var(--card);border-top:1px solid var(--brd)}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.rel-card{background:rgba(5,5,16,.6);border:1px solid var(--brd);border-radius:var(--r);padding:20px;transition:all .3s;cursor:pointer}
+.rel-card:hover{border-color:rgba(0,56,255,.4);transform:translateY(-4px)}
+.rel-cat{font-family:var(--fh);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--bl);margin-bottom:8px}
+.rel-title{font-family:var(--fh);font-size:15px;font-weight:700;margin-bottom:8px;line-height:1.3;color:var(--w);transition:color .2s}
+.rel-card:hover .rel-title{color:var(--bl)}
+.rel-meta{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:8px}
+
+/* CTA */
+#cta-end{padding:80px 0;background:var(--blue);text-align:center;position:relative;overflow:hidden}
+#cta-end::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.2),transparent)}
+#cta-end::after{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border:1px solid rgba(255,255,255,.1);transform:rotate(20deg);animation:rs 35s linear infinite}
+@keyframes rs{to{transform:rotate(380deg)}}
+.cta-inner{position:relative;z-index:1}
+.cta-inner h2{font-family:var(--fh);font-size:clamp(24px,4vw,44px);font-weight:700;margin-bottom:14px}
+.cta-inner p{font-size:17px;color:rgba(255,255,255,.85);margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid var(--brd)}
+.fb h3{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.fb p{font-size:14px;color:var(--sub);line-height:1.7;max-width:260px;margin-bottom:20px}
+.fn h4,.fc h4{font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);margin-bottom:16px}
+.fn ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fn a{font-size:14px;color:var(--sub);transition:color .2s}
+.fn a:hover,.fn a.act{color:var(--w)}
+.fc p{font-size:14px;color:var(--sub);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.fc i{color:var(--bl);font-size:16px;flex-shrink:0}
+.soc{display:flex;gap:10px;flex-wrap:wrap}
+.sl3{width:36px;height:36px;border:1px solid var(--brd);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--sub);transition:all .25s}
+.sl3:hover{border-color:var(--blue);color:var(--w);background:rgba(0,56,255,.15)}
+.fbot{padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--sub);flex-wrap:wrap;gap:12px}
+.fbot a{color:var(--sub);transition:color .2s}
+.fbot a:hover{color:var(--w)}
+.fl{display:flex;gap:20px}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nl,.nr .btn{display:none}.burg{display:flex}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .platform-grid{grid-template-columns:1fr}
+  .rel-grid{grid-template-columns:1fr}
+  .author-bio{flex-direction:column;gap:16px}
+  .fg{grid-template-columns:1fr;gap:32px}
+  .fbot{flex-direction:column;text-align:center}
+  .ah-meta-right{margin-left:0;width:100%}
+  .share-bar{flex-direction:column;align-items:flex-start}
+  .stat-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .article-content h2{padding-left:16px}
+  blockquote{padding:18px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="ni">
+      <a href="index.html" class="logo">
+        <img src="Logo_Design.png" alt="Leon Media Solution" style="height:42px;width:auto;object-fit:contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="lm" style="display:none">LMS</div>
+        <span class="ln">Leon Media Solution</span>
+      </a>
+      <ul class="nl">
+        <li class="has-dropdown">
+          <a href="#" onclick="return false">Leistungen <i class="ti ti-chevron-down" style="font-size:12px;vertical-align:middle"></i></a>
+          <ul class="dropdown">
+            <li><a href="kuenstler.html"><i class="ti ti-music"></i> Für Künstler & Musiker</a></li>
+            <li><a href="veranstalter.html"><i class="ti ti-confetti"></i> Für Veranstalter</a></li>
+            <li><a href="firmen.html"><i class="ti ti-building"></i> Für Firmen</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="blog.html" class="act">Blog</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <div class="nr">
+        <a href="kontakt.html" class="btn bp">Erstgespräch buchen</a>
+        <button class="burg" id="burg"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <a href="kuenstler.html" onclick="cM()"><i class="ti ti-music" style="margin-right:8px;color:var(--bl)"></i>Für Künstler & Musiker</a>
+  <a href="veranstalter.html" onclick="cM()"><i class="ti ti-confetti" style="margin-right:8px;color:var(--bl)"></i>Für Veranstalter</a>
+  <a href="firmen.html" onclick="cM()"><i class="ti ti-building" style="margin-right:8px;color:var(--bl)"></i>Für Firmen</a>
+  <a href="ueber-mich.html" onclick="cM()">Über mich</a>
+  <a href="blog.html" onclick="cM()">Blog</a>
+  <a href="kontakt.html" onclick="cM()">Kontakt</a>
+  <a href="kontakt.html" class="btn bp" onclick="cM()">Erstgespräch buchen</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="bc">
+  <div class="container">
+    <div class="bci">
+      <a href="index.html">Startseite</a>
+      <i class="ti ti-chevron-right"></i>
+      <a href="blog.html">Blog</a>
+      <i class="ti ti-chevron-right"></i>
+      <span>Tipps für Künstler</span>
+    </div>
+  </div>
+</div>
+
+<!-- ARTIKEL HERO -->
+<section class="article-hero">
+  <div class="ah-bg"><div class="orb o1"></div><div class="orb o2"></div></div>
+  <div class="ah-inner">
+    <div class="ah-cat"><i class="ti ti-music" style="font-size:13px"></i> Tipps für Künstler · Artikel Nr. 1</div>
+    <h1 class="ah-title">Warum Schlager-Künstler Social Media nicht ignorieren dürfen</h1>
+    <p class="ah-sub">Die Bühne hat sich verlagert. Wer heute nur auf Konzerte und Radio setzt, verliert den Anschluss – und sein Publikum.</p>
+    <div class="ah-meta">
+      <div class="ah-avatar">
+        <img src="Volker_3.jpg" alt="Volker Missun" onerror="this.style.display='none';this.parentElement.textContent='VM'">
+      </div>
+      <div class="ah-author-info">
+        <div class="ah-author-name">Volker Missun</div>
+        <div class="ah-author-role">Music Marketing · Dortmund · Leon Media Solution</div>
+      </div>
+      <div class="ah-meta-right">
+        <div class="ah-meta-item"><i class="ti ti-calendar"></i> <strong>18. Mai 2026</strong></div>
+        <div class="ah-meta-item"><i class="ti ti-clock"></i> 7 Min. Lesezeit</div>
+        <div class="ah-meta-item"><i class="ti ti-eye"></i> Artikel Nr. 1</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVER BILD -->
+<div class="cover-wrap">
+  <div class="article-cover">
+    <i class="ti ti-music article-cover-icon"></i>
+    <div class="article-cover-label">Social Media trifft Schlager — eine neue Bühne wartet</div>
+  </div>
+</div>
+
+<!-- ARTIKEL INHALT -->
+<article class="article-content">
+
+  <p>Es gibt eine Frage, die ich immer wieder höre — von Sängerinnen und Sängern, von Entertainern, von Künstlern die seit Jahren auf Bühnen stehen und ihre Zuhörer begeistern: <strong>„Brauche ich wirklich Social Media? Meine Fans kommen doch zu meinen Konzerten."</strong></p>
+
+  <p>Ich verstehe diese Frage. Wirklich. Social Media kann sich fremd anfühlen, wenn man sein Leben damit verbracht hat, Menschen auf einer echten Bühne zu begeistern. Aber es ist eine Frage, die ich in den kommenden Jahren immer seltener hören werde — nicht weil die Antwort sich ändert, sondern weil die Realität des Musikmarkts sie längst beantwortet hat.</p>
+
+  <div class="highlight-box">
+    <i class="ti ti-bulb hb-icon"></i>
+    <p>Die Bühne hat sich verlagert. Sie existiert noch — aber sie ist größer geworden. Und ein Teil von ihr ist digital.</p>
+  </div>
+
+  <h2>Die Zahlen sprechen eine klare Sprache</h2>
+
+  <p>Lass uns kurz sachlich sein, bevor wir emotional werden. Denn die Daten sind eindeutig — und sie betreffen auch das Schlager-Publikum direkt.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-num">82%</div>
+      <div class="stat-label">der über 50-Jährigen in Deutschland nutzen täglich ein Smartphone</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">67%</div>
+      <div class="stat-label">der Schlager-Fans entdecken neue Künstler heute über Online-Kanäle</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">3x</div>
+      <div class="stat-label">höhere Ticket-Nachfrage bei Künstlern mit aktiver Social-Media-Präsenz</div>
+    </div>
+  </div>
+
+  <p>Das Schlager-Publikum ist nicht offline. Es ist auf Facebook, YouTube und zunehmend auch auf Instagram und TikTok. Die Frage ist nicht ob deine Fans dort sind — die Frage ist ob <strong>du</strong> dort bist, wenn sie dich suchen.</p>
+
+  <h2>Was passiert, wenn du nicht da bist</h2>
+
+  <p>Stell dir vor, ein Fan erzählt seiner Nachbarin von deinem letzten Konzert. Sie war begeistert, möchte mehr über dich erfahren. Sie greift zum Smartphone, gibt deinen Namen ein — und findet entweder nichts, oder einen veralteten Facebook-Account mit dem letzten Post aus dem Jahr 2019.</p>
+
+  <p>Was passiert dann? Sie klickt weiter. Zu einem anderen Künstler. Einem der präsent ist. Einem der antwortet, der postet, der Einblicke gibt, der eine Geschichte erzählt.</p>
+
+  <blockquote>
+    <p>Sichtbarkeit ist keine Frage des Talents mehr. Sie ist eine Frage der Präsenz.</p>
+    <cite>— Volker Missun, Leon Media Solution</cite>
+  </blockquote>
+
+  <p>Das klingt hart. Aber es ist die Wahrheit die ich täglich erlebe — in Gesprächen mit Künstlern die sich fragen warum ihre Tourneen schwerer zu füllen sind, obwohl sie besser singen als je zuvor.</p>
+
+  <h2>Die richtigen Plattformen für Schlager-Künstler</h2>
+
+  <p>Hier ist die gute Nachricht: Du musst nicht auf jeder Plattform aktiv sein. Du musst auf den <strong>richtigen</strong> Plattformen aktiv sein. Und die sehen für Schlager-Künstler anders aus als für Hip-Hop-Künstler.</p>
+
+  <div class="platform-grid">
+    <div class="platform-card">
+      <div class="pc-icon" style="background:rgba(24,119,242,.15)"><i class="ti ti-brand-facebook" style="color:#1877f2"></i></div>
+      <div class="pc-body">
+        <div class="pc-name">Facebook</div>
+        <div class="pc-desc">Dein stärkstes Werkzeug. Dein Kernpublikum ist hier aktiv. Konzertankündigungen, Backstage-Einblicke, Faninteraktion — Facebook ist für Schlager-Künstler noch immer das Fundament.</div>
+      </div>
+    </div>
+    <div class="platform-card">
+      <div class="pc-icon" style="background:rgba(255,0,0,.1)"><i class="ti ti-brand-youtube" style="color:#cc0000"></i></div>
+      <div class="pc-body">
+        <div class="pc-name">YouTube</div>
+        <div class="pc-desc">Die zweitgrößte Suchmaschine der Welt. Wer nach Schlager-Künstlern sucht, sucht auf YouTube. Konzertmitschnitte, Musikvideos, Backstage — du wirst gefunden, rund um die Uhr.</div>
+      </div>
+    </div>
+    <div class="platform-card">
+      <div class="pc-icon" style="background:rgba(225,48,108,.1)"><i class="ti ti-brand-instagram" style="color:#e1306c"></i></div>
+      <div class="pc-body">
+        <div class="pc-name">Instagram</div>
+        <div class="pc-desc">Jünger, visueller — aber wächst auch im Schlager-Segment stark. Stories und Reels zeigen dich als Mensch hinter dem Mikrofon. Authentizität schlägt Perfektion.</div>
+      </div>
+    </div>
+    <div class="platform-card">
+      <div class="pc-icon" style="background:rgba(0,153,255,.1)"><i class="ti ti-microphone" style="color:var(--bl)"></i></div>
+      <div class="pc-body">
+        <div class="pc-name">Podcast / Audio</div>
+        <div class="pc-desc">Unterschätzt und mächtig. Deine Fans hören beim Autofahren, beim Kochen, beim Spaziergang. Ein eigener Podcast schafft eine Intimität die kein Konzert replizieren kann.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Was du wirklich posten sollst — und was nicht</h2>
+
+  <p>Der größte Irrtum den ich bei Künstlern sehe: Sie denken Social Media bedeutet, täglich ein professionelles Hochglanz-Foto zu posten. Das ist falsch. Und das schreckt die meisten ab, bevor sie überhaupt anfangen.</p>
+
+  <p>Was deine Fans wirklich sehen wollen:</p>
+
+  <ul>
+    <li><strong>Dich als Menschen</strong> — nicht nur als Künstler. Der Moment vor dem Auftritt. Das Lampenfieber. Der Blick hinter die Bühne.</li>
+    <li><strong>Deine Geschichte</strong> — warum singst du? Was bedeutet dir Musik? Welcher Song hat dich als Kind berührt?</li>
+    <li><strong>Dankbarkeit</strong> — ein einfaches "Danke für diesen wunderbaren Abend" mit einem Foto aus dem Saal schlägt jedes perfekte Studio-Foto.</li>
+    <li><strong>Ankündigungen mit Vorfreude</strong> — nicht nur "Konzert am 15. Juni in Dortmund", sondern "Ich kann es kaum erwarten, euch wiederzusehen..."</li>
+    <li><strong>Reaktionen und Interaktion</strong> — beantworte Kommentare. Stelle Fragen. Frage deine Fans welches Lied sie auf dem nächsten Konzert hören wollen.</li>
+  </ul>
+
+  <div class="highlight-box">
+    <i class="ti ti-heart hb-icon"></i>
+    <p>Authentizität schlägt Perfektion — immer. Ein verwackeltes Handyvideo das echte Emotion zeigt, übertrifft jede professionelle Produktion die sich kalt und distanziert anfühlt.</p>
+  </div>
+
+  <h2>Der Zeitaufwand: Weniger als du denkst</h2>
+
+  <p>„Ich hab keine Zeit für das alles." Das höre ich oft. Und ich verstehe es — du probt, du tritt auf, du reist. Aber hier ist die Wahrheit:</p>
+
+  <ol>
+    <li><strong>3 Posts pro Woche</strong> reichen vollkommen aus. Qualität über Quantität.</li>
+    <li><strong>15 Minuten täglich</strong> für Kommentare und Interaktion — das genügt um eine Community aufzubauen.</li>
+    <li><strong>Batching</strong> — nimm dir einmal im Monat zwei Stunden Zeit, erstelle Inhalte für vier Wochen und plane sie ein.</li>
+    <li><strong>Lass helfen</strong> — du musst das nicht alleine machen. Genau dafür gibt es Leute wie mich.</li>
+  </ol>
+
+  <div class="divider"></div>
+
+  <h2>Ein Beispiel das zeigt wie mächtig es sein kann</h2>
+
+  <p>Ich erzähle dir von einem Künstler — kein Name, aber eine wahre Geschichte. Er sang seit 20 Jahren auf Dorffesten und Stadtfesten in Nordrhein-Westfalen. Guter Sänger, bescheidene Online-Präsenz. Ein alter Facebook-Account, kein YouTube-Kanal.</p>
+
+  <p>Wir haben gemeinsam angefangen. Drei Videos pro Woche, konsequent. Backstage-Clips, ein kurzes Konzert-Highlight, eine persönliche Geschichte. Nach vier Monaten hatte er mehr Anfragen von Veranstaltern als in den drei Jahren davor. Nicht weil er besser geworden ist. Sondern weil man ihn endlich <strong>finden</strong> konnte.</p>
+
+  <p>Das ist die Kraft von Social Media — nicht viral gehen, nicht Millionen Follower sammeln. Sondern <strong>gefunden werden</strong> von den richtigen Menschen zur richtigen Zeit.</p>
+
+  <div class="fazit-box">
+    <h3><i class="ti ti-check-circle"></i> Das Fazit auf einen Blick</h3>
+    <ul>
+      <li>Dein Publikum ist online — auf Facebook, YouTube und Instagram.</li>
+      <li>Wer nicht präsent ist, wird nicht gefunden — unabhängig von seinem Talent.</li>
+      <li>Du musst nicht überall sein, sondern auf den richtigen Plattformen regelmäßig aktiv.</li>
+      <li>Authentizität schlägt immer Perfektion — echte Einblicke statt Hochglanz.</li>
+      <li>3 Posts pro Woche und 15 Minuten Interaktion täglich reichen als Einstieg vollkommen aus.</li>
+      <li>Du musst das nicht alleine machen — lass dich unterstützen.</li>
+    </ul>
+  </div>
+
+  <p>Die Bühne wartet auf dich — auch die digitale. Es ist Zeit, sie zu betreten.</p>
+
+  <!-- TEILEN -->
+  <div class="share-bar">
+    <span class="share-label">Artikel teilen:</span>
+    <button class="share-btn" onclick="navigator.share ? navigator.share({title:document.title,url:location.href}) : navigator.clipboard.writeText(location.href).then(()=>alert('Link kopiert!'))">
+      <i class="ti ti-share"></i> Teilen
+    </button>
+    <button class="share-btn" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'_blank')">
+      <i class="ti ti-brand-facebook"></i> Facebook
+    </button>
+    <button class="share-btn" onclick="window.open('https://www.linkedin.com/shareArticle?url='+encodeURIComponent(location.href),'_blank')">
+      <i class="ti ti-brand-linkedin"></i> LinkedIn
+    </button>
+    <button class="share-btn" onclick="navigator.clipboard.writeText(location.href).then(()=>{this.innerHTML='<i class=\'ti ti-check\'></i> Kopiert!';setTimeout(()=>this.innerHTML='<i class=\'ti ti-link\'></i> Link kopieren',2000)})">
+      <i class="ti ti-link"></i> Link kopieren
+    </button>
+  </div>
+
+  <!-- AUTOR BIO -->
+  <div class="author-bio">
+    <div class="bio-avatar">
+      <img src="Volker_3.jpg" alt="Volker Missun" onerror="this.style.display='none';this.parentElement.textContent='VM'">
+    </div>
+    <div class="bio-content">
+      <div class="bio-name">Volker Missun</div>
+      <div class="bio-role">Gründer · Leon Media Solution · Music Marketing · Dortmund</div>
+      <p class="bio-text">Volker Missun hilft Künstlern, Musikern, Veranstaltern und Firmen dabei, professionell sichtbar zu werden — mit Social Media Marketing, Storytelling und echter Erfahrung aus der Kreativbranche. Sein Fokus: Messbare Ergebnisse statt leere Versprechen.</p>
+      <div class="bio-links">
+        <a href="ueber-mich.html" class="bio-link"><i class="ti ti-user"></i> Über mich</a>
+        <a href="kontakt.html" class="bio-link"><i class="ti ti-calendar"></i> Erstgespräch buchen</a>
+        <a href="blog.html" class="bio-link"><i class="ti ti-article"></i> Alle Artikel</a>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+<!-- VERWANDTE ARTIKEL -->
+<section class="related">
+  <div class="container">
+    <p style="font-family:var(--fh);font-size:13px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);margin-bottom:10px">Weiterlesen</p>
+    <h2 style="font-family:var(--fh);font-size:clamp(24px,4vw,36px);font-weight:700;margin-bottom:0">Das könnte dich auch interessieren</h2>
+    <div class="rel-grid">
+      <div class="rel-card" onclick="window.location='blog.html'">
+        <div class="rel-cat">Tipps für Künstler</div>
+        <div class="rel-title">Als Newcomer zur Fanbase: Dein 90-Tage-Plan für Musiker</div>
+        <div class="rel-meta"><i class="ti ti-clock" style="font-size:13px;color:var(--bl)"></i> 7 Min.</div>
+      </div>
+      <div class="rel-card" onclick="window.location='blog.html'">
+        <div class="rel-cat">Social Media</div>
+        <div class="rel-title">Instagram-Algorithmus 2025: So bekommst du mehr Reichweite</div>
+        <div class="rel-meta"><i class="ti ti-clock" style="font-size:13px;color:var(--bl)"></i> 5 Min.</div>
+      </div>
+      <div class="rel-card" onclick="window.location='blog.html'">
+        <div class="rel-cat">Tipps für Künstler</div>
+        <div class="rel-title">Pressefotos die wirklich Türen öffnen: Was Veranstalter sehen wollen</div>
+        <div class="rel-meta"><i class="ti ti-clock" style="font-size:13px;color:var(--bl)"></i> 5 Min.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-end">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Deine Sichtbarkeit beginnt heute.</h2>
+      <p>Lass uns gemeinsam deine Social-Media-Strategie entwickeln — kostenlos, unverbindlich, persönlich.</p>
+      <a href="kontakt.html" class="btn bw" style="font-size:17px;padding:18px 40px">
+        <i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fg">
+      <div class="fb">
+        <h3><div class="lm" style="width:34px;height:34px;font-size:12px;border-radius:6px">LMS</div> Leon Media Solution</h3>
+        <p>Messbare Marketinglösungen für Künstler, Musiker, Veranstalter & Firmen.</p>
+        <div class="soc">
+          <a href="#" class="sl3"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="sl3"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="sl3"><i class="ti ti-brand-youtube"></i></a>
+          <a href="#" class="sl3"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" class="sl3"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="fn">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="kuenstler.html">Für Künstler</a></li>
+          <li><a href="veranstalter.html">Für Veranstalter</a></li>
+          <li><a href="firmen.html">Für Firmen</a></li>
+        </ul>
+      </div>
+      <div class="fn">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="blog.html" class="act">Blog</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Kontakt</h4>
+        <p><i class="ti ti-mail"></i><a href="mailto:vmissun@web.de" style="color:var(--sub)">vmissun@web.de</a></p>
+        <p><i class="ti ti-phone"></i><a href="tel:01716852540" style="color:var(--sub)">01716852540</a></p>
+        <p style="margin-top:16px"><a href="kontakt.html" class="btn bp" style="font-size:13px;padding:10px 18px"><i class="ti ti-calendar"></i> Termin buchen</a></p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Leon Media Solution · Inh. Volker Missun</span>
+      <div class="fl"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>20));
+const burg=document.getElementById('burg'),mm=document.getElementById('mm');
+burg.addEventListener('click',()=>{burg.classList.toggle('o');mm.classList.toggle('o')});
+function cM(){burg.classList.remove('o');mm.classList.remove('o')}
+
+// Lesezeit-Fortschrittsbalken
+const bar=document.createElement('div');
+bar.style.cssText='position:fixed;top:var(--nh,72px);left:0;height:2px;background:#0038FF;z-index:999;transition:width .1s;box-shadow:0 0 8px rgba(0,56,255,.6)';
+document.body.appendChild(bar);
+window.addEventListener('scroll',()=>{
+  const d=document.documentElement;
+  const pct=(d.scrollTop)/(d.scrollHeight-d.clientHeight)*100;
+  bar.style.width=pct+'%';
+});
+</script>
+</body>
+</html>
