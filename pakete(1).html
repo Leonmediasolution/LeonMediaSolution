@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leistungen & Pakete | Leon Media Solution</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a0e1a;
+    --navy-mid: #111827;
+    --navy-light: #1e2a3a;
+    --gold: #c8a96e;
+    --gold-light: #e8d5a3;
+    --cream: #f5efe6;
+    --white: #ffffff;
+    --grey: #6b7280;
+    --grey-light: rgba(107,114,128,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* NAV — passend zur bestehenden Seite */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,14,26,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,169,110,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(245,239,230,0.6);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.6rem 1.4rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--navy); }
+
+  /* HERO */
+  .hero {
+    padding: 10rem 4rem 5rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(200,169,110,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 em { font-style: italic; color: var(--gold); }
+
+  .hero p {
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    color: rgba(245,239,230,0.65);
+    font-size: 1rem;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 3rem auto 0;
+    opacity: 0.3;
+  }
+  .hero-divider-line { flex: 1; height: 1px; background: var(--gold); }
+  .hero-divider span { color: var(--gold); font-size: 0.7rem; }
+
+  /* SECTION */
+  section { padding: 5rem 4rem; }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: rgba(245,239,230,0.55);
+    font-size: 0.9rem;
+    max-width: 520px;
+    margin: 0 auto 4rem;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid rgba(200,169,110,0.15);
+    margin: 0 4rem;
+  }
+
+  /* PAKETE GRID */
+  .pakete-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .paket-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(200,169,110,0.12);
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.4s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .paket-card:hover {
+    border-color: rgba(200,169,110,0.4);
+    transform: translateY(-4px);
+  }
+
+  .paket-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(200,169,110,0.08) 0%, var(--navy-mid) 60%);
+  }
+
+  .paket-card.featured::before {
+    content: 'EMPFOHLEN';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    padding: 0.3rem 1rem;
+  }
+
+  .paket-name {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .paket-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+  }
+
+  .paket-target {
+    font-size: 0.8rem;
+    color: rgba(245,239,230,0.5);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .paket-price {
+    margin-bottom: 1.8rem;
+  }
+
+  .paket-price .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .paket-price .period {
+    font-size: 0.8rem;
+    color: var(--grey);
+    margin-left: 0.3rem;
+  }
+
+  .paket-price .note {
+    font-size: 0.75rem;
+    color: var(--gold-light);
+    margin-top: 0.3rem;
+    display: block;
+  }
+
+  .paket-divider {
+    height: 1px;
+    background: rgba(200,169,110,0.15);
+    margin-bottom: 1.5rem;
+  }
+
+  .paket-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex: 1;
+  }
+
+  .paket-features li {
+    font-size: 0.88rem;
+    color: rgba(245,239,230,0.8);
+    padding: 0.4rem 0;
+    padding-left: 1.4rem;
+    position: relative;
+    border-bottom: 1px solid rgba(200,169,110,0.06);
+  }
+
+  .paket-features li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.55rem;
+    top: 0.6rem;
+  }
+
+  .paket-btn {
+    display: block;
+    text-align: center;
+    padding: 0.9rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .paket-btn:hover, .paket-card.featured .paket-btn {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  /* EINZELLEISTUNGEN */
+  .leistungen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .leistung-block {
+    background: var(--navy-mid);
+    border: 1px solid rgba(200,169,110,0.1);
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+
+  .leistung-block:hover {
+    border-color: rgba(200,169,110,0.3);
+  }
+
+  .leistung-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .leistung-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    color: var(--white);
+  }
+
+  .leistung-block .preis {
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+
+  .leistung-block p {
+    font-size: 0.85rem;
+    color: rgba(245,239,230,0.65);
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+
+  .leistung-block ul {
+    list-style: none;
+  }
+
+  .leistung-block ul li {
+    font-size: 0.82rem;
+    color: rgba(245,239,230,0.7);
+    padding: 0.25rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .leistung-block ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.7rem;
+  }
+
+  /* PREISTABELLE */
+  .preistabelle {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid rgba(200,169,110,0.15);
+  }
+
+  .preistabelle table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .preistabelle thead tr {
+    background: var(--navy-light);
+  }
+
+  .preistabelle thead th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  .preistabelle tbody tr {
+    border-top: 1px solid rgba(200,169,110,0.08);
+    transition: background 0.2s;
+  }
+
+  .preistabelle tbody tr:hover {
+    background: rgba(200,169,110,0.04);
+  }
+
+  .preistabelle tbody td {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.88rem;
+    color: rgba(245,239,230,0.8);
+  }
+
+  .preistabelle tbody td:last-child {
+    color: var(--gold);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
+    border: 1px solid rgba(200,169,110,0.2);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section h2 em { font-style: italic; color: var(--gold); }
+
+  .cta-section p {
+    color: rgba(245,239,230,0.6);
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); }
+
+  .btn-secondary {
+    border: 1px solid rgba(200,169,110,0.4);
+    color: var(--gold);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Jost', sans-serif;
+    transition: all 0.3s;
+  }
+
+  .btn-secondary:hover { border-color: var(--gold); background: rgba(200,169,110,0.08); }
+
+  .hinweis-box {
+    background: rgba(200,169,110,0.06);
+    border-left: 3px solid var(--gold);
+    padding: 1.2rem 1.5rem;
+    margin: 3rem auto 0;
+    max-width: 800px;
+    font-size: 0.85rem;
+    color: rgba(245,239,230,0.7);
+    font-style: italic;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2rem 4rem;
+    border-top: 1px solid rgba(200,169,110,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--grey);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    hr.divider { margin: 0 1.5rem; }
+    .hero { padding: 8rem 1.5rem 4rem; }
+    .cta-section { padding: 2.5rem 1.5rem; }
+    footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    .preistabelle thead th, .preistabelle tbody td { padding: 0.7rem 1rem; }
+  }
+
+  /* OHNE / MIT */
+  .vergleich-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid rgba(200,169,110,0.15);
+  }
+
+  .vergleich-col {
+    padding: 2.5rem;
+  }
+
+  .vergleich-col.ohne {
+    background: rgba(139,26,26,0.08);
+    border-right: 2px solid rgba(200,169,110,0.15);
+  }
+
+  .vergleich-col.mit {
+    background: rgba(200,169,110,0.05);
+  }
+
+  .vergleich-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(200,169,110,0.15);
+  }
+
+  .vergleich-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .ohne .vergleich-icon {
+    background: rgba(139,26,26,0.3);
+    color: #e57373;
+    border: 1px solid rgba(139,26,26,0.4);
+  }
+
+  .mit .vergleich-icon {
+    background: rgba(200,169,110,0.2);
+    color: var(--gold);
+    border: 1px solid rgba(200,169,110,0.4);
+  }
+
+  .vergleich-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .ohne .vergleich-header h3 { color: rgba(245,239,230,0.5); }
+  .mit .vergleich-header h3 { color: var(--white); }
+
+  .vergleich-liste {
+    list-style: none;
+  }
+
+  .vergleich-liste li {
+    font-size: 0.88rem;
+    padding: 0.5rem 0;
+    padding-left: 1.4rem;
+    position: relative;
+    border-bottom: 1px solid rgba(200,169,110,0.06);
+    line-height: 1.5;
+  }
+
+  .ohne .vergleich-liste li {
+    color: rgba(245,239,230,0.5);
+  }
+
+  .ohne .vergleich-liste li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #e57373;
+    font-size: 0.8rem;
+  }
+
+  .mit .vergleich-liste li {
+    color: rgba(245,239,230,0.85);
+  }
+
+  .mit .vergleich-liste li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.55rem;
+    top: 0.7rem;
+  }
+
+  @media (max-width: 768px) {
+    .vergleich-grid {
+      grid-template-columns: 1fr;
+    }
+    .vergleich-col.ohne { border-right: none; border-bottom: 2px solid rgba(200,169,110,0.15); }
+  }
+
+  /* FAQ */
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(200,169,110,0.12);
+  }
+
+  .faq-frage {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 1.4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-align: left;
+    gap: 1rem;
+    transition: color 0.3s;
+  }
+
+  .faq-frage:hover { color: var(--gold); }
+
+  .faq-icon {
+    color: var(--gold);
+    font-size: 1.4rem;
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+    line-height: 1;
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  .faq-antwort {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+  }
+
+  .faq-item.open .faq-antwort {
+    max-height: 300px;
+    padding-bottom: 1.4rem;
+  }
+
+  .faq-antwort p {
+    font-size: 0.88rem;
+    color: rgba(245,239,230,0.65);
+    line-height: 1.8;
+    border-left: 2px solid var(--gold);
+    padding-left: 1.2rem;
+  }
+
+  /* FADE IN */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://www.leonmediasolution.de" class="nav-logo">Leon Media Solution</a>
+  <ul class="nav-links">
+    <li><a href="https://www.leonmediasolution.de/kuenstler.html">Künstler</a></li>
+    <li><a href="https://www.leonmediasolution.de/veranstalter.html">Veranstalter</a></li>
+    <li><a href="https://www.leonmediasolution.de/firmen.html">Firmen</a></li>
+    <li><a href="https://www.leonmediasolution.de/ueber-mich.html">Über mich</a></li>
+    <li><a href="https://www.leonmediasolution.de/kontakt.html">Kontakt</a></li>
+  </ul>
+  <a href="https://www.leonmediasolution.de/kontakt.html" class="nav-cta">Erstgespräch buchen</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-label">Leistungen & Pakete</span>
+  <h1>Was ich für dich<br><em>leisten kann</em></h1>
+  <p>Transparente Pakete. Klare Leistungen. Kein Kleingedrucktes. Monatlich kündbar — ohne Risiko.</p>
+  <div class="hero-divider">
+    <div class="hero-divider-line"></div>
+    <span>✦</span>
+    <div class="hero-divider-line"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SOCIAL MEDIA PAKETE -->
+<section>
+  <span class="section-label">Social Media Management</span>
+  <h2 class="section-title">Deine monatliche Betreuung</h2>
+  <p class="section-sub">Von der Strategie bis zum Post — alles aus einer Hand. Persönlich betreut von Volker Missun.</p>
+
+  <div class="pakete-grid">
+
+    <!-- STARTER -->
+    <div class="paket-card fade-in">
+      <p class="paket-name">Paket</p>
+      <h3 class="paket-title">Starter</h3>
+      <p class="paket-target">Für Einzelkünstler & Einsteiger die starten wollen</p>
+      <div class="paket-price">
+        <span class="amount">499</span><span class="period">€ / Monat</span>
+        <span class="note">Monatlich kündbar · Netto zzgl. MwSt.</span>
+      </div>
+      <div class="paket-divider"></div>
+      <ul class="paket-features">
+        <li>1 Plattform (Facebook oder Instagram)</li>
+        <li>8 Posts pro Monat</li>
+        <li>Redaktionsplan & Content-Strategie</li>
+        <li>Bildgestaltung für jeden Post</li>
+        <li>Monatliches Reporting</li>
+        <li>Kostenloses Erstgespräch (30 Min.)</li>
+      </ul>
+      <a href="https://www.leonmediasolution.de/kontakt.html" class="paket-btn">Jetzt anfragen</a>
+    </div>
+
+    <!-- SICHTBAR -->
+    <div class="paket-card featured fade-in">
+      <p class="paket-name">Paket</p>
+      <h3 class="paket-title">Sichtbar</h3>
+      <p class="paket-target">Für Künstler & Veranstalter die wachsen wollen</p>
+      <div class="paket-price">
+        <span class="amount">899</span><span class="period">€ / Monat</span>
+        <span class="note">Monatlich kündbar · Netto zzgl. MwSt.</span>
+      </div>
+      <div class="paket-divider"></div>
+      <ul class="paket-features">
+        <li>2 Plattformen (Facebook + Instagram)</li>
+        <li>16 Posts pro Monat</li>
+        <li>Redaktionsplan & Content-Strategie</li>
+        <li>Thumbnail & Bildgestaltung</li>
+        <li>Community Management</li>
+        <li>Monatliches Reporting mit Wachstumsanalyse</li>
+        <li>Kostenloses Erstgespräch (45 Min.)</li>
+      </ul>
+      <a href="https://www.leonmediasolution.de/kontakt.html" class="paket-btn">Jetzt anfragen</a>
+    </div>
+
+    <!-- PROFI -->
+    <div class="paket-card fade-in">
+      <p class="paket-name">Paket</p>
+      <h3 class="paket-title">Profi</h3>
+      <p class="paket-target">Für maximale Sichtbarkeit auf allen Kanälen</p>
+      <div class="paket-price">
+        <span class="amount">1.490</span><span class="period">€ / Monat</span>
+        <span class="note">Monatlich kündbar · Netto zzgl. MwSt.</span>
+      </div>
+      <div class="paket-divider"></div>
+      <ul class="paket-features">
+        <li>3 Plattformen (Facebook + Instagram + TikTok oder YouTube)</li>
+        <li>24 Posts + 4 Short-Videos pro Monat</li>
+        <li>Vollständige Content-Strategie</li>
+        <li>Thumbnail & Grafik-Design</li>
+        <li>Community Management komplett</li>
+        <li>YouTube-Kanal-Aufbau & Optimierung</li>
+        <li>Sponsoring-Konzept für Veranstalter</li>
+        <li>Wöchentliches Reporting</li>
+        <li>Persönliches Monats-Meeting</li>
+      </ul>
+      <a href="https://www.leonmediasolution.de/kontakt.html" class="paket-btn">Jetzt anfragen</a>
+    </div>
+
+    <!-- INDIVIDUAL -->
+    <div class="paket-card fade-in">
+      <p class="paket-name">Paket</p>
+      <h3 class="paket-title">Individual</h3>
+      <p class="paket-target">Für Unternehmen & Labels mit besonderen Anforderungen</p>
+      <div class="paket-price">
+        <span class="amount">ab 2.500</span><span class="period">€ / Monat</span>
+        <span class="note">Nach Absprache · Netto zzgl. MwSt.</span>
+      </div>
+      <div class="paket-divider"></div>
+      <ul class="paket-features">
+        <li>Alle Plattformen</li>
+        <li>Unbegrenzte Posts & Inhalte</li>
+        <li>Paid Advertising (Werbebudget separat)</li>
+        <li>Vollständige Musikmarketing-Strategie</li>
+        <li>Persönliche wöchentliche Begleitung</li>
+        <li>Individuelle Vereinbarung aller Leistungen</li>
+      </ul>
+      <a href="https://www.leonmediasolution.de/kontakt.html" class="paket-btn">Angebot anfragen</a>
+    </div>
+
+  </div>
+
+  <div class="hinweis-box fade-in">
+    ✦ Alle Preise sind Nettopreise zzgl. gesetzlicher MwSt. · Monatlich kündbar ohne Mindestlaufzeit · Das Erstgespräch ist immer kostenlos und unverbindlich.
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- MUSIK & KÜNSTLER BERATUNG -->
+<section>
+  <span class="section-label">Musik & Künstler</span>
+  <h2 class="section-title">Aus eigener Erfahrung</h2>
+  <p class="section-sub">Ich habe selbst eine CD aufgenommen, Ibo auf meiner Bühne gehabt und einen YouTube-Kanal aufgebaut. Diese Erfahrung gebe ich an dich weiter.</p>
+
+  <div class="leistungen-grid">
+
+    <div class="leistung-block fade-in">
+      <span class="leistung-icon">🎤</span>
+      <h3>Karriere-Coaching</h3>
+      <span class="preis">150 € / Stunde · Erstgespräch kostenlos</span>
+      <p>Einzelberatung für Künstler, Sänger und Musikbegeisterte die wissen wollen wo sie stehen — und wie sie weiterkommen.</p>
+      <ul>
+        <li>Analyse deiner aktuellen Situation</li>
+        <li>Die 5 Phasen der Schlager-Karriere</li>
+        <li>Konkrete nächste Schritte</li>
+        <li>Social Media Strategie für deine Musik</li>
+        <li>Empfehlungen für Tools & Plattformen</li>
+        <li>Vermittlung zu Produzenten & Studios</li>
+      </ul>
+    </div>
+
+    <div class="leistung-block fade-in">
+      <span class="leistung-icon">🎵</span>
+      <h3>Song-Konzept mit KI</h3>
+      <span class="preis">299 € einmalig</span>
+      <p>Deine Geschichte wird zum Song. Ich produziere einen professionellen KI-Song der wirklich zu dir passt — mit deiner Emotion und deiner Botschaft.</p>
+      <ul>
+        <li>Songtextentwicklung nach deiner Geschichte</li>
+        <li>Professionelle Suno-Produktion</li>
+        <li>Bis zu 3 Versionen zur Auswahl</li>
+        <li>Style-Optimierung (Stimme, Arrangement, BPM)</li>
+        <li>Fertige MP3-Datei</li>
+        <li>Nutzungsrechte inklusive</li>
+      </ul>
+    </div>
+
+    <div class="leistung-block fade-in">
+      <span class="leistung-icon">🏠</span>
+      <h3>Tonstudio-Vermittlung</h3>
+      <span class="preis">Provision nach Vereinbarung</span>
+      <p>Du möchtest eine echte CD — mit echter Stimme, echten Musikern, echtem Studio? Ich begleite dich von der ersten Idee bis zur fertigen Produktion.</p>
+      <ul>
+        <li>Empfehlung geeigneter Produzenten & Studios</li>
+        <li>Briefing und Vorbereitung für die Aufnahme</li>
+        <li>Begleitung beim Aufnahmeprozess auf Wunsch</li>
+        <li>Vermittlung bundesweit</li>
+        <li>Erfahrung aus eigener CD-Produktion</li>
+      </ul>
+    </div>
+
+    <div class="leistung-block fade-in">
+      <span class="leistung-icon">▶</span>
+      <h3>YouTube-Kanal-Aufbau</h3>
+      <span class="preis">799 € einmalig + 299 € / Monat</span>
+      <p>Von null auf Reichweite — mit Strategie die wirklich funktioniert. Ich habe meinen eigenen Kanal aufgebaut und weiß was der Algorithmus belohnt.</p>
+      <ul>
+        <li>Kanal-Setup & vollständige Optimierung</li>
+        <li>Kanaldesign (Banner, Thumbnails, Branding)</li>
+        <li>SEO-Optimierung (Tags, Titel, Beschreibungen)</li>
+        <li>Erste 4 Videos produziert & hochgeladen</li>
+        <li>Strategie für die ersten 3 Monate</li>
+        <li>Monatlich: 4 Videos + Thumbnails + Reporting</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- VERANSTALTUNGSMARKETING -->
+<section>
+  <span class="section-label">Veranstaltungen & Events</span>
+  <h2 class="section-title">Volle Säle statt leere Stühle</h2>
+  <p class="section-sub">Ich kenne die Welt des Veranstalters von innen — und ich kenne die Gründe warum Säle leer bleiben. Genau deshalb kann ich helfen sie zu füllen.</p>
+
+  <div class="leistungen-grid">
+
+    <div class="leistung-block fade-in">
+      <span class="leistung-icon">🤝</span>
+      <h3>Sponsoring-Konzept</h3>
+      <span class="preis">499 € einmalig</span>
+      <p>Professionelle Sponsoring-Pakete die Unternehmen heute wirklich überzeugen — mit messbaren Gegenleistungen statt nur einem Logo auf dem Plakat.</p>
+      <ul>
+        <li>Analyse deiner Veranstaltung & Zielgruppe</li>
+        <li>Sponsoring-Pakete Bronze / Silber / Gold / Platin</li>
+        <li>Reichweiten-Auswertung nach dem Event</li>
+        <li>Anschreiben-Vorlagen für Sponsorenanfragen</li>
+        <li>Empfehlung neuer Sponsoren-Zielgruppen</li>
+      </ul>
+    </div>
+
+    <div class="leistung-block fade-in">
+      <span class="leistung-icon">📢</span>
+      <h3>Event-Marketing Komplett</h3>
+      <span class="preis">ab 799 € pro Veranstaltung</span>
+      <p>Der vollständige 6-Wochen-Plan für maximale Besucherzahlen. Von der ersten Ankündigung bis zur Nachberichterstattung für Sponsoren.</p>
+      <ul>
+        <li>6-Wochen Social Media Plan komplett</li>
+        <li>20+ Posts vor dem Event</li>
+        <li>Nachberichterstattung mit Fotos</li>
+        <li>Sponsoring-Konzept inklusive</li>
+        <li>Reichweiten-Reporting für Sponsoren</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EINZELLEISTUNGEN TABELLE -->
+<section>
+  <span class="section-label">Einzelleistungen</span>
+  <h2 class="section-title">Flexibel ohne Vertrag</h2>
+  <p class="section-sub">Du brauchst nur einen einzelnen Baustein? Kein Problem — alle Leistungen sind auch einzeln buchbar.</p>
+
+  <div class="preistabelle fade-in">
+    <table>
+      <thead>
+        <tr>
+          <th>Leistung</th>
+          <th>Preis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Social Media Strategie-Beratung</td><td>199 € / Stunde</td></tr>
+        <tr><td>Redaktionsplan erstellen (3 Monate)</td><td>399 €</td></tr>
+        <tr><td>Facebook-Seite professionell einrichten</td><td>299 €</td></tr>
+        <tr><td>Instagram-Profil optimieren</td><td>249 €</td></tr>
+        <tr><td>YouTube-Kanal-Optimierung</td><td>399 €</td></tr>
+        <tr><td>Thumbnail-Design (5 Stück)</td><td>149 €</td></tr>
+        <tr><td>Songtext schreiben</td><td>199 €</td></tr>
+        <tr><td>KI-Song produzieren (Suno)</td><td>299 €</td></tr>
+        <tr><td>eBook-Konzept & Erstellung</td><td>ab 499 €</td></tr>
+        <tr><td>Hörbuch-Konzept & Begleitung</td><td>ab 399 €</td></tr>
+        <tr><td>Veranstaltungs-Briefing (1 Std.)</td><td>150 €</td></tr>
+        <tr><td>Tonstudio-Vermittlung</td><td>Provision nach Vereinbarung</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="hinweis-box fade-in">
+    ✦ Alle Preise sind Nettopreise zzgl. gesetzlicher MwSt. · Angebote auf Anfrage für größere Projekte · Bei Unsicherheit: Erst das kostenlose Erstgespräch — dann entscheidest du.
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- OHNE / MIT VERGLEICH -->
+<section>
+  <span class="section-label">Der Unterschied</span>
+  <h2 class="section-title">Ohne mich — <em>oder mit mir</em></h2>
+  <p class="section-sub">Kein Marketing-Versprechen. Nur der ehrliche Vergleich was sich verändert wenn du mit einer Strategie arbeitest.</p>
+
+  <div class="vergleich-grid fade-in">
+
+    <div class="vergleich-col ohne">
+      <div class="vergleich-header">
+        <span class="vergleich-icon">✗</span>
+        <h3>Ohne Leon Media Solution</h3>
+      </div>
+      <ul class="vergleich-liste">
+        <li>Posts ohne Strategie die kaum jemand sieht</li>
+        <li>Plakat hängt — Saal bleibt halb leer</li>
+        <li>Sponsoren sagen ab weil das Konzept fehlt</li>
+        <li>YouTube-Kanal startet und schläft wieder ein</li>
+        <li>Keine Ahnung welche Plattform wirklich funktioniert</li>
+        <li>Viel Aufwand — wenig Ergebnis — Frust</li>
+        <li>Kein Ansprechpartner der die Musikwelt wirklich kennt</li>
+        <li>Künstler bleiben unsichtbar trotz guter Musik</li>
+      </ul>
+    </div>
+
+    <div class="vergleich-col mit">
+      <div class="vergleich-header">
+        <span class="vergleich-icon">✓</span>
+        <h3>Mit Leon Media Solution</h3>
+      </div>
+      <ul class="vergleich-liste">
+        <li>Klare Strategie — jeder Post hat einen Zweck</li>
+        <li>6-Wochen-Plan — mehr Besucher bei jedem Event</li>
+        <li>Sponsoring-Pakete die Unternehmen heute überzeugen</li>
+        <li>YouTube-Aufbau mit System — Wachstum das bleibt</li>
+        <li>Fokus auf die richtigen Kanäle für deine Zielgruppe</li>
+        <li>Messbare Ergebnisse — monatliches Reporting</li>
+        <li>Persönliche Betreuung von jemandem der es selbst gelebt hat</li>
+        <li>Künstler werden sichtbar — Fans werden real</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section>
+  <span class="section-label">Häufige Fragen</span>
+  <h2 class="section-title">Deine Fragen — <em>meine Antworten</em></h2>
+  <p class="section-sub">Ehrlich und direkt. Kein Kleingedrucktes.</p>
+
+  <div class="faq-container fade-in">
+
+    <div class="faq-item">
+      <button class="faq-frage" onclick="toggleFaq(this)">
+        Was kostet die Zusammenarbeit — und warum sind die Preise so?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p>Die Preise spiegeln echten Aufwand wider. Social Media Management bedeutet täglich 1-3 Stunden Arbeit — Strategie, Content-Erstellung, Bildgestaltung, Community-Pflege, Reporting. Meine Pakete beginnen bei 499 € / Monat für Einzelkünstler und gehen bis 1.490 € / Monat für vollständige Betreuung. Alle Preise sind Nettopreise zzgl. MwSt. und monatlich kündbar — ohne Risiko.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-frage" onclick="toggleFaq(this)">
+        Wie schnell sehe ich erste Ergebnisse?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p>Erste spürbare Ergebnisse — mehr Reichweite, mehr Profilbesuche, mehr Anfragen — sind meist nach 4 bis 8 Wochen sichtbar. Nachhaltiges Wachstum baut sich über 3 bis 6 Monate auf. Ich arbeite nicht mit kurzfristigen Tricks sondern mit Strategien die langfristig tragen.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-frage" onclick="toggleFaq(this)">
+        Gibt es einen Mindestvertrag oder Kündigungsfristen?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p>Nein. Alle monatlichen Pakete sind ohne Mindestlaufzeit und monatlich kündbar. Ich baue auf Vertrauen — nicht auf Verträge die dich festhalten. Wer mit mir arbeiten will tut das weil er die Ergebnisse sieht — nicht weil er muss.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-frage" onclick="toggleFaq(this)">
+        Ich bin Veranstalter — kein Künstler. Kann ich trotzdem mit dir arbeiten?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p>Absolut. Ich habe selbst Veranstaltungen organisiert — ich kenne die Welt von innen. Ich weiß warum Säle leer bleiben und was dagegen hilft. Meine Veranstaltungs-Pakete beginnen bei 499 € für ein vollständiges Sponsoring-Konzept und 799 € für das komplette Event-Marketing.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-frage" onclick="toggleFaq(this)">
+        Ich habe noch keine Follower und bin ganz am Anfang. Ist das ein Problem?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p>Kein Problem — im Gegenteil. Der beste Zeitpunkt zu starten ist jetzt. Ich habe meinen eigenen YouTube-Kanal von null aufgebaut und weiß was in den ersten Wochen und Monaten wirklich zählt. Egal ob du 0 oder 1.000 Follower hast — ich entwickle eine Strategie die zu deiner Ausgangssituation passt.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-frage" onclick="toggleFaq(this)">
+        Arbeitest du auch mit KI-Musik oder nur mit klassischen Künstlern?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p>Mit beidem. Ich produziere selbst KI-Songs mit Suno und betreibe den YouTube-Kanal Chill Schlager. Gleichzeitig vermittle ich zu echten Tonstudios und Produzenten für klassische Aufnahmen. Ich kenne beide Welten — und berate dich ehrlich welcher Weg für deine Ziele der richtige ist.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-frage" onclick="toggleFaq(this)">
+        Was passiert beim kostenlosen Erstgespräch?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p>Wir lernen uns kennen — 30 bis 45 Minuten, telefonisch oder per Video. Ich frage nach deiner Situation, deinen Zielen und deinem Budget. Dann sage ich dir ehrlich was ich tun kann — und was ich nicht tun kann. Du bekommst konkrete Empfehlungen — auch wenn du danach kein Kunde wirst. Kein Druck. Keine Verpflichtung.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-frage" onclick="toggleFaq(this)">
+        Warum sollte ich mit dir arbeiten und nicht mit einer größeren Agentur?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-antwort">
+        <p>Weil du bei mir direkt mit der Person arbeitest die deine Welt kennt. Ich war selbst Veranstalter. Ich habe Ibo auf meiner Bühne gehabt. Ich habe eine eigene CD aufgenommen. Ich betreibe heute einen YouTube-Musikkanal. Ich kenne die Schlager-Szene von innen — nicht aus Büchern. Große Agenturen delegieren deinen Fall an einen Mitarbeiter der deinen Namen kaum kennt. Ich kenne deine Geschichte.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CTA -->
+<section style="padding: 5rem 4rem;">
+  <div class="cta-section fade-in">
+    <h2>Nicht sicher welches<br><em>Paket passt?</em></h2>
+    <p>Das Erstgespräch kostet nichts. Ich schaue mir deine Situation an und sage dir ehrlich was du brauchst — auch wenn das weniger ist als du denkst.</p>
+    <div class="cta-buttons">
+      <a href="https://www.leonmediasolution.de/kontakt.html" class="btn-primary">Kostenloses Erstgespräch</a>
+      <a href="mailto:info@leonmediasolution.de" class="btn-secondary">info@leonmediasolution.de</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Leon Media Solution · Inh. Volker Missun</span>
+  <span>
+    <a href="https://www.leonmediasolution.de/impressum.html" style="color: var(--grey); text-decoration: none;">Impressum</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.leonmediasolution.de/datenschutz.html" style="color: var(--grey); text-decoration: none;">Datenschutz</a>
+  </span>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
