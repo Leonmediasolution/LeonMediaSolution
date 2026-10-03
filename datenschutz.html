@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -53,24 +54,11 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
 .info-row:last-child{margin-bottom:0}
 .info-label{font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--bl);min-width:130px;flex-shrink:0;margin-top:2px}
 .info-value{font-size:14px;color:var(--w);line-height:1.5}
-.hint-box{background:rgba(0,56,255,.06);border:1px solid var(--brd);border-radius:8px;padding:14px 18px;margin:16px 0;font-size:13px;color:var(--sub);display:flex;gap:10px;align-items:flex-start}
-.hint-box i{color:var(--bl);flex-shrink:0;font-size:16px;margin-top:1px}
-.placeholder{background:rgba(255,165,0,.08);border:1px solid rgba(255,165,0,.25);border-radius:6px;padding:3px 8px;font-size:13px;color:#ffaa44;font-family:var(--fh)}
 .rechtsgrundlage{display:inline-flex;align-items:center;gap:6px;font-family:var(--fh);font-size:12px;color:var(--bl);border:1px solid rgba(0,153,255,.2);border-radius:4px;padding:3px 10px;margin-top:8px}
 .ds-footer{padding:24px 0;border-top:1px solid var(--brd);display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--sub);flex-wrap:wrap;gap:12px;margin-top:60px}
 .ds-footer a{color:var(--sub)}.ds-footer a:hover{color:var(--w)}
 .ds-footer-links{display:flex;gap:20px}
 @media(max-width:600px){.info-row{flex-direction:column;gap:4px}.info-label{min-width:auto}.ds-footer{flex-direction:column;text-align:center}}
-
-.has-dropdown{position:relative}
-.dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
-.dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
-.has-dropdown:hover .dropdown{display:block}
-.dropdown li{list-style:none}
-.dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#CCCCDD;transition:all .2s;white-space:nowrap;text-decoration:none}
-.dropdown a i{font-size:16px;color:#0099FF}
-.dropdown a:hover{background:rgba(0,56,255,.12);color:#fff}
-
 </style>
 </head>
 <body>
@@ -89,7 +77,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
     <div class="ds-header">
       <div class="ds-badge"><i class="ti ti-shield-lock" style="font-size:13px"></i> Datenschutz · DSGVO</div>
       <h1 class="ds-title">Datenschutz&shy;erklärung</h1>
-      <div class="ds-date"><i class="ti ti-calendar"></i> Stand: Mai 2025</div>
+      <div class="ds-date"><i class="ti ti-calendar"></i> Stand: 2026</div>
     </div>
 
     <!-- INHALTSVERZEICHNIS -->
@@ -116,9 +104,9 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
       <div class="info-card">
         <div class="info-row"><span class="info-label">Name</span><span class="info-value">Volker Missun</span></div>
         <div class="info-row"><span class="info-label">Unternehmen</span><span class="info-value">Leon Media Solution</span></div>
-        <div class="info-row"><span class="info-label">Adresse</span><span class="info-value"><span class="placeholder">[STRASSE UND HAUSNUMMER]</span><br><span class="placeholder">[PLZ ORT]</span></span></div>
-        <div class="info-row"><span class="info-label">E-Mail</span><span class="info-value"><a href="mailto:vmissun@web.de">vmissun@web.de</a></span></div>
-        <div class="info-row"><span class="info-label">Telefon</span><span class="info-value"><a href="tel:01716852540">01716852540</a></span></div>
+        <div class="info-row"><span class="info-label">Adresse</span><span class="info-value">Wengernstr. 19<br>58452 Witten</span></div>
+        <div class="info-row"><span class="info-label">E-Mail</span><span class="info-value"><a href="mailto:info@leonmediasolution.de">info@leonmediasolution.de</a></span></div>
+        <div class="info-row"><span class="info-label">Telefon</span><span class="info-value"><a href="tel:015679827958">015679827958</a></span></div>
       </div>
     </div>
 
@@ -155,45 +143,33 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
     <!-- 4. HOSTING -->
     <div class="ds-section" id="hosting">
       <h2><i class="ti ti-server"></i> 4. Hosting</h2>
-      <h3>Squarespace</h3>
-      <p>Diese Website wird bei Squarespace gehostet. Anbieter ist die Squarespace, Inc., 225 Varick Street, 12th Floor, New York, NY 10014, USA.</p>
-      <p>Wenn Sie unsere Website besuchen, erfasst Squarespace verschiedene Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von Squarespace: <a href="https://www.squarespace.com/privacy" target="_blank" rel="noopener">https://www.squarespace.com/privacy</a></p>
-      <p>Die Verwendung von Squarespace erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.</p>
-      <div class="hint-box">
-        <i class="ti ti-alert-circle"></i>
-        <span>Squarespace ist ein US-amerikanischer Dienst. Für Datenübertragungen in die USA gelten die EU-Standardvertragsklauseln. Squarespace ist unter dem EU-US Data Privacy Framework zertifiziert.</span>
-      </div>
+      <h3>Vercel</h3>
+      <p>Diese Website wird bei Vercel gehostet. Anbieter ist die Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA.</p>
+      <p>Wenn Sie unsere Website besuchen, erfasst Vercel verschiedene Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der Datenschutzerklärung von Vercel: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">https://vercel.com/legal/privacy-policy</a></p>
+      <p>Die Verwendung von Vercel erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.</p>
       <span class="rechtsgrundlage"><i class="ti ti-scale" style="font-size:13px"></i> Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO</span>
     </div>
 
     <!-- 5. KONTAKTFORMULAR -->
     <div class="ds-section" id="kontaktformular">
       <h2><i class="ti ti-mail"></i> 5. Kontaktformular & E-Mail-Kontakt</h2>
-      <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
+      <p>Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
       <p>Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist.</p>
       <p>In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.</p>
-      <p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.</p>
-
-      <h3>Formspree (Kontaktformular-Dienst)</h3>
-      <p>Wir nutzen für die Übermittlung von Kontaktformulardaten den Dienst Formspree. Anbieter ist Formspree, Inc., 1702 14th Street NW, Washington, DC 20009, USA. Weitere Informationen finden Sie unter: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">https://formspree.io/legal/privacy-policy</a></p>
+      <p>Die von Ihnen eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt. Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.</p>
       <span class="rechtsgrundlage"><i class="ti ti-scale" style="font-size:13px"></i> Rechtsgrundlage: Art. 6 Abs. 1 lit. b / f DSGVO</span>
     </div>
 
     <!-- 6. GOOGLE ANALYTICS -->
     <div class="ds-section" id="analytics">
       <h2><i class="ti ti-brand-google"></i> 6. Google Analytics</h2>
-      <p>Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.</p>
+      <p>Sofern eingebunden, nutzt diese Website Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.</p>
       <p>Google Analytics ermöglicht es uns, das Verhalten der Websitebesucher zu analysieren. Hierbei erhalten wir verschiedene Nutzungsdaten, wie z. B. Seitenaufrufe, Verweildauer, verwendete Betriebssysteme und Herkunft des Nutzers.</p>
       <p>Google Analytics verwendet Technologien, die die Wiedererkennung des Nutzers zum Zwecke der Analyse des Nutzerverhaltens ermöglichen (z. B. Cookies oder Device-Fingerprinting). Die von Google erfassten Informationen über die Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.</p>
       <h3>IP-Anonymisierung</h3>
-      <p>Wir haben die Funktion IP-Anonymisierung auf dieser Website aktiviert. Dadurch wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt.</p>
+      <p>Sofern aktiviert, wird Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt.</p>
       <h3>Opt-Out</h3>
-      <p>Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie auf folgenden Link klicken: <a href="javascript:void(0)" onclick="alert('Google Analytics Opt-Out — Bitte Browser-Plugin nutzen: https://tools.google.com/dlpage/gaoptout')">Google Analytics deaktivieren</a></p>
-      <p>Alternativ: Browser-Plugin herunterladen unter <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout</a></p>
-      <div class="hint-box">
-        <i class="ti ti-info-circle"></i>
-        <span><strong style="color:var(--w)">Hinweis:</strong> Google Analytics darf nur mit Einwilligung der Nutzer (Cookie-Banner) eingesetzt werden. Stelle sicher, dass du einen DSGVO-konformen Cookie-Consent-Banner verwendest.</span>
-      </div>
+      <p>Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern. Browser-Plugin herunterladen unter <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout</a></p>
       <span class="rechtsgrundlage"><i class="ti ti-scale" style="font-size:13px"></i> Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</span>
     </div>
 
@@ -219,10 +195,6 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
       <p>Für die Online-Terminbuchung nutzen wir den Dienst Calendly. Anbieter ist die Calendly LLC, 271 17th St NW, Atlanta, GA 30363, USA.</p>
       <p>Wenn Sie über Calendly einen Termin buchen, übermitteln Sie personenbezogene Daten (Name, E-Mail-Adresse, ggf. weitere Angaben) an Calendly. Diese werden zur Terminverwaltung und -bestätigung genutzt.</p>
       <p>Weitere Informationen zur Datenverarbeitung durch Calendly finden Sie unter: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">https://calendly.com/privacy</a></p>
-      <div class="hint-box">
-        <i class="ti ti-info-circle"></i>
-        <span>Dieser Abschnitt ist relevant sobald du Calendly auf deiner Website eingebunden hast. Bis dahin kann er entfernt oder ausgeblendet werden.</span>
-      </div>
       <span class="rechtsgrundlage"><i class="ti ti-scale" style="font-size:13px"></i> Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO</span>
     </div>
 
@@ -240,9 +212,9 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
         <li><strong style="color:var(--w)">Widerruf der Einwilligung</strong> — Sie können eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO)</li>
         <li><strong style="color:var(--w)">Beschwerderecht</strong> — Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren (Art. 77 DSGVO)</li>
       </ul>
-      <p>Für die Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:vmissun@web.de">vmissun@web.de</a></p>
+      <p>Für die Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@leonmediasolution.de">info@leonmediasolution.de</a></p>
       <h3>Zuständige Aufsichtsbehörde</h3>
-      <p>Die für uns zuständige Datenschutzaufsichtsbehörde ist die Landesbeauftragte für Datenschutz und Informationsfreiheit in dem Bundesland, in dem Sie Ihren Wohnsitz haben. Eine Liste aller Aufsichtsbehörden finden Sie unter: <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank" rel="noopener">www.bfdi.bund.de</a></p>
+      <p>Die für uns zuständige Datenschutzaufsichtsbehörde ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW). Eine Liste aller Aufsichtsbehörden finden Sie unter: <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank" rel="noopener">www.bfdi.bund.de</a></p>
     </div>
 
     <!-- 10. COOKIES -->
@@ -253,19 +225,10 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
       <p>Einige Cookies sind technisch notwendig, damit die Website korrekt funktioniert. Diese werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gesetzt.</p>
       <h3>Analyse-Cookies</h3>
       <p>Sofern Sie eingewilligt haben, setzen wir Analyse-Cookies (z. B. Google Analytics). Die Einwilligung erfolgt über unser Cookie-Banner beim ersten Seitenbesuch und kann jederzeit widerrufen werden.</p>
-      <div class="hint-box">
-        <i class="ti ti-alert-circle"></i>
-        <span><strong style="color:var(--w)">Cookie-Banner:</strong> Sobald du Google Analytics oder andere Tracking-Dienste aktivierst, benötigst du einen DSGVO-konformen Cookie-Consent-Banner. Empfehlung: <strong style="color:var(--w)">Cookiebot</strong> (kostenlose Version verfügbar) oder <strong style="color:var(--w)">Usercentrics</strong>.</span>
-      </div>
-    </div>
-
-    <!-- HINWEIS -->
-    <div class="ds-section">
-      <p style="font-size:13px;color:rgba(204,204,221,.5)">Diese Datenschutzerklärung wurde mit Unterstützung einer KI-Vorlage erstellt und an die Bedürfnisse von Leon Media Solution angepasst. Bitte von einem Rechtsanwalt oder Datenschutzbeauftragten prüfen lassen. Stand: Mai 2025.</p>
     </div>
 
     <div class="ds-footer">
-      <span>© 2025 Leon Media Solution · Inh. Volker Missun</span>
+      <span>© 2026 Leon Media Solution · Inh. Volker Missun</span>
       <div class="ds-footer-links">
         <a href="index.html">Startseite</a>
         <a href="impressum.html">Impressum</a>
