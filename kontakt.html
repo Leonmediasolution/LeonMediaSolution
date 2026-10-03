@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kontakt — Leon Media Solution. Kostenloses Erstgespräch buchen mit Volker Missun. Social Media Manager für Künstler, Veranstalter & Firmen.">
+<meta name="description" content="Kontakt — Leon Media Solution. Kostenloses Erstgespräch buchen mit Volker Missun. Social Media Marketer für Künstler, Veranstalter & Firmen.">
 <title>Kontakt & Erstgespräch | Leon Media Solution</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +44,6 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .bc{padding-top:calc(var(--nh) + 24px)}
 .bci{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--sub);font-family:var(--fh)}
 .bci a{color:var(--sub);transition:color .2s}.bci a:hover{color:#fff}.bci i{font-size:12px;color:rgba(255,255,255,.25)}.bci span{color:var(--bl)}
-/* HERO */
 .kt-hero{padding:80px 0 60px;text-align:center;position:relative;overflow:hidden}
 .orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
 .o1{width:500px;height:500px;background:rgba(0,56,255,.09);top:-100px;right:-100px;animation:po 8s ease-in-out infinite}
@@ -53,9 +53,7 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .kh-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);border:1px solid rgba(0,153,255,.3);border-radius:20px;padding:6px 16px;margin-bottom:28px;background:rgba(0,153,255,.06)}
 .kh-title{font-family:var(--fh);font-size:clamp(32px,5vw,60px);font-weight:700;line-height:1.1;letter-spacing:-.03em;margin-bottom:16px}
 .kh-sub{font-size:18px;color:var(--sub);max-width:540px;margin:0 auto 20px;line-height:1.7}
-/* MAIN GRID */
 .kt-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;padding:40px 0 100px;align-items:start}
-/* LEFT: Info */
 .kt-info{}
 .ki-card{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:32px;margin-bottom:20px}
 .ki-card h3{font-family:var(--fh);font-size:16px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px;color:var(--bl)}
@@ -69,19 +67,16 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .ci-value a:hover{color:#fff}
 .avail-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#00cc44;margin-right:6px;animation:dp 2s ease-in-out infinite}
 @keyframes dp{0%,100%{opacity:1}50%{opacity:.4}}
-/* Steps */
 .steps{display:flex;flex-direction:column;gap:16px}
 .step-item{display:flex;align-items:flex-start;gap:16px}
 .step-num{width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--fh);font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 10px var(--glow)}
 .step-body h4{font-family:var(--fh);font-size:14px;font-weight:700;margin-bottom:3px}
 .step-body p{font-size:13px;color:var(--sub);line-height:1.5}
-/* Calendly placeholder */
-.cal-placeholder{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:48px 32px;text-align:center}
+.cal-card{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:36px 32px;text-align:center}
 .cal-icon{font-size:48px;color:var(--blue);margin-bottom:20px}
-.cal-title{font-family:var(--fh);font-size:22px;font-weight:700;margin-bottom:12px}
-.cal-sub{font-size:15px;color:var(--sub);line-height:1.6;margin-bottom:28px}
-.cal-hint{font-size:12px;color:var(--sub);margin-top:16px;padding:12px;background:rgba(0,56,255,.06);border-radius:8px;border:1px solid var(--brd)}
-/* FORM Alternative */
+.cal-title{font-family:var(--fh);font-size:24px;font-weight:700;margin-bottom:12px}
+.cal-sub{font-size:15px;color:var(--sub);line-height:1.6;margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto}
+.cal-widget{border-radius:12px;overflow:hidden;min-height:700px;border:1px solid var(--brd)}
 .form-wrap{background:var(--card);border:1px solid var(--brd);border-radius:var(--r);padding:32px;margin-top:20px}
 .form-wrap h3{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:8px}
 .form-wrap p{font-size:14px;color:var(--sub);margin-bottom:24px}
@@ -95,12 +90,10 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .form-submit{width:100%;justify-content:center;font-size:16px;padding:16px}
 .form-note{font-size:12px;color:var(--sub);text-align:center;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:6px}
 .form-note i{font-size:14px;color:var(--bl)}
-/* Success Message */
 .success-msg{display:none;background:rgba(0,204,68,.08);border:1px solid rgba(0,204,68,.3);border-radius:var(--r);padding:24px;text-align:center;margin-top:16px}
 .success-msg i{font-size:40px;color:#00cc44;margin-bottom:12px;display:block}
 .success-msg h4{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:8px}
 .success-msg p{font-size:14px;color:var(--sub)}
-/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
 .fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--brd)}
 .fb h3{font-family:var(--fh);font-size:20px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
@@ -122,7 +115,6 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
   .fg{grid-template-columns:1fr;gap:36px}
   .fbot{flex-direction:column;text-align:center}
 }
-
 .has-dropdown{position:relative}
 .dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
 .dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
@@ -131,7 +123,6 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
 .dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#CCCCDD;transition:all .2s;white-space:nowrap;text-decoration:none}
 .dropdown a i{font-size:16px;color:#0099FF}
 .dropdown a:hover{background:rgba(0,56,255,.12);color:#fff}
-
 </style>
 </head>
 <body>
@@ -144,20 +135,20 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
             <li><a href="firmen.html"><i class="ti ti-building"></i> Für Firmen</a></li>
           </ul>
         </li>
-        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="ueber-mich.html">Über mich</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul><div class="nr"><a href="kontakt.html" class="btn bp">Erstgespräch buchen</a><button class="burg" id="burg"><span></span><span></span><span></span></button></div></div></div></nav>
+        <li><a href="kontakt.html" class="act">Kontakt</a></li>
+      </ul><div class="nr"><a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bp">Erstgespräch buchen</a><button class="burg" id="burg"><span></span><span></span><span></span></button></div></div></div></nav>
 <div class="mm" id="mm">
   <a href="kuenstler.html" onclick="cM()"><i class="ti ti-music" style="margin-right:8px;color:#0099FF"></i>Für Künstler & Musiker</a>
   <a href="veranstalter.html" onclick="cM()"><i class="ti ti-confetti" style="margin-right:8px;color:#0099FF"></i>Für Veranstalter</a>
   <a href="firmen.html" onclick="cM()"><i class="ti ti-building" style="margin-right:8px;color:#0099FF"></i>Für Firmen</a>
-  <a href="index.html#portfolio" onclick="cM()">Portfolio</a>
+  <a href="portfolio.html" onclick="cM()">Portfolio</a>
   <a href="ueber-mich.html" onclick="cM()">Über mich</a>
   <a href="blog.html" onclick="cM()">Blog</a>
   <a href="kontakt.html" onclick="cM()">Kontakt</a>
-  <a href="kontakt.html" class="btn bp" onclick="cM()">Erstgespräch buchen</a>
+  <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bp" onclick="cM()">Erstgespräch buchen</a>
 </div>
 <div class="bc"><div class="container"><div class="bci"><a href="index.html">Startseite</a><i class="ti ti-chevron-right"></i><span>Kontakt</span></div></div></div>
 
@@ -176,16 +167,15 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
   <div class="kt-grid">
     <!-- LEFT -->
     <div>
-      <!-- Kontaktdaten -->
       <div class="ki-card reveal">
         <h3><i class="ti ti-address-book"></i> Direktkontakt</h3>
         <div class="contact-item">
           <div class="ci-icon"><i class="ti ti-mail"></i></div>
-          <div><div class="ci-label">E-Mail</div><div class="ci-value"><a href="mailto:vmissun@web.de">vmissun@web.de</a></div></div>
+          <div><div class="ci-label">E-Mail</div><div class="ci-value"><a href="mailto:info@leonmediasolution.de">info@leonmediasolution.de</a></div></div>
         </div>
         <div class="contact-item">
           <div class="ci-icon"><i class="ti ti-phone"></i></div>
-          <div><div class="ci-label">Telefon / WhatsApp</div><div class="ci-value"><a href="tel:01716852540">01716852540</a></div></div>
+          <div><div class="ci-label">Telefon / WhatsApp</div><div class="ci-value"><a href="tel:015679827958">015679827958</a></div></div>
         </div>
         <div class="contact-item">
           <div class="ci-icon"><i class="ti ti-world"></i></div>
@@ -197,7 +187,6 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
         </div>
       </div>
 
-      <!-- Socials -->
       <div class="ki-card reveal d1">
         <h3><i class="ti ti-share"></i> Social Media</h3>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
@@ -209,7 +198,6 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
         </div>
       </div>
 
-      <!-- Wie es läuft -->
       <div class="ki-card reveal d2">
         <h3><i class="ti ti-list-check"></i> So läuft das Erstgespräch</h3>
         <div class="steps">
@@ -223,51 +211,35 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
 
     <!-- RIGHT -->
     <div>
-      <!-- Calendly Placeholder -->
-      <div class="cal-placeholder reveal">
+      <!-- Calendly -->
+      <div class="cal-card reveal">
         <div class="cal-icon"><i class="ti ti-calendar-event"></i></div>
         <h2 class="cal-title">Termin direkt buchen</h2>
         <p class="cal-sub">Wähle einfach einen Termin der dir passt — ich freue mich auf unser Gespräch.</p>
-        <!-- [PLATZHALTER: Calendly Widget hier einfügen] -->
-        <!-- Sobald Calendly-Account erstellt: -->
-        <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/DEIN-LINK" style="min-width:320px;height:700px;"></div> -->
-        <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script> -->
-        <a href="#" class="btn bp" style="font-size:17px;padding:18px 40px">
-          <i class="ti ti-calendar-plus"></i> [CALENDLY-LINK EINTRAGEN]
-        </a>
-        <div class="cal-hint"><i class="ti ti-info-circle" style="font-size:14px;margin-right:6px"></i>Sobald dein Calendly-Account erstellt ist, ersetze den Button durch das Calendly-Widget. Anleitung in der CLAUDE.md.</div>
+        <!-- Calendly inline widget -->
+        <div class="calendly-inline-widget cal-widget" data-url="https://calendly.com/vmissun/30min" style="min-width:320px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
 
-      <!-- Kontaktformular Alternative -->
+      <!-- Direktkontakt-Hinweis (statt Formular) -->
       <div class="form-wrap reveal d1">
-        <h3>Oder schreib mir direkt</h3>
-        <p>Kein Calendly? Kein Problem — füll das Formular aus und ich melde mich innerhalb von 24 Stunden.</p>
-        <form id="contact-form" onsubmit="submitForm(event)">
-          <div class="form-row">
-            <div class="form-group"><label>Vorname *</label><input type="text" name="vorname" placeholder="Dein Vorname" required></div>
-            <div class="form-group"><label>Nachname *</label><input type="text" name="nachname" placeholder="Dein Nachname" required></div>
-          </div>
-          <div class="form-group"><label>E-Mail *</label><input type="email" name="email" placeholder="deine@email.de" required></div>
-          <div class="form-group"><label>Telefon / WhatsApp</label><input type="tel" name="telefon" placeholder="Optional"></div>
-          <div class="form-group">
-            <label>Ich bin *</label>
-            <select name="kategorie" required>
-              <option value="">Bitte wählen...</option>
-              <option value="kuenstler">Künstler / Musiker / Sänger:in</option>
-              <option value="veranstalter">Veranstalter / Event-Betreiber</option>
-              <option value="firma">Firma / Unternehmen</option>
-              <option value="anderes">Anderes</option>
-            </select>
-          </div>
-          <div class="form-group"><label>Mein Anliegen *</label><textarea name="nachricht" placeholder="Erzähl mir kurz was du machst und wobei du Unterstützung brauchst..." required></textarea></div>
-          <button type="submit" class="btn bp form-submit"><i class="ti ti-send"></i> Nachricht senden</button>
-          <p class="form-note"><i class="ti ti-lock"></i> Deine Daten werden vertraulich behandelt und nicht weitergegeben.</p>
-        </form>
-        <div class="success-msg" id="success">
-          <i class="ti ti-circle-check"></i>
-          <h4>Nachricht gesendet!</h4>
-          <p>Ich melde mich innerhalb von 24 Stunden bei dir. Bis bald — Volker</p>
+        <h3>Lieber schreiben oder anrufen?</h3>
+        <p>Kein Problem — melde dich einfach direkt bei mir. Ich antworte in der Regel innerhalb von 24 Stunden.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <a href="mailto:info@leonmediasolution.de" style="display:flex;align-items:center;gap:14px;padding:18px 20px;background:rgba(5,5,16,.6);border:1px solid var(--brd);border-radius:10px;transition:all .25s" onmouseover="this.style.borderColor='var(--blue)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--brd)';this.style.transform='translateY(0)'">
+            <div class="ci-icon"><i class="ti ti-mail"></i></div>
+            <div><div class="ci-label">E-Mail schreiben</div><div class="ci-value" style="color:var(--bl)">info@leonmediasolution.de</div></div>
+          </a>
+          <a href="tel:015679827958" style="display:flex;align-items:center;gap:14px;padding:18px 20px;background:rgba(5,5,16,.6);border:1px solid var(--brd);border-radius:10px;transition:all .25s" onmouseover="this.style.borderColor='var(--blue)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--brd)';this.style.transform='translateY(0)'">
+            <div class="ci-icon"><i class="ti ti-phone"></i></div>
+            <div><div class="ci-label">Anrufen / WhatsApp</div><div class="ci-value" style="color:var(--bl)">015679827958</div></div>
+          </a>
+          <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:14px;padding:18px 20px;background:rgba(0,56,255,.1);border:1px solid var(--blue);border-radius:10px;transition:all .25s" onmouseover="this.style.background='rgba(0,56,255,.18)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(0,56,255,.1)';this.style.transform='translateY(0)'">
+            <div class="ci-icon" style="background:var(--blue);color:#fff;border-color:var(--blue)"><i class="ti ti-calendar"></i></div>
+            <div><div class="ci-label">Termin buchen</div><div class="ci-value" style="color:#fff">Kostenloses Erstgespräch · online</div></div>
+          </a>
         </div>
+        <p class="form-note" style="margin-top:20px"><i class="ti ti-lock"></i> Deine Daten werden vertraulich behandelt und nicht weitergegeben.</p>
       </div>
     </div>
   </div>
@@ -296,7 +268,7 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
           <li><a href="kuenstler.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Künstler & Musiker</a></li>
           <li><a href="veranstalter.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Veranstalter</a></li>
           <li><a href="firmen.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Firmen</a></li>
-          <li><a href="index.html#portfolio" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Portfolio</a></li>
+          <li><a href="portfolio.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Portfolio</a></li>
         </ul>
       </div>
       <div>
@@ -311,14 +283,14 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
       </div>
       <div>
         <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Kontakt</h4>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="mailto:vmissun@web.de" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">vmissun@web.de</a></p>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="tel:01716852540" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">01716852540</a></p>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="mailto:info@leonmediasolution.de" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">info@leonmediasolution.de</a></p>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="tel:015679827958" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">015679827958</a></p>
         <p style="font-size:14px;color:#CCCCDD;margin-bottom:20px;display:flex;align-items:center;gap:8px"><i class="ti ti-world" style="font-size:16px;color:#0099FF;flex-shrink:0"></i> leonmediasolution.de</p>
-        <a href="kontakt.html" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(0,56,255,.3);text-decoration:none" onmouseover="this.style.background='#0099FF'" onmouseout="this.style.background='#0038FF'"><i class="ti ti-calendar"></i> Termin buchen</a>
+        <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(0,56,255,.3);text-decoration:none" onmouseover="this.style.background='#0099FF'" onmouseout="this.style.background='#0038FF'"><i class="ti ti-calendar"></i> Termin buchen</a>
       </div>
     </div>
     <div style="padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#CCCCDD;flex-wrap:wrap;gap:12px">
-      <span>© 2025 Leon Media Solution · Inh. Volker Missun</span>
+      <span>© 2026 Leon Media Solution · Inh. Volker Missun</span>
       <div style="display:flex;gap:20px">
         <a href="impressum.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Impressum</a>
         <a href="datenschutz.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Datenschutz</a>
@@ -335,26 +307,6 @@ b.addEventListener('click',()=>{b.classList.toggle('o');m.classList.toggle('o')}
 function cM(){b.classList.remove('o');m.classList.remove('o')}
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-function submitForm(e){
-  e.preventDefault();
-  const btn=e.target.querySelector('.form-submit');
-  btn.innerHTML='<i class="ti ti-loader"></i> Wird gesendet...';
-  btn.disabled=true;
-  setTimeout(()=>{
-    e.target.style.display='none';
-    document.getElementById('success').style.display='block';
-  },1500);
-}
 </script>
-<!--
-TODO — Kontaktseite:
-[ ] Calendly-Account erstellen → calendly.com (kostenlos)
-[ ] Calendly-Widget-Code einfügen (Kommentar im Code beachten)
-[ ] Social-Media-Links eintragen (alle href="#" ersetzen)
-[ ] Formular mit echtem Backend verbinden (Formspree.io ist kostenlos und einfach)
-    → <form action="https://formspree.io/f/DEIN-CODE" method="POST">
-[ ] E-Mail-Adresse aktualisieren sobald geändert
-[ ] Impressum und Datenschutz-Seiten erstellen
--->
 </body>
 </html>
