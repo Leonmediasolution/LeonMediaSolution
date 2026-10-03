@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -47,24 +48,11 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
 .info-row:last-child{margin-bottom:0}
 .info-label{font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--bl);min-width:120px;flex-shrink:0;margin-top:2px}
 .info-value{font-size:15px;color:var(--w)}
-.placeholder{background:rgba(255,165,0,.08);border:1px solid rgba(255,165,0,.25);border-radius:6px;padding:3px 8px;font-size:13px;color:#ffaa44;font-family:var(--fh)}
-.hint-box{background:rgba(0,56,255,.06);border:1px solid var(--brd);border-radius:8px;padding:14px 18px;margin-top:16px;font-size:13px;color:var(--sub);display:flex;gap:10px;align-items:flex-start}
-.hint-box i{color:var(--bl);flex-shrink:0;font-size:16px;margin-top:1px}
 /* Footer minimal */
 .imp-footer{padding:24px 0;border-top:1px solid var(--brd);display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--sub);flex-wrap:wrap;gap:12px;margin-top:60px}
 .imp-footer a{color:var(--sub)}.imp-footer a:hover{color:var(--w)}
 .imp-footer-links{display:flex;gap:20px}
 @media(max-width:600px){.info-row{flex-direction:column;gap:4px}.info-label{min-width:auto}.imp-footer{flex-direction:column;text-align:center}}
-
-.has-dropdown{position:relative}
-.dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
-.dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
-.has-dropdown:hover .dropdown{display:block}
-.dropdown li{list-style:none}
-.dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#CCCCDD;transition:all .2s;white-space:nowrap;text-decoration:none}
-.dropdown a i{font-size:16px;color:#0099FF}
-.dropdown a:hover{background:rgba(0,56,255,.12);color:#fff}
-
 </style>
 </head>
 <body>
@@ -83,12 +71,12 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
     <div class="imp-header">
       <div class="imp-badge"><i class="ti ti-file-text" style="font-size:13px"></i> Rechtliches</div>
       <h1 class="imp-title">Impressum</h1>
-      <div class="imp-date"><i class="ti ti-calendar"></i> Stand: Mai 2025</div>
+      <div class="imp-date"><i class="ti ti-calendar"></i> Stand: 2026</div>
     </div>
 
-    <!-- ANGABEN GEM. §5 TMG -->
+    <!-- ANGABEN GEM. §5 DDG -->
     <div class="imp-section">
-      <h2><i class="ti ti-building"></i> Angaben gemäß § 5 TMG</h2>
+      <h2><i class="ti ti-building"></i> Angaben gemäß § 5 DDG</h2>
       <div class="info-card">
         <div class="info-row">
           <span class="info-label">Name</span>
@@ -100,20 +88,16 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
         </div>
         <div class="info-row">
           <span class="info-label">Straße</span>
-          <span class="info-value"><span class="placeholder">[STRASSE UND HAUSNUMMER EINTRAGEN]</span></span>
+          <span class="info-value">Wengernstr. 19</span>
         </div>
         <div class="info-row">
           <span class="info-label">PLZ / Ort</span>
-          <span class="info-value"><span class="placeholder">[PLZ ORT EINTRAGEN]</span></span>
+          <span class="info-value">58452 Witten</span>
         </div>
         <div class="info-row">
           <span class="info-label">Land</span>
           <span class="info-value">Deutschland</span>
         </div>
-      </div>
-      <div class="hint-box">
-        <i class="ti ti-alert-circle"></i>
-        <span>Trage hier deine vollständige Adresse ein. Als Einzelunternehmer bist du verpflichtet, deine ladungsfähige Anschrift anzugeben — auch wenn du von zu Hause aus arbeitest.</span>
       </div>
     </div>
 
@@ -123,11 +107,11 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
       <div class="info-card">
         <div class="info-row">
           <span class="info-label">Telefon</span>
-          <span class="info-value"><a href="tel:01716852540">01716852540</a></span>
+          <span class="info-value"><a href="tel:015679827958">015679827958</a></span>
         </div>
         <div class="info-row">
           <span class="info-label">E-Mail</span>
-          <span class="info-value"><a href="mailto:vmissun@web.de">vmissun@web.de</a></span>
+          <span class="info-value"><a href="mailto:info@leonmediasolution.de">info@leonmediasolution.de</a></span>
         </div>
         <div class="info-row">
           <span class="info-label">Website</span>
@@ -136,20 +120,10 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
       </div>
     </div>
 
-    <!-- UMSATZSTEUER -->
+    <!-- UMSATZSTEUER / KLEINUNTERNEHMER -->
     <div class="imp-section">
-      <h2><i class="ti ti-receipt-tax"></i> Umsatzsteuer-ID</h2>
-      <p>Sofern du umsatzsteuerpflichtig bist, trage hier deine Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG ein:</p>
-      <div class="info-card">
-        <div class="info-row">
-          <span class="info-label">USt-IdNr.</span>
-          <span class="info-value"><span class="placeholder">[UST-IDNR. EINTRAGEN — oder diesen Abschnitt entfernen falls Kleinunternehmer]</span></span>
-        </div>
-      </div>
-      <div class="hint-box">
-        <i class="ti ti-info-circle"></i>
-        <span><strong style="color:var(--w)">Kleinunternehmerregelung:</strong> Wenn du die Kleinunternehmerregelung (§ 19 UStG) in Anspruch nimmst, entfällt dieser Abschnitt. Bitte kläre das mit deinem Steuerberater.</span>
-      </div>
+      <h2><i class="ti ti-receipt-tax"></i> Umsatzsteuer</h2>
+      <p>Als Kleinunternehmer im Sinne von § 19 UStG wird keine Umsatzsteuer berechnet und daher keine Umsatzsteuer-Identifikationsnummer ausgewiesen.</p>
     </div>
 
     <!-- BERUFSBEZEICHNUNG -->
@@ -178,7 +152,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
         </div>
         <div class="info-row">
           <span class="info-label">Anschrift</span>
-          <span class="info-value"><span class="placeholder">[STRASSE, PLZ ORT]</span></span>
+          <span class="info-value">Wengernstr. 19, 58452 Witten</span>
         </div>
       </div>
     </div>
@@ -194,7 +168,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
     <!-- HAFTUNG FÜR INHALTE -->
     <div class="imp-section">
       <h2><i class="ti ti-shield"></i> Haftung für Inhalte</h2>
-      <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+      <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
       <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
     </div>
 
@@ -212,13 +186,8 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;background
       <p>Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
     </div>
 
-    <!-- QUELLE -->
-    <div class="imp-section">
-      <p style="font-size:13px;color:rgba(204,204,221,.5)">Impressum erstellt mit Unterstützung einer KI-Vorlage. Bitte von einem Rechtsanwalt oder Steuerberater prüfen lassen.</p>
-    </div>
-
     <div class="imp-footer">
-      <span>© 2025 Leon Media Solution · Inh. Volker Missun</span>
+      <span>© 2026 Leon Media Solution · Inh. Volker Missun</span>
       <div class="imp-footer-links">
         <a href="index.html">Startseite</a>
         <a href="datenschutz.html">Datenschutz</a>
