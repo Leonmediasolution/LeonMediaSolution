@@ -92,8 +92,9 @@ nav {
 .mobile-menu .btn { width: 100%; justify-content: center; margin-top: 8px; }
 .has-dropdown{position:relative}
 .dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
-.dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
-.has-dropdown:hover .dropdown{display:block}
+.dropdown{display:none;position:absolute;top:100%;left:-16px;margin-top:12px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
+.has-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.has-dropdown:hover .dropdown,.dropdown:hover{display:block}
 .dropdown li{list-style:none}
 .dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#CCCCDD;transition:all .2s;white-space:nowrap;text-decoration:none}
 .dropdown a i{font-size:16px;color:#0099FF}
@@ -280,21 +281,21 @@ footer { background: var(--bg-primary); border-top: 1px solid var(--border); pad
 
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-year">[JAHR EINTRAGEN]</div>
+        <div class="tl-year">2021</div>
         <div class="tl-title">Der Anfang</div>
         <p class="tl-text">Meine ersten Schritte im Marketing — erste Projekte, erste Kunden, erste Erfolge. Hier habe ich gelernt, was wirklich zählt: nicht die lauteste Werbung, sondern die, die ankommt und Ergebnisse bringt.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-year">[JAHR EINTRAGEN]</div>
+        <div class="tl-year">2023</div>
         <div class="tl-title">Fokus auf Künstler & Musiker</div>
         <p class="tl-text">Ich habe gemerkt, wo mein Herz schlägt: bei den Kreativen. Künstler, Musiker und Veranstalter brauchen jemanden, der ihre Welt versteht — und genau dort habe ich meine Spezialisierung gefunden.</p>
       </div>
 
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-year">[JAHR EINTRAGEN]</div>
+        <div class="tl-year">2025</div>
         <div class="tl-title">Gründung Leon Media Solution</div>
         <p class="tl-text">Die Entscheidung, eine eigene Marke aufzubauen — mit einem klaren Versprechen: persönliche Betreuung, ehrliche Arbeit und messbare Ergebnisse. Keine Hochglanz-Versprechen, sondern echte Resultate.</p>
       </div>
@@ -304,7 +305,7 @@ footer { background: var(--bg-primary); border-top: 1px solid var(--border); pad
         <div class="tl-year">Heute</div>
         <div class="tl-title">Wo ich heute stehe</div>
         <div class="tl-highlight">
-          <div class="big">50+ Kunden · 5 Jahre · 3 Branchen</div>
+          <div class="big">Zufriedene Kunden · 3 Branchen · 100% Einsatz</div>
           <div class="small">Messbare Ergebnisse für Künstler, Veranstalter und Firmen — mit Leidenschaft und echter Erfahrung.</div>
         </div>
       </div>
