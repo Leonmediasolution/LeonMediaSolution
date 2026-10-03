@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -56,7 +57,6 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .o1{width:600px;height:600px;background:rgba(0,56,255,.1);top:-150px;right:-150px;animation:po 7s ease-in-out infinite}
 .o2{width:400px;height:400px;background:rgba(0,153,255,.07);bottom:-50px;left:-50px;animation:po 9s ease-in-out infinite reverse}
 @keyframes po{0%,100%{transform:scale(1)}50%{transform:scale(1.2);opacity:.65}}
-/* Grid pattern for corporate feel */
 .grid-pat{position:absolute;inset:0;background-image:linear-gradient(rgba(0,56,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,56,255,.04) 1px,transparent 1px);background-size:60px 60px;opacity:.6}
 .hi{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:80px 24px;text-align:center}
 .hbadge{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);border:1px solid rgba(0,153,255,.3);border-radius:20px;padding:6px 16px;margin-bottom:32px;background:rgba(0,153,255,.06)}
@@ -96,7 +96,6 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .lc h3{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:10px}
 .lc p{font-size:13px;color:var(--sub);line-height:1.6;margin-bottom:16px}
 .ltag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-family:var(--fh);color:var(--bl);border:1px solid rgba(0,153,255,.25);border-radius:4px;padding:3px 8px}
-/* ROI Section */
 #roi{padding:100px 0;background:var(--bg)}
 .roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .roi-text .sl{margin-bottom:14px}
@@ -167,7 +166,6 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
   .fbot{flex-direction:column;text-align:center}
 }
 @media(max-width:480px){.section{padding:70px 0}.hh1{font-size:36px}.sn{font-size:48px}}
-
 .has-dropdown{position:relative}
 .dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
 .dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
@@ -176,7 +174,6 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
 .dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#CCCCDD;transition:all .2s;white-space:nowrap;text-decoration:none}
 .dropdown a i{font-size:16px;color:#0099FF}
 .dropdown a:hover{background:rgba(0,56,255,.12);color:#fff}
-
 </style>
 </head>
 <body>
@@ -189,20 +186,20 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
             <li><a href="firmen.html"><i class="ti ti-building"></i> Für Firmen</a></li>
           </ul>
         </li>
-        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="ueber-mich.html">Über mich</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
-      </ul><div class="nr"><a href="kontakt.html" class="btn bp">Erstgespräch buchen</a><button class="burg" id="burg"><span></span><span></span><span></span></button></div></div></div></nav>
+      </ul><div class="nr"><a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bp">Erstgespräch buchen</a><button class="burg" id="burg"><span></span><span></span><span></span></button></div></div></div></nav>
 <div class="mm" id="mm">
-  <a href="kuenstler.html" onclick="cM()"><i class="ti ti-music" style="margin-right:8px;color:#0099FF"></i>Für Künstler & Musiker</a>
-  <a href="veranstalter.html" onclick="cM()"><i class="ti ti-confetti" style="margin-right:8px;color:#0099FF"></i>Für Veranstalter</a>
-  <a href="firmen.html" onclick="cM()"><i class="ti ti-building" style="margin-right:8px;color:#0099FF"></i>Für Firmen</a>
-  <a href="index.html#portfolio" onclick="cM()">Portfolio</a>
+  <a href="kuenstler.html" onclick="cM()">Für Künstler & Musiker</a>
+  <a href="veranstalter.html" onclick="cM()">Für Veranstalter</a>
+  <a href="firmen.html" onclick="cM()">Für Firmen</a>
+  <a href="portfolio.html" onclick="cM()">Portfolio</a>
   <a href="ueber-mich.html" onclick="cM()">Über mich</a>
   <a href="blog.html" onclick="cM()">Blog</a>
   <a href="kontakt.html" onclick="cM()">Kontakt</a>
-  <a href="kontakt.html" class="btn bp" onclick="cM()">Erstgespräch buchen</a>
+  <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bp" onclick="cM()">Erstgespräch buchen</a>
 </div>
 <div class="bc"><div class="container"><div class="bci"><a href="index.html">Startseite</a><i class="ti ti-chevron-right"></i><a href="#">Leistungen</a><i class="ti ti-chevron-right"></i><span>Firmen & Unternehmen</span></div></div></div>
 <section id="hero">
@@ -212,7 +209,7 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
     <h1 class="hh1">Social Media der<br>wirklich <em>Kunden bringt.</em></h1>
     <p class="hsub">Kein Posting in die Leere — sondern eine Strategie die deine Zielgruppe erreicht, Vertrauen aufbaut und messbar mehr Anfragen generiert.</p>
     <div class="hctas">
-      <a href="kontakt.html" class="btn bp blg pulse"><i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen</a>
+      <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bp blg pulse"><i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen</a>
       <a href="#leistungen" class="btn bo blg">Meine Leistungen</a>
     </div>
     <div class="htrust"><span><i class="ti ti-check"></i> Messbarer ROI</span><span><i class="ti ti-check"></i> Professionelle Umsetzung</span><span><i class="ti ti-check"></i> Persönliche Betreuung</span></div>
@@ -239,7 +236,7 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
       <div class="lc reveal d3"><div class="lic"><i class="ti ti-pencil"></i></div><h3>Blog & Content Marketing</h3><p>SEO-optimierte Inhalte die Vertrauen aufbauen, Expertise zeigen und organisch neue Kunden bringen.</p><span class="ltag"><i class="ti ti-clock" style="font-size:12px"></i> Monatlich</span></div>
       <div class="lc reveal d1"><div class="lic"><i class="ti ti-brand-youtube"></i></div><h3>YouTube-Kanal für Firmen</h3><p>Produkt-Videos, Unternehmensvorstellungen, How-To-Inhalte — YouTube als Vertrauens- und Reichweitenmotor.</p><span class="ltag"><i class="ti ti-sparkles" style="font-size:12px"></i> Auf Anfrage</span></div>
       <div class="lc reveal d2"><div class="lic"><i class="ti ti-microphone"></i></div><h3>Firmen-Podcast</h3><p>Positioniere dein Unternehmen als Branchenexperte — mit einem Podcast der Vertrauen schafft und Reichweite aufbaut.</p><span class="ltag"><i class="ti ti-sparkles" style="font-size:12px"></i> Auf Anfrage</span></div>
-      <div class="lc reveal d3"><div class="lic"><i class="ti ti-layout"></i></div><h3>Webseite (Squarespace)</h3><p>Professionelle, schnelle und conversion-optimierte Website die Besucher zu Kunden macht — mit eigenem CMS.</p><span class="ltag"><i class="ti ti-sparkles" style="font-size:12px"></i> Einmalig</span></div>
+      <div class="lc reveal d3"><div class="lic"><i class="ti ti-layout"></i></div><h3>Webseite</h3><p>Professionelle, schnelle und conversion-optimierte Website die Besucher zu Kunden macht — mit eigenem CMS.</p><span class="ltag"><i class="ti ti-sparkles" style="font-size:12px"></i> Einmalig</span></div>
     </div>
   </div>
 </section>
@@ -268,9 +265,9 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
   <div class="container">
     <div class="tc reveal"><p class="sl">Meine Angebote</p><h2 class="st">Das passende Paket für dein Unternehmen</h2><p class="ss">Flexibel, skalierbar und auf deine Branche zugeschnitten.</p></div>
     <div class="pk">
-      <div class="pkc reveal d1"><div class="pkn">Business-Starter</div><div class="pkp">Einstieg ins professionelle Marketing · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> 1–2 Social Media Kanäle</li><li><i class="ti ti-check"></i> Monatlicher Content-Plan</li><li><i class="ti ti-check"></i> Community Management</li><li><i class="ti ti-check"></i> Monatlicher Report</li><li><i class="ti ti-check"></i> Persönliche Betreuung</li></ul><a href="kontakt.html" class="btn bo pkcta">Anfragen</a></div>
-      <div class="pkc ft reveal d2"><div class="pkb">Empfohlen</div><div class="pkn">Business-Pro</div><div class="pkp">Multi-Channel mit Ads · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> Alle relevanten Kanäle</li><li><i class="ti ti-check"></i> Content-Produktion inklusive</li><li><i class="ti ti-check"></i> Meta + Google Ads</li><li><i class="ti ti-check"></i> Blog & SEO-Content</li><li><i class="ti ti-check"></i> Wöchentliche Updates</li><li><i class="ti ti-check"></i> Detaillierte KPI-Reports</li></ul><a href="kontakt.html" class="btn bp pkcta">Anfragen</a></div>
-      <div class="pkc reveal d3"><div class="pkn">Business-Premium</div><div class="pkp">Volldigitale Präsenz · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> Alle Leistungen inklusive</li><li><i class="ti ti-check"></i> Social + YouTube + Podcast</li><li><i class="ti ti-check"></i> Webseite inklusive</li><li><i class="ti ti-check"></i> Ads + Blog + PR</li><li><i class="ti ti-check"></i> Monatliche Strategie-Calls</li><li><i class="ti ti-check"></i> Tägliche Betreuung</li></ul><a href="kontakt.html" class="btn bo pkcta">Anfragen</a></div>
+      <div class="pkc reveal d1"><div class="pkn">Business-Starter</div><div class="pkp">Einstieg ins professionelle Marketing · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> 1–2 Social Media Kanäle</li><li><i class="ti ti-check"></i> Monatlicher Content-Plan</li><li><i class="ti ti-check"></i> Community Management</li><li><i class="ti ti-check"></i> Monatlicher Report</li><li><i class="ti ti-check"></i> Persönliche Betreuung</li></ul><a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bo pkcta">Anfragen</a></div>
+      <div class="pkc ft reveal d2"><div class="pkb">Empfohlen</div><div class="pkn">Business-Pro</div><div class="pkp">Multi-Channel mit Ads · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> Alle relevanten Kanäle</li><li><i class="ti ti-check"></i> Content-Produktion inklusive</li><li><i class="ti ti-check"></i> Meta + Google Ads</li><li><i class="ti ti-check"></i> Blog & SEO-Content</li><li><i class="ti ti-check"></i> Wöchentliche Updates</li><li><i class="ti ti-check"></i> Detaillierte KPI-Reports</li></ul><a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bp pkcta">Anfragen</a></div>
+      <div class="pkc reveal d3"><div class="pkn">Business-Premium</div><div class="pkp">Volldigitale Präsenz · Preis auf Anfrage</div><ul class="pkl"><li><i class="ti ti-check"></i> Alle Leistungen inklusive</li><li><i class="ti ti-check"></i> Social + YouTube + Podcast</li><li><i class="ti ti-check"></i> Webseite inklusive</li><li><i class="ti ti-check"></i> Ads + Blog + PR</li><li><i class="ti ti-check"></i> Monatliche Strategie-Calls</li><li><i class="ti ti-check"></i> Tägliche Betreuung</li></ul><a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bo pkcta">Anfragen</a></div>
     </div>
   </div>
 </section>
@@ -278,15 +275,15 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
   <div class="container">
     <div class="tc reveal"><p class="sl">Häufige Fragen</p><h2 class="st">Deine Fragen — meine Antworten</h2></div>
     <div class="fw">
-      <div class="fi reveal d1"><button class="fq" onclick="tog(this)">Arbeitet ihr auch mit kleinen Unternehmen?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Ja — die Unternehmensgröße spielt keine Rolle. Ob Einzelunternehmer, KMU oder mittelständisches Unternehmen: Ich passe die Strategie an dein Budget und deine Ziele an. Es gibt kein Mindestumsatz.</div></div></div>
+      <div class="fi reveal d1"><button class="fq" onclick="tog(this)">Arbeitet ihr auch mit kleinen Unternehmen?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Ja — die Unternehmensgröße spielt keine Rolle. Ob Einzelunternehmer, KMU oder mittelständisches Unternehmen: Ich passe die Strategie an dein Budget und deine Ziele an. Es gibt keinen Mindestumsatz.</div></div></div>
       <div class="fi reveal d2"><button class="fq" onclick="tog(this)">Wie lange dauert es bis ich Ergebnisse sehe?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Erste messbare Ergebnisse — mehr Reichweite, mehr Profilbesuche, erste Anfragen — sind oft nach 4–8 Wochen sichtbar. Paid Ads liefern schneller Ergebnisse als organisches Marketing. Ein realistischer Zeithorizont für nachhaltiges Wachstum sind 3–6 Monate.</div></div></div>
       <div class="fi reveal d3"><button class="fq" onclick="tog(this)">Welche Branchen betreust du?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Ich bin branchenoffen — von Handwerk über Gastronomie bis hin zu Dienstleistungen und E-Commerce. Im Erstgespräch analysieren wir gemeinsam, welche Kanäle und Strategien für deine spezifische Branche am besten funktionieren.</div></div></div>
-      <div class="fi reveal d4"><button class="fq" onclick="tog(this)">Wie hoch sollte das Ads-Budget sein?<i class="ti ti-plus"></i></button><div class="fai" style="display:none"></div><div class="fa"><div class="fai">Das hängt von deinen Zielen und der Wettbewerbssituation ab. Ich arbeite mit jedem Budget — und helfe dir, es optimal einzusetzen. Wir besprechen das gemeinsam im Erstgespräch ohne Verpflichtung.</div></div></div>
+      <div class="fi reveal d4"><button class="fq" onclick="tog(this)">Wie hoch sollte das Ads-Budget sein?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Das hängt von deinen Zielen und der Wettbewerbssituation ab. Ich arbeite mit jedem Budget — und helfe dir, es optimal einzusetzen. Wir besprechen das gemeinsam im Erstgespräch ohne Verpflichtung.</div></div></div>
       <div class="fi reveal d5"><button class="fq" onclick="tog(this)">Bekomme ich regelmäßige Reports?<i class="ti ti-plus"></i></button><div class="fa"><div class="fai">Ja — monatliche Reports sind Standard. Darin siehst du alle wichtigen KPIs: Reichweite, Engagement, Klicks, Leads und Conversions. Auf Wunsch auch wöchentliche Updates. Volle Transparenz ist für mich selbstverständlich.</div></div></div>
     </div>
   </div>
 </section>
-<section id="ce"><div class="container"><div class="cei reveal"><h2>Mehr Kunden durch Social Media?</h2><p>Buche dein kostenloses Erstgespräch — unverbindlich, persönlich, ohne Risiko.</p><a href="kontakt.html" class="btn bw blg"><i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen</a><div class="cex"><span><i class="ti ti-check"></i> Kein Risiko</span><span><i class="ti ti-check"></i> Antwort in 24h</span><span><i class="ti ti-check"></i> Für alle Branchen</span></div></div></div></section>
+<section id="ce"><div class="container"><div class="cei reveal"><h2>Mehr Kunden durch Social Media?</h2><p>Buche dein kostenloses Erstgespräch — unverbindlich, persönlich, ohne Risiko.</p><a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn bw blg"><i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen</a><div class="cex"><span><i class="ti ti-check"></i> Kein Risiko</span><span><i class="ti ti-check"></i> Antwort in 24h</span><span><i class="ti ti-check"></i> Für alle Branchen</span></div></div></div></section>
 <footer>
   <div class="container" style="max-width:1200px">
     <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(0,56,255,.18)">
@@ -310,7 +307,7 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
           <li><a href="kuenstler.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Künstler & Musiker</a></li>
           <li><a href="veranstalter.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Veranstalter</a></li>
           <li><a href="firmen.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Firmen</a></li>
-          <li><a href="index.html#portfolio" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Portfolio</a></li>
+          <li><a href="portfolio.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Portfolio</a></li>
         </ul>
       </div>
       <div>
@@ -325,14 +322,14 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
       </div>
       <div>
         <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Kontakt</h4>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="mailto:vmissun@web.de" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">vmissun@web.de</a></p>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="tel:01716852540" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">01716852540</a></p>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="mailto:info@leonmediasolution.de" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">info@leonmediasolution.de</a></p>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="tel:015679827958" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">015679827958</a></p>
         <p style="font-size:14px;color:#CCCCDD;margin-bottom:20px;display:flex;align-items:center;gap:8px"><i class="ti ti-world" style="font-size:16px;color:#0099FF;flex-shrink:0"></i> leonmediasolution.de</p>
-        <a href="kontakt.html" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(0,56,255,.3);text-decoration:none" onmouseover="this.style.background='#0099FF'" onmouseout="this.style.background='#0038FF'"><i class="ti ti-calendar"></i> Termin buchen</a>
+        <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(0,56,255,.3);text-decoration:none" onmouseover="this.style.background='#0099FF'" onmouseout="this.style.background='#0038FF'"><i class="ti ti-calendar"></i> Termin buchen</a>
       </div>
     </div>
     <div style="padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#CCCCDD;flex-wrap:wrap;gap:12px">
-      <span>© 2025 Leon Media Solution · Inh. Volker Missun</span>
+      <span>© 2026 Leon Media Solution · Inh. Volker Missun</span>
       <div style="display:flex;gap:20px">
         <a href="impressum.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Impressum</a>
         <a href="datenschutz.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Datenschutz</a>
