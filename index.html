@@ -1049,8 +1049,9 @@ footer {
 
 .has-dropdown{position:relative}
 .dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
-.dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
-.has-dropdown:hover .dropdown{display:block}
+.dropdown{display:none;position:absolute;top:100%;left:-16px;margin-top:12px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
+.has-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.has-dropdown:hover .dropdown,.dropdown:hover{display:block}
 .dropdown li{list-style:none}
 .dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#CCCCDD;transition:all .2s;white-space:nowrap;text-decoration:none}
 .dropdown a i{font-size:16px;color:#0099FF}
@@ -1295,10 +1296,10 @@ footer {
 
       <!-- Angebot 3 -->
       <div class="ang-card reveal reveal-delay-3">
-        <div class="ang-icon"><i class="ti ti-credit-card"></i></div>
-        <h3>Finanzielle Freiheit neu gedacht</h3>
-        <p>Etwas, das du täglich nutzt — und das erstmals für dich arbeitet. Einfach in der Handhabung, clever im System. Sei von Anfang an dabei und sichere dir deinen Vorsprung.</p>
-        <a href="https://app.bellvercards.com?ref=business" target="_blank" rel="noopener" class="ang-btn"><i class="ti ti-external-link"></i> Jetzt entdecken</a>
+        <div class="ang-icon"><i class="ti ti-coin"></i></div>
+        <h3>Projekt-Finanzierung gesucht?</h3>
+        <p>Du hast ein Projekt, eine Idee oder ein Vorhaben, dem noch die passende Finanzierung fehlt? Ich kenne digitale Möglichkeiten, die dich hier weiterbringen können — unkompliziert und zeitgemäß. Du willst mehr erfahren? Dann melde dich einfach bei mir.</p>
+        <a href="kontakt.html" class="ang-btn"><i class="ti ti-message-circle"></i> Mehr erfahren</a>
       </div>
 
     </div>
