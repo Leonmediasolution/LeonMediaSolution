@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -652,6 +653,114 @@ nav.scrolled {
   line-height: 1.6;
 }
 
+/* ===== ANGEBOTE / ZUSÄTZLICHE MÖGLICHKEITEN ===== */
+#angebote {
+  padding: 100px 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+#angebote::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(0,56,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+.ang-card {
+  background: rgba(17,17,51,0.45);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 34px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.ang-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+.ang-card:hover::before { transform: scaleX(1); }
+.ang-card:hover {
+  border-color: var(--blue);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35), 0 0 30px var(--blue-glow-soft);
+}
+.ang-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--blue-glow-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: var(--blue-light);
+  transition: all .3s;
+}
+.ang-card:hover .ang-icon {
+  background: rgba(0,56,255,0.2);
+  border-color: var(--blue);
+  color: var(--white);
+}
+.ang-card h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+.ang-card p {
+  font-size: 15px;
+  color: var(--subtext);
+  line-height: 1.65;
+  margin-bottom: 26px;
+  flex-grow: 1;
+}
+.ang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--blue);
+  color: var(--white);
+  padding: 13px 24px;
+  border-radius: 6px;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 0 18px var(--blue-glow);
+  transition: all .25s;
+  margin-top: auto;
+}
+.ang-btn:hover {
+  background: var(--blue-light);
+  box-shadow: 0 0 32px rgba(0,153,255,0.5);
+  transform: translateY(-2px);
+}
+
 /* ===== WHY ===== */
 #warum {
   padding: 100px 0;
@@ -923,6 +1032,7 @@ footer {
   .kz-item:nth-child(2n) { border-bottom: 1px solid var(--border); }
   .kz-item:last-child, .kz-item:nth-last-child(2) { border-bottom: none; }
   .ls-grid { grid-template-columns: 1fr; }
+  .ang-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; gap: 32px; }
   .testi-wrap { flex-direction: column; gap: 24px; }
   .testi-line { width: 100%; min-height: 3px; }
@@ -971,7 +1081,7 @@ footer {
             <li><a href="firmen.html"><i class="ti ti-building"></i> Für Firmen</a></li>
           </ul>
         </li>
-        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="ueber-mich.html">Über mich</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
@@ -979,7 +1089,7 @@ footer {
 
       <!-- CTA + Hamburger -->
       <div class="nav-cta">
-        <a href="kontakt.html" class="btn btn-primary">Erstgespräch buchen</a>
+        <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn btn-primary">Erstgespräch buchen</a>
         <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
           <span></span><span></span><span></span>
         </button>
@@ -993,11 +1103,11 @@ footer {
   <a href="kuenstler.html" onclick="closeMobile()"><i class="ti ti-music" style="margin-right:8px;color:#0099FF"></i>Für Künstler & Musiker</a>
   <a href="veranstalter.html" onclick="closeMobile()"><i class="ti ti-confetti" style="margin-right:8px;color:#0099FF"></i>Für Veranstalter</a>
   <a href="firmen.html" onclick="closeMobile()"><i class="ti ti-building" style="margin-right:8px;color:#0099FF"></i>Für Firmen</a>
-  <a href="index.html#portfolio" onclick="closeMobile()">Portfolio</a>
+  <a href="portfolio.html" onclick="closeMobile()">Portfolio</a>
   <a href="ueber-mich.html" onclick="closeMobile()">Über mich</a>
   <a href="blog.html" onclick="closeMobile()">Blog</a>
   <a href="kontakt.html" onclick="closeMobile()">Kontakt</a>
-  <a href="kontakt.html" class="btn btn-primary" onclick="closeMobile()">Erstgespräch buchen</a>
+  <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn btn-primary" onclick="closeMobile()">Erstgespräch buchen</a>
 </div>
 
 <!-- ===== HERO ===== -->
@@ -1023,7 +1133,7 @@ footer {
     </p>
 
     <div class="hero-ctas">
-      <a href="#kontakt" class="btn btn-primary btn-large pulse">🎤 Jetzt sichtbar werden</a>
+      <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn btn-primary btn-large pulse">🎤 Jetzt sichtbar werden</a>
       <a href="#portfolio" class="btn btn-outline btn-large">Portfolio ansehen</a>
     </div>
 
@@ -1039,69 +1149,6 @@ footer {
   </div>
 </section>
 
-
-<!-- ===== VIDEO TEASER ===== -->
-<section id="video-teaser" style="padding:0;background:#050510;position:relative;overflow:hidden">
-  <div style="max-width:1200px;margin:0 auto;padding:60px 24px">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
-
-      <!-- VIDEO LINKS -->
-      <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(0,56,255,.2);box-shadow:0 0 60px rgba(0,56,255,.15)">
-        <!-- VIDEO PLATZHALTER — ersetze src="video.mp4" mit deinem fertigen Clip -->
-        <video
-          autoplay muted loop playsinline
-          style="width:100%;display:block;border-radius:16px"
-          poster="video-poster.jpg"
-          id="hero-video">
-          <!-- <source src="dein-musikvideo-clip.mp4" type="video/mp4"> -->
-        </video>
-        <!-- Platzhalter-Anzeige solange kein Video vorhanden -->
-        <div id="video-placeholder" style="aspect-ratio:16/9;background:linear-gradient(135deg,#0a0a20,#0d1a5e);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
-          <div style="width:72px;height:72px;border-radius:50%;background:rgba(0,56,255,.2);border:2px solid rgba(0,56,255,.4);display:flex;align-items:center;justify-content:center;cursor:pointer" onclick="window.open('https://www.youtube.com/@LeonMediaSolution','_blank')">
-            <i class="ti ti-player-play" style="font-size:28px;color:#0099FF;margin-left:4px"></i>
-          </div>
-          <div style="text-align:center">
-            <div style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:4px">Volker Leon — Ich bin frei</div>
-            <div style="font-size:13px;color:#CCCCDD">Video kommt bald · Jetzt auf YouTube abonnieren</div>
-          </div>
-        </div>
-        <!-- Play-Overlay -->
-        <div style="position:absolute;bottom:16px;left:16px;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);border-radius:8px;padding:6px 12px;display:flex;align-items:center;gap:8px">
-          <i class="ti ti-music" style="font-size:14px;color:#0099FF"></i>
-          <span style="font-family:'Space Grotesk',sans-serif;font-size:12px;color:#fff">Ich bin frei — Volker Leon</span>
-        </div>
-      </div>
-
-      <!-- TEXT RECHTS -->
-      <div>
-        <p style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Sichtbar werden</p>
-        <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.1;margin-bottom:20px;color:#fff">Deine Geschichte.<br>Dein Auftritt.<br><span style="color:#0038FF">Deine Reichweite.</span></h2>
-        <p style="font-size:18px;color:#CCCCDD;line-height:1.75;margin-bottom:32px">Social Media das wirklich funktioniert — für Künstler, Musiker, Veranstalter und Firmen. Persönlich betreut von Volker Missun.</p>
-        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px">
-          <div style="display:flex;align-items:center;gap:12px;font-size:16px;color:#CCCCDD">
-            <i class="ti ti-check" style="font-size:18px;color:#0099FF;flex-shrink:0"></i> Mehr Reichweite durch gezielte Strategie
-          </div>
-          <div style="display:flex;align-items:center;gap:12px;font-size:16px;color:#CCCCDD">
-            <i class="ti ti-check" style="font-size:18px;color:#0099FF;flex-shrink:0"></i> Persönliche Betreuung — direkt mit Volker
-          </div>
-          <div style="display:flex;align-items:center;gap:12px;font-size:16px;color:#CCCCDD">
-            <i class="ti ti-check" style="font-size:18px;color:#0099FF;flex-shrink:0"></i> Für Newcomer & erfahrene Künstler
-          </div>
-        </div>
-        <a href="kontakt.html" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:16px 32px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:500;text-decoration:none;box-shadow:0 0 25px rgba(0,56,255,.4);transition:all .25s" onmouseover="this.style.background='#0099FF';this.style.boxShadow='0 0 40px rgba(0,153,255,.5)'" onmouseout="this.style.background='#0038FF';this.style.boxShadow='0 0 25px rgba(0,56,255,.4)'">
-          <i class="ti ti-calendar"></i> Kostenloses Erstgespräch buchen
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- Responsive Video Section -->
-<style>
-@media(max-width:768px){
-  #video-teaser .container-inner{grid-template-columns:1fr !important}
-}
-</style>
 
 <!-- ===== ZIELGRUPPEN ===== -->
 <section id="zielgruppen">
@@ -1219,6 +1266,44 @@ footer {
   </div>
 </section>
 
+<!-- ===== ZUSÄTZLICHE MÖGLICHKEITEN / ANGEBOTE ===== -->
+<section id="angebote">
+  <div class="container">
+    <div class="text-center reveal">
+      <p class="section-label">Zusätzliche Möglichkeiten</p>
+      <h2 class="section-title">Mehr für Unternehmer,<br>Künstler &amp; Macher.</h2>
+      <p class="section-sub">Ausgewählte Plattformen und Tools, die dein Business zusätzlich nach vorne bringen — direkt zum Entdecken.</p>
+    </div>
+    <div class="ang-grid">
+
+      <!-- Angebot 1 -->
+      <div class="ang-card reveal reveal-delay-1">
+        <div class="ang-icon"><i class="ti ti-id-badge-2"></i></div>
+        <h3>Deine digitale Visitenkarte</h3>
+        <p>Ein professioneller erster Eindruck, der hängen bleibt: Teile all deine Kontakte, Links und Angebote mit einem einzigen Fingertipp — modern, kontaktlos, immer dabei.</p>
+        <a href="https://clever-world.info/visitcard" target="_blank" rel="noopener" class="ang-btn"><i class="ti ti-external-link"></i> Jetzt entdecken</a>
+      </div>
+
+      <!-- Angebot 2 -->
+      <div class="ang-card reveal reveal-delay-2">
+        <div class="ang-icon"><i class="ti ti-users-group"></i></div>
+        <h3>Echte Community statt Fake</h3>
+        <p>Ein Netzwerk aus 100 % verifizierten, echten Menschen — ohne Bots, ohne Fake-Profile. Ideal für Sichtbarkeit, neue Partner und echte Verbindungen für dein Business.</p>
+        <a href="https://welcome.wearereal.com/?real=2050540" target="_blank" rel="noopener" class="ang-btn"><i class="ti ti-external-link"></i> Jetzt entdecken</a>
+      </div>
+
+      <!-- Angebot 3 -->
+      <div class="ang-card reveal reveal-delay-3">
+        <div class="ang-icon"><i class="ti ti-credit-card"></i></div>
+        <h3>Finanzielle Freiheit neu gedacht</h3>
+        <p>Etwas, das du täglich nutzt — und das erstmals für dich arbeitet. Einfach in der Handhabung, clever im System. Sei von Anfang an dabei und sichere dir deinen Vorsprung.</p>
+        <a href="https://app.bellvercards.com?ref=business" target="_blank" rel="noopener" class="ang-btn"><i class="ti ti-external-link"></i> Jetzt entdecken</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ===== WARUM ===== -->
 <section id="warum" class="section">
   <div class="container">
@@ -1269,7 +1354,7 @@ footer {
           </div>
         </div>
         <div style="margin-top:24px">
-          <a href="kontakt.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:14px 28px;border-radius:6px;font-family:var(--font-head);font-size:15px;font-weight:500;text-decoration:none;box-shadow:0 0 20px var(--blue-glow);transition:all .25s" onmouseover="this.style.background='var(--blue-light)'" onmouseout="this.style.background='var(--blue)'">
+          <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:14px 28px;border-radius:6px;font-family:var(--font-head);font-size:15px;font-weight:500;text-decoration:none;box-shadow:0 0 20px var(--blue-glow);transition:all .25s" onmouseover="this.style.background='var(--blue-light)'" onmouseout="this.style.background='var(--blue)'">
             <i class="ti ti-calendar"></i> Jetzt kostenloses Erstgespräch buchen
           </a>
         </div>
@@ -1284,7 +1369,7 @@ footer {
     <div class="cta-content reveal">
       <h2>Bereit, sichtbar zu werden?</h2>
       <p>Buche jetzt dein kostenloses Erstgespräch — kein Risiko, keine Verpflichtung.</p>
-      <a href="#kontakt" class="btn btn-white btn-large">Kostenloses Erstgespräch buchen</a>
+      <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn btn-white btn-large">Kostenloses Erstgespräch buchen</a>
     </div>
   </div>
 </section>
@@ -1313,7 +1398,7 @@ footer {
           <li><a href="kuenstler.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Künstler & Musiker</a></li>
           <li><a href="veranstalter.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Veranstalter</a></li>
           <li><a href="firmen.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Firmen</a></li>
-          <li><a href="index.html#portfolio" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Portfolio</a></li>
+          <li><a href="portfolio.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Portfolio</a></li>
         </ul>
       </div>
       <div>
@@ -1328,14 +1413,14 @@ footer {
       </div>
       <div>
         <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Kontakt</h4>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="mailto:vmissun@web.de" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">vmissun@web.de</a></p>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="tel:01716852540" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">01716852540</a></p>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="mailto:info@leonmediasolution.de" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">info@leonmediasolution.de</a></p>
+        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="tel:015679827958" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">015679827958</a></p>
         <p style="font-size:14px;color:#CCCCDD;margin-bottom:20px;display:flex;align-items:center;gap:8px"><i class="ti ti-world" style="font-size:16px;color:#0099FF;flex-shrink:0"></i> leonmediasolution.de</p>
-        <a href="kontakt.html" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(0,56,255,.3);text-decoration:none" onmouseover="this.style.background='#0099FF'" onmouseout="this.style.background='#0038FF'"><i class="ti ti-calendar"></i> Termin buchen</a>
+        <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(0,56,255,.3);text-decoration:none" onmouseover="this.style.background='#0099FF'" onmouseout="this.style.background='#0038FF'"><i class="ti ti-calendar"></i> Termin buchen</a>
       </div>
     </div>
     <div style="padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#CCCCDD;flex-wrap:wrap;gap:12px">
-      <span>© 2025 Leon Media Solution · Inh. Volker Missun</span>
+      <span>© 2026 Leon Media Solution · Inh. Volker Missun</span>
       <div style="display:flex;gap:20px">
         <a href="impressum.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Impressum</a>
         <a href="datenschutz.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Datenschutz</a>
@@ -1433,25 +1518,5 @@ const kzSection = document.getElementById('kennzahlen');
 if (kzSection) kzObserver.observe(kzSection);
 </script>
 
-<!--
-==============================================
-TODO — Vor dem Launch ausfüllen:
-==============================================
-[ ] Logo-Bild einsetzen (nav-logo-mark und footer)
-[ ] Calendly-Link eintragen (alle "Erstgespräch buchen" Buttons)
-[ ] E-Mail aktualisieren (vmissun@web.de → neue Adresse)
-[ ] Testimonial-Zitat + Name + Beruf + Foto eintragen
-[ ] Social-Media-Links eintragen (Instagram, Facebook, YouTube, LinkedIn, TikTok)
-[ ] Impressum-Seite erstellen (impressum.html)
-[ ] Datenschutz-Seite erstellen (datenschutz.html)
-[ ] Domain leonmediasolution.de verbinden
-[ ] Google Analytics 4 einbinden (vor </head>)
-[ ] Favicon erstellen und eintragen
-[ ] Portfolio-Seite verlinken (portfolio.html)
-[ ] Über-mich-Seite verlinken (ueber-mich.html)
-[ ] Blog-Seite verlinken (blog.html)
-[ ] Leistungs-Unterseiten verlinken (zg-link Karten)
-==============================================
--->
 </body>
 </html>
