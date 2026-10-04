@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
-:root{--bg:#050510;--card:#111133;--blue:#0038FF;--bl:#0099FF;--glow:rgba(0,56,255,.35);--soft:rgba(0,56,255,.12);--w:#FFFFFF;--sub:#CCCCDD;--brd:rgba(0,56,255,.18);--fh:'Space Grotesk',sans-serif;--fb:'Inter',sans-serif;--nh:72px;--r:12px}
+:root{--bg:#FFFFFF;--card:#F4F6FB;--blue:#2353D1;--bl:#2353D1;--glow:rgba(35,83,209,.25);--soft:rgba(35,83,209,.10);--w:#1A2238;--sub:#4A5568;--brd:#E2E8F0;--fh:'Space Grotesk',sans-serif;--fb:'Inter',sans-serif;--nh:72px;--r:12px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--fb);background:var(--bg);color:var(--w);line-height:1.6;overflow-x:hidden}
@@ -27,17 +27,17 @@ a{color:inherit;text-decoration:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:15px;font-weight:500;padding:14px 28px;border-radius:6px;cursor:pointer;transition:all .25s;border:2px solid transparent;white-space:nowrap}
 .bp{background:var(--blue);color:#fff;box-shadow:0 0 22px var(--glow)}
-.bp:hover{background:var(--bl);box-shadow:0 0 38px rgba(0,153,255,.5);transform:translateY(-2px)}
-.bo{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
-.bo:hover{border-color:#fff;background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.bp:hover{background:var(--bl);box-shadow:0 0 38px rgba(35,83,209,.4);transform:translateY(-2px)}
+.bo{background:transparent;color:var(--blue);border-color:var(--blue)}
+.bo:hover{border-color:var(--blue);background:rgba(35,83,209,.07);transform:translateY(-2px)}
 .blg{font-size:17px;padding:18px 40px}
 .bw{background:#fff;color:var(--blue);font-weight:700}
 .bw:hover{background:rgba(255,255,255,.9);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
 nav{position:fixed;top:0;left:0;right:0;height:var(--nh);z-index:1000;transition:background .3s,backdrop-filter .3s,border-bottom .3s}
-nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
+nav.sc{background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd)}
 .ni{display:flex;align-items:center;justify-content:space-between;height:var(--nh)}
 .logo{display:flex;align-items:center;gap:12px;font-family:var(--fh)}
-.lm{width:42px;height:42px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:8px;box-shadow:0 0 15px var(--glow);overflow:hidden;position:relative}
+.lm{width:42px;height:42px;background:var(--blue);color:#FFFFFF;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:8px;box-shadow:0 0 15px var(--glow);overflow:hidden;position:relative}
 .lm::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:sh 3s infinite}
 @keyframes sh{to{left:100%}}
 .ln{font-size:16px;font-weight:700}
@@ -50,7 +50,7 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .burg.o span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burg.o span:nth-child(2){opacity:0}
 .burg.o span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mm{display:none;position:fixed;top:var(--nh);left:0;right:0;background:rgba(5,5,16,.97);backdrop-filter:blur(20px);padding:24px;border-bottom:1px solid var(--brd);z-index:999;flex-direction:column;gap:16px}
+.mm{display:none;position:fixed;top:var(--nh);left:0;right:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);padding:24px;border-bottom:1px solid var(--brd);z-index:999;flex-direction:column;gap:16px}
 .mm.o{display:flex}
 .mm a{font-family:var(--fh);font-size:18px;font-weight:500;color:var(--sub);padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .2s}
 .mm a:hover{color:#fff}
@@ -67,16 +67,16 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .o1{width:600px;height:600px;background:rgba(0,56,255,.1);top:-150px;right:-150px;animation:po 7s ease-in-out infinite}
 .o2{width:400px;height:400px;background:rgba(0,153,255,.07);bottom:-50px;left:-50px;animation:po 9s ease-in-out infinite reverse}
 @keyframes po{0%,100%{transform:scale(1)}50%{transform:scale(1.2);opacity:.65}}
-.crowd{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,56,255,.15) 1px,transparent 1px);background-size:32px 32px;opacity:.3;animation:cd 20s linear infinite}
+.crowd{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(35,83,209,.12) 1px,transparent 1px);background-size:32px 32px;opacity:.3;animation:cd 20s linear infinite}
 @keyframes cd{to{background-position:32px 32px}}
 .hi{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:80px 24px;text-align:center}
-.hbadge{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);border:1px solid rgba(0,153,255,.3);border-radius:20px;padding:6px 16px;margin-bottom:32px;background:rgba(0,153,255,.06)}
+.hbadge{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--bl);border:1px solid rgba(35,83,209,.25);border-radius:20px;padding:6px 16px;margin-bottom:32px;background:rgba(35,83,209,.05)}
 .hh1{font-family:var(--fh);font-size:clamp(40px,7vw,80px);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin-bottom:28px}
 .hh1 em{font-style:normal;color:var(--blue)}
 .hsub{font-size:clamp(16px,2.2vw,19px);color:var(--sub);max-width:640px;margin:0 auto 44px;line-height:1.7}
 .hctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
 .pulse{animation:bp 2.5s ease-in-out infinite}
-@keyframes bp{0%,100%{box-shadow:0 0 22px var(--glow)}50%{box-shadow:0 0 42px rgba(0,56,255,.55),0 0 65px rgba(0,56,255,.2)}}
+@keyframes bp{0%,100%{box-shadow:0 0 22px var(--glow)}50%{box-shadow:0 0 42px rgba(0,56,255,.55),0 0 65px #E2E8F0}}
 .htrust{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;font-size:13px;color:var(--sub);font-family:var(--fh)}
 .htrust span{display:flex;align-items:center;gap:6px}
 .htrust i{color:var(--bl);font-size:15px}
@@ -94,7 +94,7 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .pc h3{font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.3}
 .pc p{font-size:13px;color:var(--sub);line-height:1.6}
 #stats{padding:80px 0;background:var(--bg);position:relative;overflow:hidden}
-#stats::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,56,255,.06) 0%,transparent 70%);pointer-events:none}
+#stats::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(35,83,209,.05) 0%,transparent 70%);pointer-events:none}
 .sg{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border:1px solid var(--brd);border-radius:var(--r);overflow:hidden}
 .si{padding:48px 24px;text-align:center;background:rgba(17,17,51,.3);border-right:1px solid var(--brd);transition:background .3s}
 .si:last-child{border-right:none}
@@ -111,7 +111,7 @@ nav.sc{background:rgba(5,5,16,.87);backdrop-filter:blur(20px);border-bottom:1px 
 .lc:hover .lic{color:#fff}
 .lc h3{font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:10px}
 .lc p{font-size:13px;color:var(--sub);line-height:1.6;margin-bottom:16px}
-.ltag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-family:var(--fh);color:var(--bl);border:1px solid rgba(0,153,255,.25);border-radius:4px;padding:3px 8px}
+.ltag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-family:var(--fh);color:var(--bl);border:1px solid rgba(35,83,209,.2);border-radius:4px;padding:3px 8px}
 #prozess{padding:100px 0;background:var(--card);border-top:1px solid var(--brd)}
 .prs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;position:relative}
 .prs::before{content:'';position:absolute;top:32px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,var(--blue),var(--bl),var(--blue));opacity:.3;z-index:0}
@@ -163,13 +163,13 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
 .fc i{color:var(--bl);font-size:16px;flex-shrink:0}
 .soc{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
 .sl3{width:38px;height:38px;border:1px solid var(--brd);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--sub);transition:all .25s}
-.sl3:hover{border-color:var(--blue);color:#fff;background:rgba(0,56,255,.15);transform:translateY(-2px)}
+.sl3:hover{border-color:var(--blue);color:#fff;background:rgba(35,83,209,.12);transform:translateY(-2px)}
 .fbot{padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--sub);flex-wrap:wrap;gap:12px}
 .fbot a{color:var(--sub);transition:color .2s}
 .fbot a:hover{color:#fff}
 .fl{display:flex;gap:20px}
 @media(max-width:768px){
-  .nl,.nr .btn{display:none}.burg{display:flex}
+  .nl{display:none}.nr .btn{display:none}.burg{display:flex}
   .pg,.lg,.pk,.prs{grid-template-columns:1fr}
   .sg{grid-template-columns:repeat(2,1fr)}
   .si{border-right:none;border-bottom:1px solid var(--brd)}
@@ -182,12 +182,13 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
 @media(max-width:480px){.section{padding:70px 0}.hh1{font-size:36px}.sn{font-size:48px}}
 .has-dropdown{position:relative}
 .dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
-.dropdown{display:none;position:absolute;top:calc(100% + 12px);left:-16px;background:rgba(5,5,16,.97);border:1px solid rgba(0,56,255,.2);border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
-.has-dropdown:hover .dropdown{display:block}
+.dropdown{display:none;position:absolute;top:100%;left:-16px;margin-top:12px;background:rgba(255,255,255,.98);border:1px solid #E2E8F0;border-radius:12px;padding:8px;min-width:220px;z-index:200;backdrop-filter:blur(20px)}
+.has-dropdown::after{content:'';position:absolute;top:100%;left:0;right:0;height:16px}
+.has-dropdown:hover .dropdown,.dropdown:hover{display:block}
 .dropdown li{list-style:none}
-.dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#CCCCDD;transition:all .2s;white-space:nowrap;text-decoration:none}
-.dropdown a i{font-size:16px;color:#0099FF}
-.dropdown a:hover{background:rgba(0,56,255,.12);color:#fff}
+.dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;font-size:14px;color:#4A5568;transition:all .2s;white-space:nowrap;text-decoration:none}
+.dropdown a i{font-size:16px;color:#2353D1}
+.dropdown a:hover{background:rgba(35,83,209,.10);color:#fff}
 </style>
 </head>
 <body>
@@ -316,53 +317,53 @@ footer{background:var(--bg);border-top:1px solid var(--brd);padding:60px 0 0}
 </section>
 <footer>
   <div class="container" style="max-width:1200px">
-    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(0,56,255,.18)">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid #E2E8F0">
       <div>
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
-          <div style="width:36px;height:36px;background:#0038FF;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:6px;box-shadow:0 0 12px rgba(0,56,255,.35);font-family:'Space Grotesk',sans-serif">LMS</div>
+          <div style="width:36px;height:36px;background:#2353D1;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:6px;box-shadow:0 0 12px rgba(35,83,209,.25);font-family:'Space Grotesk',sans-serif">LMS</div>
           <span style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#fff">Leon Media Solution</span>
         </div>
-        <p style="font-size:14px;color:#CCCCDD;line-height:1.7;max-width:260px;margin-bottom:20px">Messbare Marketinglösungen für Künstler, Musiker, Veranstalter &amp; Firmen.</p>
+        <p style="font-size:14px;color:#4A5568;line-height:1.7;max-width:260px;margin-bottom:20px">Messbare Marketinglösungen für Künstler, Musiker, Veranstalter &amp; Firmen.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
-          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
-          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
-          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
-          <a href="#" style="width:38px;height:38px;border:1px solid rgba(0,56,255,.18);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#CCCCDD;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#0038FF';this.style.color='#fff';this.style.background='rgba(0,56,255,.15)'" onmouseout="this.style.borderColor='rgba(0,56,255,.18)';this.style.color='#CCCCDD';this.style.background=''" aria-label="TikTok"><i class="ti ti-brand-tiktok"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid #E2E8F0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#4A5568;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#2353D1';this.style.color='#1A2238';this.style.background='rgba(35,83,209,.12)'" onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#4A5568';this.style.background=''" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid #E2E8F0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#4A5568;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#2353D1';this.style.color='#1A2238';this.style.background='rgba(35,83,209,.12)'" onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#4A5568';this.style.background=''" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid #E2E8F0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#4A5568;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#2353D1';this.style.color='#1A2238';this.style.background='rgba(35,83,209,.12)'" onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#4A5568';this.style.background=''" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid #E2E8F0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#4A5568;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#2353D1';this.style.color='#1A2238';this.style.background='rgba(35,83,209,.12)'" onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#4A5568';this.style.background=''" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" style="width:38px;height:38px;border:1px solid #E2E8F0;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#4A5568;text-decoration:none;transition:all .25s" onmouseover="this.style.borderColor='#2353D1';this.style.color='#1A2238';this.style.background='rgba(35,83,209,.12)'" onmouseout="this.style.borderColor='#E2E8F0';this.style.color='#4A5568';this.style.background=''" aria-label="TikTok"><i class="ti ti-brand-tiktok"></i></a>
         </div>
       </div>
       <div>
-        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Leistungen</h4>
+        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#2353D1;margin-bottom:16px">Leistungen</h4>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-          <li><a href="kuenstler.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Künstler & Musiker</a></li>
-          <li><a href="veranstalter.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Veranstalter</a></li>
-          <li><a href="firmen.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Für Firmen</a></li>
-          <li><a href="portfolio.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Portfolio</a></li>
+          <li><a href="kuenstler.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Für Künstler & Musiker</a></li>
+          <li><a href="veranstalter.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Für Veranstalter</a></li>
+          <li><a href="firmen.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Für Firmen</a></li>
+          <li><a href="portfolio.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Portfolio</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Unternehmen</h4>
+        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#2353D1;margin-bottom:16px">Unternehmen</h4>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
-          <li><a href="ueber-mich.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Über mich</a></li>
-          <li><a href="blog.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Blog</a></li>
-          <li><a href="kontakt.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Kontakt</a></li>
-          <li><a href="impressum.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Impressum</a></li>
-          <li><a href="datenschutz.html" style="font-size:14px;color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Datenschutz</a></li>
+          <li><a href="ueber-mich.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Über mich</a></li>
+          <li><a href="blog.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Blog</a></li>
+          <li><a href="kontakt.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Kontakt</a></li>
+          <li><a href="impressum.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Impressum</a></li>
+          <li><a href="datenschutz.html" style="font-size:14px;color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Datenschutz</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0099FF;margin-bottom:16px">Kontakt</h4>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="mailto:info@leonmediasolution.de" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">info@leonmediasolution.de</a></p>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#0099FF;flex-shrink:0"></i><a href="tel:015679827958" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">015679827958</a></p>
-        <p style="font-size:14px;color:#CCCCDD;margin-bottom:20px;display:flex;align-items:center;gap:8px"><i class="ti ti-world" style="font-size:16px;color:#0099FF;flex-shrink:0"></i> leonmediasolution.de</p>
-        <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#0038FF;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(0,56,255,.3);text-decoration:none" onmouseover="this.style.background='#0099FF'" onmouseout="this.style.background='#0038FF'"><i class="ti ti-calendar"></i> Termin buchen</a>
+        <h4 style="font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#2353D1;margin-bottom:16px">Kontakt</h4>
+        <p style="font-size:14px;color:#4A5568;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-mail" style="font-size:16px;color:#2353D1;flex-shrink:0"></i><a href="mailto:info@leonmediasolution.de" style="color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">info@leonmediasolution.de</a></p>
+        <p style="font-size:14px;color:#4A5568;margin-bottom:8px;display:flex;align-items:center;gap:8px"><i class="ti ti-phone" style="font-size:16px;color:#2353D1;flex-shrink:0"></i><a href="tel:015679827958" style="color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">015679827958</a></p>
+        <p style="font-size:14px;color:#4A5568;margin-bottom:20px;display:flex;align-items:center;gap:8px"><i class="ti ti-world" style="font-size:16px;color:#2353D1;flex-shrink:0"></i> leonmediasolution.de</p>
+        <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#2353D1;color:#fff;padding:10px 18px;border-radius:6px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;transition:all .2s;box-shadow:0 0 15px rgba(35,83,209,.25);text-decoration:none" onmouseover="this.style.background='#2353D1'" onmouseout="this.style.background='#2353D1'"><i class="ti ti-calendar"></i> Termin buchen</a>
       </div>
     </div>
-    <div style="padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#CCCCDD;flex-wrap:wrap;gap:12px">
+    <div style="padding:20px 0;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:#4A5568;flex-wrap:wrap;gap:12px">
       <span>© 2026 Leon Media Solution · Inh. Volker Missun</span>
       <div style="display:flex;gap:20px">
-        <a href="impressum.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Impressum</a>
-        <a href="datenschutz.html" style="color:#CCCCDD;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#CCCCDD'">Datenschutz</a>
+        <a href="impressum.html" style="color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Impressum</a>
+        <a href="datenschutz.html" style="color:#4A5568;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#1A2238'" onmouseout="this.style.color='#4A5568'">Datenschutz</a>
       </div>
     </div>
   </div>
