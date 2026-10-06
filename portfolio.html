@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Der Leon Media Solution Blog — Impulse, Trends und Strategien für Künstler, Networker und Unternehmer. Jede Woche neue Artikel rund um Sichtbarkeit und Wachstum.">
-<title>Blog | Leon Media Solution</title>
+<meta name="description" content="Portfolio von Leon Media Solution — Social Media, Marketing & Strategie für Künstler, Musiker, Veranstalter und Firmen. Plus ausgewählte zusätzliche Möglichkeiten für dein Business.">
+<title>Portfolio | Leon Media Solution</title>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,22 +33,70 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); background: var(--bg-primary); color: var(--white); line-height: 1.7; font-size: 17px; overflow-x: hidden; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--white);
+  line-height: 1.7;
+  font-size: 17px;
+  overflow-x: hidden;
+}
 a { color: inherit; text-decoration: none; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 /* ===== BUTTONS ===== */
-.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-head); font-size: 15px; font-weight: 500; padding: 14px 28px; border-radius: 6px; cursor: pointer; transition: all .25s ease; border: 2px solid transparent; white-space: nowrap; }
-.btn-primary { background: var(--blue); color: var(--white); box-shadow: 0 0 20px var(--blue-glow); }
-.btn-primary:hover { background: var(--blue-light); box-shadow: 0 0 35px rgba(0,153,255,0.5); transform: translateY(-2px); }
-.btn-white { background: #FFFFFF; color: var(--blue); font-weight: 700; font-size: 17px; padding: 18px 40px; }
-.btn-white:hover { background: rgba(255,255,255,0.9); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .25s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--blue);
+  color: #FFFFFF;
+  box-shadow: 0 0 20px var(--blue-glow);
+}
+.btn-primary:hover {
+  background: var(--blue-light);
+  box-shadow: 0 0 35px rgba(0,153,255,0.5);
+  transform: translateY(-2px);
+}
 
 /* ===== NAVIGATION ===== */
-nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 1000; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); }
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-h);
+}
 .nav-logo { display: flex; align-items: center; gap: 12px; font-family: var(--font-head); }
-.nav-logo-mark { width: 42px; height: 42px; background: var(--blue); color: var(--white); font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0 0 15px var(--blue-glow); }
+.nav-logo-mark {
+  width: 42px; height: 42px;
+  background: var(--blue);
+  color: #FFFFFF;
+  font-size: 15px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 15px var(--blue-glow);
+}
 .nav-logo-name { font-size: 16px; font-weight: 700; color: var(--white); }
 .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
 .nav-links a { font-size: 14px; font-weight: 500; color: var(--subtext); transition: color .2s; font-family: var(--font-head); }
@@ -59,7 +107,12 @@ nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index:
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.mobile-menu { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); padding: 24px; border-bottom: 1px solid var(--border); z-index: 999; flex-direction: column; gap: 16px; }
+.mobile-menu {
+  display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+  background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px);
+  padding: 24px; border-bottom: 1px solid var(--border);
+  z-index: 999; flex-direction: column; gap: 16px;
+}
 .mobile-menu.open { display: flex; }
 .mobile-menu a { font-family: var(--font-head); font-size: 18px; font-weight: 500; color: var(--subtext); padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
 .mobile-menu a:hover { color: var(--white); }
@@ -75,59 +128,127 @@ nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index:
 .dropdown a:hover{background:rgba(169,78,48,.10);color:#fff}
 
 /* ===== PAGE HEADER ===== */
-.page-head { padding: calc(var(--nav-h) + 70px) 0 50px; text-align: center; position: relative; overflow: hidden; }
-.page-head::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(circle, rgba(0,56,255,0.1) 0%, transparent 70%); pointer-events: none; }
-.page-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-head); font-size: 12px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--blue-light); border: 1px solid rgba(169,78,48,.2); border-radius: 16px; padding: 6px 16px; margin-bottom: 20px; position: relative; z-index: 1; }
-.page-title { font-family: var(--font-head); font-size: clamp(36px, 6vw, 58px); font-weight: 700; line-height: 1.1; margin-bottom: 20px; position: relative; z-index: 1; }
+.page-head {
+  padding: calc(var(--nav-h) + 80px) 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-head::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 400px;
+  background: radial-gradient(circle, rgba(0,56,255,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.page-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-head); font-size: 12px; font-weight: 500;
+  letter-spacing: .15em; text-transform: uppercase; color: var(--blue-light);
+  border: 1px solid rgba(169,78,48,.2); border-radius: 16px;
+  padding: 6px 16px; margin-bottom: 20px; position: relative; z-index: 1;
+}
+.page-title {
+  font-family: var(--font-head);
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 700; line-height: 1.1;
+  margin-bottom: 20px; position: relative; z-index: 1;
+}
 .page-title .blue { color: var(--blue); }
-.page-sub { font-size: 19px; color: var(--subtext); max-width: 620px; margin: 0 auto; line-height: 1.75; position: relative; z-index: 1; }
+.page-sub {
+  font-size: 19px; color: var(--subtext);
+  max-width: 620px; margin: 0 auto; line-height: 1.75;
+  position: relative; z-index: 1;
+}
 
-/* ===== FILTER TABS ===== */
-.filter-tabs { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 40px 0 0; position: relative; z-index: 1; }
-.filter-tab { font-family: var(--font-head); font-size: 14px; font-weight: 500; color: var(--subtext); background: var(--bg-card); border: 1px solid var(--border); border-radius: 30px; padding: 10px 22px; cursor: pointer; transition: all .25s; display: inline-flex; align-items: center; gap: 7px; }
-.filter-tab:hover { color: var(--white); border-color: var(--blue); }
-.filter-tab.active { background: var(--blue); color: var(--white); border-color: var(--blue); box-shadow: 0 0 20px var(--blue-glow); }
-.filter-tab i { font-size: 16px; }
+/* ===== SECTION HELPERS ===== */
+.section { padding: 70px 0; }
+.section-label {
+  font-family: var(--font-head); font-size: 13px; font-weight: 500;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--blue-light);
+  margin-bottom: 16px; text-align: center;
+}
+.section-title {
+  font-family: var(--font-head); font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700; line-height: 1.1; margin-bottom: 18px; text-align: center;
+}
+.section-sub {
+  font-size: 17px; color: var(--subtext); max-width: 620px;
+  margin: 0 auto 10px; line-height: 1.7; text-align: center;
+}
 
-/* ===== BLOG GRID ===== */
-.blog-section { padding: 60px 0 80px; }
-.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-.blog-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: all .3s ease; }
-.blog-card:hover { border-color: var(--blue); transform: translateY(-5px); box-shadow: 0 20px 45px rgba(0,0,0,0.35), 0 0 30px var(--blue-glow-soft); }
-.blog-card-img { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 46px; color: var(--white); position: relative; overflow: hidden; }
-.blog-card-img.kuenstler { background: linear-gradient(135deg, #A94E30, #A94E30); }
-.blog-card-img.networker { background: linear-gradient(135deg, #5b1fb0, #A94E30); }
-.blog-card-img.unternehmer { background: linear-gradient(135deg, #0a2a6e, #A94E30); }
-.blog-card-body { padding: 26px 24px; display: flex; flex-direction: column; flex-grow: 1; }
-.blog-tag { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-head); font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 12px; }
-.blog-card h3 { font-family: var(--font-head); font-size: 19px; font-weight: 700; line-height: 1.3; margin-bottom: 12px; }
-.blog-card p { font-size: 14px; color: var(--subtext); line-height: 1.65; margin-bottom: 18px; flex-grow: 1; }
-.blog-meta { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: rgba(204,204,221,0.6); padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
-.blog-meta .read { color: var(--blue-light); font-family: var(--font-head); font-weight: 500; display: inline-flex; align-items: center; gap: 4px; }
-.hidden { display: none; }
+/* ===== LEISTUNGEN GRID ===== */
+.ls-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-top: 50px;
+}
+.ls-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: all .3s ease;
+  position: relative; overflow: hidden;
+}
+.ls-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-light));
+  transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+}
+.ls-card:hover::before { transform: scaleX(1); }
+.ls-card:hover { border-color: rgba(0,56,255,0.4); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+.ls-icon { font-size: 32px; color: var(--blue-light); margin-bottom: 16px; transition: color .3s; }
+.ls-card:hover .ls-icon { color: var(--white); }
+.ls-card h3 { font-family: var(--font-head); font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+.ls-card p { font-size: 14px; color: var(--subtext); line-height: 1.6; }
 
-/* ===== EXTERNE MEDIEN ===== */
-.media-section { padding: 70px 0; background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.section-label { font-family: var(--font-head); font-size: 13px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 16px; text-align: center; }
-.section-title { font-family: var(--font-head); font-size: clamp(28px, 4vw, 40px); font-weight: 700; line-height: 1.1; margin-bottom: 16px; text-align: center; }
-.section-sub { font-size: 17px; color: var(--subtext); max-width: 620px; margin: 0 auto 50px; line-height: 1.7; text-align: center; }
-.media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
-.media-card { background: #FFFFFF; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 26px; display: flex; gap: 18px; align-items: flex-start; transition: all .25s; }
-.media-card:hover { border-color: var(--blue); transform: translateY(-3px); box-shadow: 0 0 25px var(--blue-glow-soft); }
-.media-icon { width: 46px; height: 46px; background: var(--blue-glow-soft); border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--blue-light); flex-shrink: 0; }
-.media-info { flex-grow: 1; }
-.media-info .cat { font-family: var(--font-head); font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(204,204,221,0.6); margin-bottom: 4px; }
-.media-info h4 { font-family: var(--font-head); font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-.media-info p { font-size: 13px; color: var(--subtext); line-height: 1.6; margin-bottom: 10px; }
-.media-link { font-family: var(--font-head); font-size: 12px; font-weight: 500; color: var(--blue-light); display: inline-flex; align-items: center; gap: 5px; transition: gap .2s; }
-.media-card:hover .media-link { gap: 9px; }
-
-/* ===== NEWSLETTER / CADENCE NOTE ===== */
-.cadence { padding: 50px 0; text-align: center; }
-.cadence-inner { max-width: 620px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; }
-.cadence-inner i { font-size: 32px; color: var(--blue-light); margin-bottom: 14px; }
-.cadence-inner h3 { font-family: var(--font-head); font-size: 22px; font-weight: 700; margin-bottom: 10px; }
-.cadence-inner p { font-size: 15px; color: var(--subtext); line-height: 1.7; }
+/* ===== EXTERNE ANGEBOTE ===== */
+#externe {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.ang-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; margin-top: 50px;
+}
+.ang-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 34px 30px;
+  display: flex; flex-direction: column;
+  transition: all .3s ease;
+  position: relative; overflow: hidden;
+}
+.ang-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-light));
+  transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.ang-card:hover::before { transform: scaleX(1); }
+.ang-card:hover { border-color: var(--blue); transform: translateY(-5px); box-shadow: 0 20px 45px rgba(0,0,0,0.35), 0 0 30px var(--blue-glow-soft); }
+.ang-icon {
+  width: 56px; height: 56px;
+  background: var(--blue-glow-soft);
+  border: 1px solid var(--border); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px; font-size: 26px; color: var(--blue-light); transition: all .3s;
+}
+.ang-card:hover .ang-icon { background: rgba(0,56,255,0.2); border-color: var(--blue); color: var(--white); }
+.ang-card h3 { font-family: var(--font-head); font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--white); }
+.ang-card p { font-size: 15px; color: var(--subtext); line-height: 1.65; margin-bottom: 26px; flex-grow: 1; }
+.ang-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--blue); color: var(--white);
+  padding: 13px 24px; border-radius: 6px;
+  font-family: var(--font-head); font-size: 14px; font-weight: 500;
+  text-decoration: none; box-shadow: 0 0 18px var(--blue-glow);
+  transition: all .25s; margin-top: auto;
+}
+.ang-btn:hover { background: var(--blue-light); box-shadow: 0 0 32px rgba(0,153,255,0.5); transform: translateY(-2px); }
 
 /* ===== CTA ===== */
 #cta-section { padding: 90px 0; background: var(--blue); position: relative; overflow: hidden; text-align: center; }
@@ -135,10 +256,12 @@ nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index:
 .cta-content { position: relative; z-index: 1; }
 .cta-content h2 { font-family: var(--font-head); font-size: clamp(30px, 5vw, 48px); font-weight: 700; margin-bottom: 16px; color: #FFFFFF; }
 .cta-content p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.btn-white { background: #FFFFFF; color: var(--blue); font-weight: 700; font-size: 17px; padding: 18px 40px; }
+.btn-white:hover { background: rgba(255,255,255,0.9); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
 /* ===== FOOTER ===== */
-footer { background: var(--bg-primary); border-top: 1px solid var(--border); padding: 40px 0; }
-.footer-bottom { display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--subtext); flex-wrap: wrap; gap: 12px; }
+footer { background: var(--bg-primary); border-top: 1px solid var(--border); padding: 60px 0 0; }
+.footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--subtext); flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--border); margin-top: 20px; }
 .footer-bottom a { color: var(--subtext); transition: color .2s; }
 .footer-bottom a:hover { color: var(--white); }
 .footer-legal { display: flex; gap: 20px; }
@@ -147,8 +270,8 @@ footer { background: var(--bg-primary); border-top: 1px solid var(--border); pad
   .nav-links { display: none; } .nav-cta .btn { display: none; }
   .hamburger { display: flex; }
   .nav-cta { display: flex; }
-  .blog-grid { grid-template-columns: 1fr; }
-  .media-grid { grid-template-columns: 1fr; }
+  .ls-grid { grid-template-columns: 1fr; }
+  .ang-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 </style>
@@ -173,9 +296,9 @@ footer { background: var(--bg-primary); border-top: 1px solid var(--border); pad
             <li><a href="firmen.html"><i class="ti ti-building"></i> Für Firmen</a></li>
           </ul>
         </li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
         <li><a href="ueber-mich.html">Über mich</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
       <div class="nav-cta">
@@ -201,203 +324,110 @@ footer { background: var(--bg-primary); border-top: 1px solid var(--border); pad
 <!-- ===== PAGE HEADER ===== -->
 <header class="page-head">
   <div class="container">
-    <div class="page-badge"><i class="ti ti-news" style="font-size:13px"></i> Blog</div>
-    <h1 class="page-title">Impulse für deinen<br><span class="blue">nächsten Schritt.</span></h1>
-    <p class="page-sub">Trends, Strategien und ehrliche Einblicke — für Künstler, Networker und Unternehmer. Jede Woche neue Artikel.</p>
-
-    <div class="filter-tabs">
-      <button class="filter-tab active" data-filter="all"><i class="ti ti-layout-grid"></i> Alle</button>
-      <button class="filter-tab" data-filter="kuenstler"><i class="ti ti-music"></i> Künstler</button>
-      <button class="filter-tab" data-filter="networker"><i class="ti ti-users-group"></i> Networker</button>
-      <button class="filter-tab" data-filter="unternehmer"><i class="ti ti-building"></i> Unternehmer</button>
-    </div>
+    <div class="page-badge"><i class="ti ti-layout-grid" style="font-size:13px"></i> Portfolio</div>
+    <h1 class="page-title">Was ich für dich<br><span class="blue">möglich mache.</span></h1>
+    <p class="page-sub">Von Social Media bis Musikvideo — alles aus einer Hand. Dazu ausgewählte zusätzliche Möglichkeiten, die dein Business noch weiter nach vorne bringen.</p>
   </div>
 </header>
 
-<!-- ===== BLOG GRID ===== -->
-<section class="blog-section">
+<!-- ===== SOCIAL MEDIA / KERNLEISTUNGEN ===== -->
+<section class="section">
   <div class="container">
-    <div class="blog-grid" id="blogGrid">
+    <p class="section-label">Mein Kernangebot</p>
+    <h2 class="section-title">Social Media, Marketing &amp; Strategie</h2>
+    <p class="section-sub">Messbare Lösungen für Künstler, Musiker, Veranstalter und Firmen — persönlich betreut von Volker Missun.</p>
+    <div class="ls-grid">
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-brand-instagram"></i></div>
+        <h3>Social Media Management</h3>
+        <p>Strategie, Content-Erstellung und Community-Pflege auf Instagram, Facebook, TikTok und LinkedIn.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-brand-youtube"></i></div>
+        <h3>YouTube-Kanal-Aufbau</h3>
+        <p>Von null auf Reichweite: Konzept, SEO-Optimierung, Thumbnails und nachhaltige Wachstumsstrategie.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-microphone"></i></div>
+        <h3>Podcast-Produktion</h3>
+        <p>Konzept, technische Umsetzung und Distribution — deine Stimme auf allen Plattformen.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-ad"></i></div>
+        <h3>Paid Ads (Meta & Google)</h3>
+        <p>Gezielte Werbung die wirklich konvertiert — mehr Auftritte, mehr Tickets, mehr Umsatz.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-pencil"></i></div>
+        <h3>Blog & Content Marketing</h3>
+        <p>SEO-optimierte Inhalte die Vertrauen aufbauen und organisch neue Kunden bringen.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-layout"></i></div>
+        <h3>Webseiten</h3>
+        <p>Professionelle, conversion-optimierte Websites die Besucher zu Kunden machen.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-music"></i></div>
+        <h3>Vermittlung zu Produzenten & Labels</h3>
+        <p>Ich öffne Türen — zu erfahrenen Musikproduzenten und Musiklabels die zu dir und deinem Sound passen.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-video"></i></div>
+        <h3>Erstellung von Musikvideos</h3>
+        <p>Professionelle Musikvideo-Produktion die deine Musik visuell erlebbar macht und deine Reichweite maximiert.</p>
+      </div>
+      <div class="ls-card">
+        <div class="ls-icon"><i class="ti ti-camera"></i></div>
+        <h3>Professionelle Künstlerfotos</h3>
+        <p>Hochwertige Portraitfotos und Pressebilder die deinen Stil verkörpern und einen bleibenden ersten Eindruck hinterlassen.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- ARTIKEL 1 — KÜNSTLER -->
-      <a href="blog-post-01.html" class="blog-card" data-cat="kuenstler" style="text-decoration:none;color:inherit">
-        <div class="blog-card-img kuenstler"><i class="ti ti-microphone-2"></i></div>
-        <div class="blog-card-body">
-          <span class="blog-tag"><i class="ti ti-music" style="font-size:13px"></i> Für Künstler</span>
-          <h3>Sichtbar werden als Musiker: Warum Talent allein heute nicht mehr reicht</h3>
-          <p>Die besten Songs nützen nichts, wenn sie niemand hört. Wie du als Künstler mit einer klaren Social-Media-Strategie aus der Masse herausstichst — und warum der erste Schritt oft der wichtigste ist.</p>
-          <div class="blog-meta">
-            <span>Woche 1</span>
-            <span class="read">Lesen <i class="ti ti-arrow-right"></i></span>
-          </div>
-        </div>
-      </a>
+<!-- ===== EXTERNE ANGEBOTE ===== -->
+<section id="externe" class="section">
+  <div class="container">
+    <p class="section-label">Zusätzliche Möglichkeiten</p>
+    <h2 class="section-title">Mehr für Unternehmer,<br>Künstler &amp; Macher.</h2>
+    <p class="section-sub">Ausgewählte Plattformen und Tools, die dein Business zusätzlich nach vorne bringen — direkt zum Entdecken.</p>
+    <div class="ang-grid">
 
-      <!-- ARTIKEL 2 — NETWORKER -->
-      <article class="blog-card" data-cat="networker">
-        <div class="blog-card-img networker"><i class="ti ti-users-group"></i></div>
-        <div class="blog-card-body">
-          <span class="blog-tag"><i class="ti ti-users-group" style="font-size:13px"></i> Für Networker</span>
-          <h3>Kontakte sind die Währung im Network Marketing — so gewinnst du echte</h3>
-          <p>Schluss mit Kaltakquise an Fremde. Wie du als Networker über echte Sichtbarkeit und Content die richtigen Menschen anziehst, statt ihnen hinterherzulaufen — und warum Authentizität heute mehr zählt denn je.</p>
-          <div class="blog-meta">
-            <span>Woche 1</span>
-            <span class="read">Lesen <i class="ti ti-arrow-right"></i></span>
-          </div>
-        </div>
-      </article>
+      <!-- Angebot 1 -->
+      <div class="ang-card">
+        <div class="ang-icon"><i class="ti ti-rocket"></i></div>
+        <h3>Von Null auf erfolgreich</h3>
+        <p>Automatisierte Leadgenerierung für dein Marketing: Erhalte planbar qualifizierte Interessenten mit minimalem Aufwand — ganz ohne mühsame Kaltakquise und ohne ständig selbst in den sozialen Medien aktiv sein zu müssen.</p>
+        <a href="https://clever-world.info/visitcard" target="_blank" rel="noopener" class="ang-btn"><i class="ti ti-external-link"></i> Chance ergreifen</a>
+      </div>
 
-      <!-- ARTIKEL 3 — UNTERNEHMER -->
-      <article class="blog-card" data-cat="unternehmer">
-        <div class="blog-card-img unternehmer"><i class="ti ti-building-store"></i></div>
-        <div class="blog-card-body">
-          <span class="blog-tag"><i class="ti ti-building" style="font-size:13px"></i> Für Unternehmer</span>
-          <h3>Der Mittelstand und Social Media: Warum Abwarten teuer wird</h3>
-          <p>Viele mittelständische Firmen zögern noch bei Social Media — dabei suchen ihre Kunden längst online. Wie du als Unternehmen professionelle Sichtbarkeit aufbaust und neue Kunden erreichst, ohne dein Kerngeschäft aus den Augen zu verlieren.</p>
-          <div class="blog-meta">
-            <span>Woche 1</span>
-            <span class="read">Lesen <i class="ti ti-arrow-right"></i></span>
-          </div>
-        </div>
-      </article>
+      <!-- Angebot 2 -->
+      <div class="ang-card">
+        <div class="ang-icon"><i class="ti ti-users-group"></i></div>
+        <h3>Echte Community statt Fake</h3>
+        <p>Ein Netzwerk aus 100 % verifizierten, echten Menschen — ohne Bots, ohne Fake-Profile. Ideal für Sichtbarkeit, neue Partner und echte Verbindungen für dein Business.</p>
+        <a href="https://welcome.wearereal.com/?real=2050540" target="_blank" rel="noopener" class="ang-btn"><i class="ti ti-external-link"></i> Jetzt entdecken</a>
+      </div>
 
-      <!-- Weitere Platzhalter-Artikel (kommende Wochen) -->
-      <article class="blog-card" data-cat="kuenstler">
-        <div class="blog-card-img kuenstler"><i class="ti ti-photo"></i></div>
-        <div class="blog-card-body">
-          <span class="blog-tag"><i class="ti ti-music" style="font-size:13px"></i> Für Künstler</span>
-          <h3>Vom ersten Auftritt zur festen Booking-Anfrage</h3>
-          <p>Wie du als Künstler Schritt für Schritt von einzelnen Gigs zu regelmäßigen Buchungen kommst — mit System, Sichtbarkeit und den richtigen Kontakten zu Veranstaltern.</p>
-          <div class="blog-meta">
-            <span>Demnächst</span>
-            <span class="read">Bald <i class="ti ti-clock"></i></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="blog-card" data-cat="networker">
-        <div class="blog-card-img networker"><i class="ti ti-device-mobile"></i></div>
-        <div class="blog-card-body">
-          <span class="blog-tag"><i class="ti ti-users-group" style="font-size:13px"></i> Für Networker</span>
-          <h3>Dein Business automatisiert sichtbar machen</h3>
-          <p>Wie du als Networker mit cleverer Automatisierung konstant neue Interessenten erreichst — seriös, plattformkonform und ohne den ganzen Tag am Handy zu kleben.</p>
-          <div class="blog-meta">
-            <span>Demnächst</span>
-            <span class="read">Bald <i class="ti ti-clock"></i></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="blog-card" data-cat="unternehmer">
-        <div class="blog-card-img unternehmer"><i class="ti ti-chart-arrows-vertical"></i></div>
-        <div class="blog-card-body">
-          <span class="blog-tag"><i class="ti ti-building" style="font-size:13px"></i> Für Unternehmer</span>
-          <h3>Employer Branding: Mitarbeiter finden über Social Media</h3>
-          <p>Fachkräftemangel? Wie mittelständische Unternehmen über authentische Social-Media-Präsenz nicht nur Kunden, sondern auch neue Mitarbeiter gewinnen.</p>
-          <div class="blog-meta">
-            <span>Demnächst</span>
-            <span class="read">Bald <i class="ti ti-clock"></i></span>
-          </div>
-        </div>
-      </article>
+      <!-- Angebot 3 -->
+      <div class="ang-card">
+        <div class="ang-icon"><i class="ti ti-coin"></i></div>
+        <h3>Projekt-Finanzierung gesucht?</h3>
+        <p>Du hast ein Projekt, eine Idee oder ein Vorhaben, dem noch die passende Finanzierung fehlt? Ich kenne digitale Möglichkeiten, die dich hier weiterbringen können — unkompliziert und zeitgemäß. Du willst mehr erfahren? Dann melde dich einfach bei mir.</p>
+        <a href="kontakt.html" class="ang-btn"><i class="ti ti-message-circle"></i> Mehr erfahren</a>
+      </div>
 
     </div>
   </div>
 </section>
 
-<!-- ===== EXTERNE MEDIEN ===== -->
-<section class="media-section">
-  <div class="container">
-    <p class="section-label">Lesenswert</p>
-    <h2 class="section-title">Blick über den Tellerrand</h2>
-    <p class="section-sub">Ausgewählte Branchenmedien, die ich für Künstler, Networker und Unternehmer empfehle — für alle, die am Puls ihrer Szene bleiben wollen.</p>
-
-    <div class="media-grid">
-
-      <!-- Künstler-Medien -->
-      <a href="https://www.schlagerparadies.de" target="_blank" rel="noopener" class="media-card">
-        <div class="media-icon"><i class="ti ti-radio"></i></div>
-        <div class="media-info">
-          <div class="cat">Für Künstler · Radio</div>
-          <h4>Schlagerparadies</h4>
-          <p>Einer der bekanntesten Schlager-Radiosender im deutschsprachigen Raum — eine Bühne, die zeigt, wo die Szene gerade steht.</p>
-          <span class="media-link">Zur Website <i class="ti ti-external-link"></i></span>
-        </div>
-      </a>
-
-      <a href="https://www.radiobob.de" target="_blank" rel="noopener" class="media-card">
-        <div class="media-icon"><i class="ti ti-radio"></i></div>
-        <div class="media-info">
-          <div class="cat">Für Künstler · Radio</div>
-          <h4>Radio BOB!</h4>
-          <p>Rock- und Pop-Sender mit großer Reichweite — spannend für Künstler, die ihre Zielgruppe im Radio und online verstehen wollen.</p>
-          <span class="media-link">Zur Website <i class="ti ti-external-link"></i></span>
-        </div>
-      </a>
-
-      <!-- Networker-Medien -->
-      <a href="https://netcoo.com" target="_blank" rel="noopener" class="media-card">
-        <div class="media-icon"><i class="ti ti-book"></i></div>
-        <div class="media-info">
-          <div class="cat">Für Networker · Magazin</div>
-          <h4>Netcoo Magazine</h4>
-          <p>Das führende Online- und Print-Magazin für Network Marketing und Direktvertrieb im deutschsprachigen Raum — Trends, Zahlen und Erfolgsgeschichten.</p>
-          <span class="media-link">Zur Website <i class="ti ti-external-link"></i></span>
-        </div>
-      </a>
-
-      <a href="https://www.obhandeln.de" target="_blank" rel="noopener" class="media-card">
-        <div class="media-icon"><i class="ti ti-news"></i></div>
-        <div class="media-info">
-          <div class="cat">Für Networker · Fachpresse</div>
-          <h4>Branchen-Fachpresse</h4>
-          <p>Wer im Network Marketing vorne bleiben will, sollte die Fachmedien der Branche verfolgen — für fundierte Einordnung statt Hype.</p>
-          <span class="media-link">Mehr erfahren <i class="ti ti-external-link"></i></span>
-        </div>
-      </a>
-
-      <!-- Unternehmer-Medien -->
-      <a href="https://t3n.de" target="_blank" rel="noopener" class="media-card">
-        <div class="media-icon"><i class="ti ti-device-laptop"></i></div>
-        <div class="media-info">
-          <div class="cat">Für Unternehmer · Digital</div>
-          <h4>t3n</h4>
-          <p>Eines der wichtigsten deutschen Magazine für digitales Business, Marketing und Technologie — Pflichtlektüre für zukunftsorientierte Unternehmer.</p>
-          <span class="media-link">Zur Website <i class="ti ti-external-link"></i></span>
-        </div>
-      </a>
-
-      <a href="https://www.impulse.de" target="_blank" rel="noopener" class="media-card">
-        <div class="media-icon"><i class="ti ti-building"></i></div>
-        <div class="media-info">
-          <div class="cat">Für Unternehmer · Mittelstand</div>
-          <h4>impulse</h4>
-          <p>Das Magazin für den deutschen Mittelstand und Unternehmer — praxisnahe Tipps für Wachstum, Führung und digitale Sichtbarkeit.</p>
-          <span class="media-link">Zur Website <i class="ti ti-external-link"></i></span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== CADENCE NOTE ===== -->
-<section class="cadence">
-  <div class="container">
-    <div class="cadence-inner">
-      <i class="ti ti-calendar-repeat"></i>
-      <h3>Jede Woche neue Impulse</h3>
-      <p>Hier erscheinen regelmäßig frische Artikel — abwechselnd für Künstler, Networker und Unternehmer. Schau einfach immer wieder vorbei oder buche direkt ein persönliches Gespräch, wenn du nicht warten möchtest.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA ===== -->
+<!-- ===== CTA ABSCHLUSS ===== -->
 <section id="cta-section">
   <div class="container">
     <div class="cta-content">
-      <h2>Lass uns über dich sprechen.</h2>
-      <p>Buche jetzt dein kostenloses Erstgespräch — unverbindlich und persönlich.</p>
+      <h2>Bereit, sichtbar zu werden?</h2>
+      <p>Buche jetzt dein kostenloses Erstgespräch — kein Risiko, keine Verpflichtung.</p>
       <a href="https://calendly.com/vmissun/30min" target="_blank" rel="noopener" class="btn btn-white">Kostenloses Erstgespräch buchen</a>
     </div>
   </div>
@@ -428,24 +458,6 @@ function closeMobile() {
   hamburger.classList.remove('open');
   mobileMenu.classList.remove('open');
 }
-
-// Blog filter
-const tabs = document.querySelectorAll('.filter-tab');
-const cards = document.querySelectorAll('.blog-card');
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    const filter = tab.dataset.filter;
-    cards.forEach(card => {
-      if (filter === 'all' || card.dataset.cat === filter) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-  });
-});
 </script>
 
 </body>
